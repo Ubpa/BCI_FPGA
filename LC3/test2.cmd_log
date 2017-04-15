@@ -1,0 +1,14 @@
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/lab07/LC3/test2.xst" -ofn "E:/CS/OSH/final_HW/lab07/LC3/test2.syr" 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/lab07/LC3/test2.xst" -ofn "E:/CS/OSH/final_HW/lab07/LC3/test2.syr" 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/lab07/LC3/test2.xst" -ofn "E:/CS/OSH/final_HW/lab07/LC3/test2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 test2.ngc test2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test2_map.ncd test2.ngd test2.pcf 
+par -w -intstyle ise -ol high -mt off test2_map.ncd test2.ncd test2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test2.twx test2.ncd -o test2.twr test2.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f test2.ut test2.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/lab07/LC3/test2.xst" -ofn "E:/CS/OSH/final_HW/lab07/LC3/test2.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 test2.ngc test2.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o test2_map.ncd test2.ngd test2.pcf 
+par -w -intstyle ise -ol high -mt off test2_map.ncd test2.ncd test2.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml test2.twx test2.ncd -o test2.twr test2.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f test2.ut test2.ncd 

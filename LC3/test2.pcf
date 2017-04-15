@@ -1,0 +1,9 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Apr 11 14:55:41 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "SDA_BUS" LOCATE = SITE "V12" LEVEL 1;
+COMP "SCL_BUS" LOCATE = SITE "T12" LEVEL 1;
+SCHEMATIC END;
+

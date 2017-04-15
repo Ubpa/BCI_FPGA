@@ -1,0 +1,390 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sat Apr 15 17:21:39 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "an<0>" LOCATE = SITE "N16" LEVEL 1;
+COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
+COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
+COMP "an<3>" LOCATE = SITE "P17" LEVEL 1;
+COMP "sw<0>" LOCATE = SITE "T10" LEVEL 1;
+COMP "sw<1>" LOCATE = SITE "T9" LEVEL 1;
+COMP "sw<2>" LOCATE = SITE "V9" LEVEL 1;
+COMP "sw<3>" LOCATE = SITE "M8" LEVEL 1;
+COMP "sw<4>" LOCATE = SITE "N8" LEVEL 1;
+COMP "sw<5>" LOCATE = SITE "U8" LEVEL 1;
+COMP "sw<6>" LOCATE = SITE "V8" LEVEL 1;
+COMP "sw<7>" LOCATE = SITE "T5" LEVEL 1;
+COMP "btn<0>" LOCATE = SITE "B8" LEVEL 1;
+COMP "btn<1>" LOCATE = SITE "D9" LEVEL 1;
+COMP "btn<2>" LOCATE = SITE "C4" LEVEL 1;
+COMP "btn<3>" LOCATE = SITE "C9" LEVEL 1;
+COMP "btn<4>" LOCATE = SITE "A8" LEVEL 1;
+COMP "seg<0>" LOCATE = SITE "T17" LEVEL 1;
+COMP "seg<1>" LOCATE = SITE "T18" LEVEL 1;
+COMP "seg<2>" LOCATE = SITE "U17" LEVEL 1;
+COMP "seg<3>" LOCATE = SITE "U18" LEVEL 1;
+COMP "seg<4>" LOCATE = SITE "M14" LEVEL 1;
+COMP "seg<5>" LOCATE = SITE "N14" LEVEL 1;
+COMP "seg<6>" LOCATE = SITE "L14" LEVEL 1;
+COMP "SDA_BUS" LOCATE = SITE "V12" LEVEL 1;
+COMP "SCL_BUS" LOCATE = SITE "T12" LEVEL 1;
+PIN g_memory/memory/Mram_RAM32_pins<14> = BEL "g_memory/memory/Mram_RAM32"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM31_pins<14> = BEL "g_memory/memory/Mram_RAM31"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM30_pins<14> = BEL "g_memory/memory/Mram_RAM30"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM29_pins<14> = BEL "g_memory/memory/Mram_RAM29"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM28_pins<14> = BEL "g_memory/memory/Mram_RAM28"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM27_pins<14> = BEL "g_memory/memory/Mram_RAM27"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM26_pins<14> = BEL "g_memory/memory/Mram_RAM26"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM25_pins<14> = BEL "g_memory/memory/Mram_RAM25"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM24_pins<14> = BEL "g_memory/memory/Mram_RAM24"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM23_pins<14> = BEL "g_memory/memory/Mram_RAM23"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM22_pins<14> = BEL "g_memory/memory/Mram_RAM22"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM21_pins<14> = BEL "g_memory/memory/Mram_RAM21"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM20_pins<14> = BEL "g_memory/memory/Mram_RAM20"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM19_pins<14> = BEL "g_memory/memory/Mram_RAM19"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM18_pins<14> = BEL "g_memory/memory/Mram_RAM18"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM17_pins<14> = BEL "g_memory/memory/Mram_RAM17"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM16_pins<14> = BEL "g_memory/memory/Mram_RAM16"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM15_pins<14> = BEL "g_memory/memory/Mram_RAM15"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM14_pins<14> = BEL "g_memory/memory/Mram_RAM14"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM13_pins<14> = BEL "g_memory/memory/Mram_RAM13"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM12_pins<14> = BEL "g_memory/memory/Mram_RAM12"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM11_pins<14> = BEL "g_memory/memory/Mram_RAM11"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM10_pins<14> = BEL "g_memory/memory/Mram_RAM10"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM9_pins<14> = BEL "g_memory/memory/Mram_RAM9"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM8_pins<14> = BEL "g_memory/memory/Mram_RAM8"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM7_pins<14> = BEL "g_memory/memory/Mram_RAM7"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM6_pins<14> = BEL "g_memory/memory/Mram_RAM6"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM5_pins<14> = BEL "g_memory/memory/Mram_RAM5"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM4_pins<14> = BEL "g_memory/memory/Mram_RAM4"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM3_pins<14> = BEL "g_memory/memory/Mram_RAM3"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM2_pins<14> = BEL "g_memory/memory/Mram_RAM2"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM1_pins<14> = BEL "g_memory/memory/Mram_RAM1"
+        PINNAME CLKA;
+TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
+        "g_memory/MDR_14" BEL "g_memory/MDR_13" BEL "g_memory/MDR_12" BEL
+        "g_memory/MDR_11" BEL "g_memory/MDR_10" BEL "g_memory/MDR_9" BEL
+        "g_memory/MDR_8" BEL "g_memory/MDR_7" BEL "g_memory/MDR_6" BEL
+        "g_memory/MDR_5" BEL "g_memory/MDR_4" BEL "g_memory/MDR_3" BEL
+        "g_memory/MDR_2" BEL "g_memory/MDR_1" BEL "g_memory/MDR_0" BEL
+        "g_memory/memory/R" BEL "g_memory/MAR_15" BEL "g_memory/MAR_14" BEL
+        "g_memory/MAR_13" BEL "g_memory/MAR_12" BEL "g_memory/MAR_11" BEL
+        "g_memory/MAR_10" BEL "g_memory/MAR_9" BEL "g_memory/MAR_8" BEL
+        "g_memory/MAR_7" BEL "g_memory/MAR_6" BEL "g_memory/MAR_5" BEL
+        "g_memory/MAR_4" BEL "g_memory/MAR_3" BEL "g_memory/MAR_2" BEL
+        "g_memory/MAR_1" BEL "g_memory/MAR_0" BEL "g_memory/sda/SDAER_0" BEL
+        "g_memory/sda/SDADR_0" BEL "cpu/PSR_10" BEL "cpu/PSR_9" BEL
+        "cpu/PSR_8" BEL "cpu/PSR_2" BEL "cpu/PSR_1" BEL "cpu/PSR_0" BEL
+        "cpu/PSR_15" BEL "cpu/IR_15" BEL "cpu/IR_14" BEL "cpu/IR_13" BEL
+        "cpu/IR_12" BEL "cpu/IR_11" BEL "cpu/IR_10" BEL "cpu/IR_9" BEL
+        "cpu/IR_8" BEL "cpu/IR_7" BEL "cpu/IR_6" BEL "cpu/IR_5" BEL "cpu/IR_4"
+        BEL "cpu/IR_3" BEL "cpu/IR_2" BEL "cpu/IR_1" BEL "cpu/IR_0" BEL
+        "cpu/Saved_USP_15" BEL "cpu/Saved_USP_14" BEL "cpu/Saved_USP_13" BEL
+        "cpu/Saved_USP_12" BEL "cpu/Saved_USP_11" BEL "cpu/Saved_USP_10" BEL
+        "cpu/Saved_USP_9" BEL "cpu/Saved_USP_8" BEL "cpu/Saved_USP_7" BEL
+        "cpu/Saved_USP_6" BEL "cpu/Saved_USP_5" BEL "cpu/Saved_USP_4" BEL
+        "cpu/Saved_USP_3" BEL "cpu/Saved_USP_2" BEL "cpu/Saved_USP_1" BEL
+        "cpu/Saved_USP_0" BEL "cpu/Saved_SSP_15" BEL "cpu/Saved_SSP_14" BEL
+        "cpu/Saved_SSP_13" BEL "cpu/Saved_SSP_12" BEL "cpu/Saved_SSP_11" BEL
+        "cpu/Saved_SSP_10" BEL "cpu/Saved_SSP_9" BEL "cpu/Saved_SSP_8" BEL
+        "cpu/Saved_SSP_7" BEL "cpu/Saved_SSP_6" BEL "cpu/Saved_SSP_5" BEL
+        "cpu/Saved_SSP_4" BEL "cpu/Saved_SSP_3" BEL "cpu/Saved_SSP_2" BEL
+        "cpu/Saved_SSP_1" BEL "cpu/Saved_SSP_0" BEL "cpu/PC_15" BEL
+        "cpu/PC_14" BEL "cpu/PC_13" BEL "cpu/PC_12" BEL "cpu/PC_11" BEL
+        "cpu/PC_10" BEL "cpu/PC_9" BEL "cpu/PC_8" BEL "cpu/PC_7" BEL
+        "cpu/PC_6" BEL "cpu/PC_5" BEL "cpu/PC_4" BEL "cpu/PC_3" BEL "cpu/PC_2"
+        BEL "cpu/PC_1" BEL "cpu/PC_0" BEL "cpu/BEN" BEL
+        "g_memory/switch/SWR_7" BEL "g_memory/switch/SWR_6" BEL
+        "g_memory/switch/SWR_5" BEL "g_memory/switch/SWR_4" BEL
+        "g_memory/switch/SWR_3" BEL "g_memory/switch/SWR_2" BEL
+        "g_memory/switch/SWR_1" BEL "g_memory/switch/SWR_0" BEL
+        "g_memory/keyboard/KBDR_0" BEL "g_memory/keyboard/KBDR_1" BEL
+        "g_memory/keyboard/KBDR_2" BEL "g_memory/keyboard/KBDR_3" BEL
+        "g_memory/keyboard/KBDR_4" BEL "g_memory/keyboard/KBSR_0" BEL
+        "g_memory/keyboard/KBSR_1" BEL "g_memory/keyboard/KBSR_2" BEL
+        "g_memory/keyboard/KBSR_4" BEL "g_memory/keyboard/KBSR_5" BEL
+        "g_memory/keyboard/KBSR_3" BEL "g_memory/keyboard/KBSR_6" BEL
+        "g_memory/keyboard/KBSR_7" BEL "g_memory/keyboard/KBSR_9" BEL
+        "g_memory/keyboard/KBSR_10" BEL "g_memory/keyboard/KBSR_8" BEL
+        "g_memory/keyboard/KBSR_11" BEL "g_memory/keyboard/KBSR_12" BEL
+        "g_memory/keyboard/KBSR_14" BEL "g_memory/keyboard/WR" BEL
+        "g_memory/keyboard/KBSR_13" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_0" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_15" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_14" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_12" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_11" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_13" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_9" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_8" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_10" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_6" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_5" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_7" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_4" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_3" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_1" BEL
+        "g_memory/keyboard/btn_middle/counter/cnt_2" BEL
+        "g_memory/keyboard/btn_middle/counter/inner_reset" BEL
+        "g_memory/keyboard/btn_middle/Op" BEL
+        "g_memory/keyboard/btn_middle/reset" BEL
+        "g_memory/keyboard/btn_middle/Ol" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_0" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_15" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_14" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_12" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_11" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_13" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_9" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_8" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_10" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_6" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_5" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_7" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_4" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_3" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_1" BEL
+        "g_memory/keyboard/btn_right/counter/cnt_2" BEL
+        "g_memory/keyboard/btn_right/counter/inner_reset" BEL
+        "g_memory/keyboard/btn_right/Op" BEL
+        "g_memory/keyboard/btn_right/reset" BEL
+        "g_memory/keyboard/btn_right/Ol" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_0" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_15" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_14" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_12" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_11" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_13" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_9" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_8" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_10" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_6" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_5" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_7" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_4" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_3" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_1" BEL
+        "g_memory/keyboard/btn_left/counter/cnt_2" BEL
+        "g_memory/keyboard/btn_left/counter/inner_reset" BEL
+        "g_memory/keyboard/btn_left/Op" BEL "g_memory/keyboard/btn_left/reset"
+        BEL "g_memory/keyboard/btn_left/Ol" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_0" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_15" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_14" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_12" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_11" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_13" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_9" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_8" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_10" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_6" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_5" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_7" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_4" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_3" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_1" BEL
+        "g_memory/keyboard/btn_down/counter/cnt_2" BEL
+        "g_memory/keyboard/btn_down/counter/inner_reset" BEL
+        "g_memory/keyboard/btn_down/Op" BEL "g_memory/keyboard/btn_down/reset"
+        BEL "g_memory/keyboard/btn_down/Ol" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_0" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_15" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_14" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_12" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_11" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_13" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_9" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_8" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_10" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_6" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_5" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_7" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_4" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_3" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_1" BEL
+        "g_memory/keyboard/btn_up/counter/cnt_2" BEL
+        "g_memory/keyboard/btn_up/counter/inner_reset" BEL
+        "g_memory/keyboard/btn_up/Op" BEL "g_memory/keyboard/btn_up/reset" BEL
+        "g_memory/keyboard/btn_up/Ol" BEL "g_memory/int_ctl/Vector_2" BEL
+        "g_memory/int_ctl/Vector_1" BEL "g_memory/int_ctl/Vector_0" BEL
+        "g_memory/display/i_1" BEL "g_memory/display/i_0" BEL
+        "g_memory/display/counter/cnt_0" BEL "g_memory/display/counter/cnt_15"
+        BEL "g_memory/display/counter/cnt_13" BEL
+        "g_memory/display/counter/cnt_12" BEL
+        "g_memory/display/counter/cnt_14" BEL
+        "g_memory/display/counter/cnt_10" BEL "g_memory/display/counter/cnt_9"
+        BEL "g_memory/display/counter/cnt_11" BEL
+        "g_memory/display/counter/cnt_8" BEL "g_memory/display/counter/cnt_7"
+        BEL "g_memory/display/counter/cnt_6" BEL
+        "g_memory/display/counter/cnt_5" BEL "g_memory/display/counter/cnt_3"
+        BEL "g_memory/display/counter/cnt_2" BEL
+        "g_memory/display/counter/cnt_4" BEL "g_memory/display/counter/cnt_1"
+        BEL "g_memory/display/DSR_1" BEL "g_memory/display/DSR_2" BEL
+        "g_memory/display/DSR_0" BEL "g_memory/display/DSR_3" BEL
+        "g_memory/display/DSR_4" BEL "g_memory/display/DSR_5" BEL
+        "g_memory/display/DSR_6" BEL "g_memory/display/DSR_8" BEL
+        "g_memory/display/DSR_9" BEL "g_memory/display/DSR_7" BEL
+        "g_memory/display/DSR_10" BEL "g_memory/display/DSR_11" BEL
+        "g_memory/display/DSR_12" BEL "g_memory/display/DSR_13" BEL
+        "g_memory/display/DSR_WR" BEL "g_memory/display/DSR_14" BEL
+        "g_memory/display/DDR_WR" BEL "g_memory/display/DDR_15" BEL
+        "g_memory/display/DDR_14" BEL "g_memory/display/DDR_7" BEL
+        "g_memory/display/DDR_6" BEL "g_memory/display/DDR_5" BEL
+        "g_memory/display/DDR_4" BEL "g_memory/display/DDR_3" BEL
+        "g_memory/display/DDR_2" BEL "g_memory/display/DDR_1" BEL
+        "g_memory/display/DDR_0" BEL "g_memory/scl/counter/cnt_0" BEL
+        "g_memory/scl/counter/cnt_7" BEL "g_memory/scl/counter/cnt_6" BEL
+        "g_memory/scl/counter/cnt_8" BEL "g_memory/scl/counter/cnt_5" BEL
+        "g_memory/scl/counter/cnt_4" BEL "g_memory/scl/counter/cnt_2" BEL
+        "g_memory/scl/counter/cnt_1" BEL "g_memory/scl/counter/cnt_3" BEL
+        "g_memory/scl/counter/inner_reset" BEL "g_memory/scl/SCL_BUS" BEL
+        "g_memory/scl/reset" BEL "g_memory/scl/SCLER_0" BEL "g_memory/scl/WR"
+        BEL "fsm/controlstore/MicroIR_49" BEL "fsm/controlstore/MicroIR_48"
+        BEL "fsm/controlstore/MicroIR_47" BEL "fsm/controlstore/MicroIR_46"
+        BEL "fsm/controlstore/MicroIR_45" BEL "fsm/controlstore/MicroIR_44"
+        BEL "fsm/controlstore/MicroIR_43" BEL "fsm/controlstore/MicroIR_42"
+        BEL "fsm/controlstore/MicroIR_41" BEL "fsm/controlstore/MicroIR_40"
+        BEL "fsm/controlstore/MicroIR_39" BEL "fsm/controlstore/MicroIR_38"
+        BEL "fsm/controlstore/MicroIR_37" BEL "fsm/controlstore/MicroIR_36"
+        BEL "fsm/controlstore/MicroIR_35" BEL "fsm/controlstore/MicroIR_34"
+        BEL "fsm/controlstore/MicroIR_33" BEL "fsm/controlstore/MicroIR_32"
+        BEL "fsm/controlstore/MicroIR_31" BEL "fsm/controlstore/MicroIR_30"
+        BEL "fsm/controlstore/MicroIR_29" BEL "fsm/controlstore/MicroIR_28"
+        BEL "fsm/controlstore/MicroIR_27" BEL "fsm/controlstore/MicroIR_26"
+        BEL "fsm/controlstore/MicroIR_25" BEL "fsm/controlstore/MicroIR_24"
+        BEL "fsm/controlstore/MicroIR_23" BEL "fsm/controlstore/MicroIR_22"
+        BEL "fsm/controlstore/MicroIR_21" BEL "fsm/controlstore/MicroIR_20"
+        BEL "fsm/controlstore/MicroIR_19" BEL "fsm/controlstore/MicroIR_18"
+        BEL "fsm/controlstore/MicroIR_17" BEL "fsm/controlstore/MicroIR_16"
+        BEL "fsm/controlstore/MicroIR_15" BEL "fsm/controlstore/MicroIR_14"
+        BEL "fsm/controlstore/MicroIR_13" BEL "fsm/controlstore/MicroIR_12"
+        BEL "fsm/controlstore/MicroIR_11" BEL "fsm/controlstore/MicroIR_10"
+        BEL "fsm/controlstore/MicroIR_9" BEL "fsm/controlstore/MicroIR_8" BEL
+        "fsm/controlstore/MicroIR_7" BEL "fsm/controlstore/MicroIR_6" BEL
+        "fsm/controlstore/MicroIR_5" BEL "fsm/controlstore/MicroIR_4" BEL
+        "fsm/controlstore/MicroIR_3" BEL "fsm/controlstore/MicroIR_2" BEL
+        "fsm/controlstore/MicroIR_1" BEL "g_memory/R" BEL "g_memory/readed"
+        BEL "g_memory/sda/WR" BEL "g_memory/keyboard/KBSR_15" BEL
+        "g_memory/display/DSR_15" BEL "fsm/controlstore/MicroIR_24_1" BEL
+        "fsm/controlstore/MicroIR_22_1" BEL "fsm/controlstore/MicroIR_27_1"
+        BEL "cpu/IR_5_1" BEL "cpu/IR_5_2" BEL "clk_BUFGP/BUFG" PIN
+        "g_memory/memory/Mram_RAM32_pins<14>" PIN
+        "g_memory/memory/Mram_RAM31_pins<14>" PIN
+        "g_memory/memory/Mram_RAM30_pins<14>" PIN
+        "g_memory/memory/Mram_RAM29_pins<14>" PIN
+        "g_memory/memory/Mram_RAM28_pins<14>" PIN
+        "g_memory/memory/Mram_RAM27_pins<14>" PIN
+        "g_memory/memory/Mram_RAM26_pins<14>" PIN
+        "g_memory/memory/Mram_RAM25_pins<14>" PIN
+        "g_memory/memory/Mram_RAM24_pins<14>" PIN
+        "g_memory/memory/Mram_RAM23_pins<14>" PIN
+        "g_memory/memory/Mram_RAM22_pins<14>" PIN
+        "g_memory/memory/Mram_RAM21_pins<14>" PIN
+        "g_memory/memory/Mram_RAM20_pins<14>" PIN
+        "g_memory/memory/Mram_RAM19_pins<14>" PIN
+        "g_memory/memory/Mram_RAM18_pins<14>" PIN
+        "g_memory/memory/Mram_RAM17_pins<14>" PIN
+        "g_memory/memory/Mram_RAM16_pins<14>" PIN
+        "g_memory/memory/Mram_RAM15_pins<14>" PIN
+        "g_memory/memory/Mram_RAM14_pins<14>" PIN
+        "g_memory/memory/Mram_RAM13_pins<14>" PIN
+        "g_memory/memory/Mram_RAM12_pins<14>" PIN
+        "g_memory/memory/Mram_RAM11_pins<14>" PIN
+        "g_memory/memory/Mram_RAM10_pins<14>" PIN
+        "g_memory/memory/Mram_RAM9_pins<14>" PIN
+        "g_memory/memory/Mram_RAM8_pins<14>" PIN
+        "g_memory/memory/Mram_RAM7_pins<14>" PIN
+        "g_memory/memory/Mram_RAM6_pins<14>" PIN
+        "g_memory/memory/Mram_RAM5_pins<14>" PIN
+        "g_memory/memory/Mram_RAM4_pins<14>" PIN
+        "g_memory/memory/Mram_RAM3_pins<14>" PIN
+        "g_memory/memory/Mram_RAM2_pins<14>" PIN
+        "g_memory/memory/Mram_RAM1_pins<14>" BEL
+        "cpu/regfile/Mram_REGFILE131/DP" BEL "cpu/regfile/Mram_REGFILE131/SP"
+        BEL "cpu/regfile/Mram_REGFILE132/DP" BEL
+        "cpu/regfile/Mram_REGFILE132/SP" BEL "cpu/regfile/Mram_REGFILE133/DP"
+        BEL "cpu/regfile/Mram_REGFILE133/SP" BEL
+        "cpu/regfile/Mram_REGFILE134/DP" BEL "cpu/regfile/Mram_REGFILE134/SP"
+        BEL "cpu/regfile/Mram_REGFILE31/DP" BEL
+        "cpu/regfile/Mram_REGFILE31/SP" BEL "cpu/regfile/Mram_REGFILE32/DP"
+        BEL "cpu/regfile/Mram_REGFILE32/SP" BEL
+        "cpu/regfile/Mram_REGFILE33/DP" BEL "cpu/regfile/Mram_REGFILE33/SP"
+        BEL "cpu/regfile/Mram_REGFILE34/DP" BEL
+        "cpu/regfile/Mram_REGFILE34/SP" BEL "g_memory/display/Mram_SEGREG2/DP"
+        BEL "g_memory/display/Mram_SEGREG2/SP" BEL
+        "cpu/regfile/Mram_REGFILE1_RAMA_D1" BEL
+        "cpu/regfile/Mram_REGFILE1_RAMA" BEL
+        "cpu/regfile/Mram_REGFILE1_RAMB_D1" BEL
+        "cpu/regfile/Mram_REGFILE1_RAMB" BEL
+        "cpu/regfile/Mram_REGFILE1_RAMC_D1" BEL
+        "cpu/regfile/Mram_REGFILE1_RAMC" BEL
+        "cpu/regfile/Mram_REGFILE1_RAMD_D1" BEL
+        "cpu/regfile/Mram_REGFILE1_RAMD" BEL
+        "cpu/regfile/Mram_REGFILE11_RAMA_D1" BEL
+        "cpu/regfile/Mram_REGFILE11_RAMA" BEL
+        "cpu/regfile/Mram_REGFILE11_RAMB_D1" BEL
+        "cpu/regfile/Mram_REGFILE11_RAMB" BEL
+        "cpu/regfile/Mram_REGFILE11_RAMC_D1" BEL
+        "cpu/regfile/Mram_REGFILE11_RAMC" BEL
+        "cpu/regfile/Mram_REGFILE11_RAMD_D1" BEL
+        "cpu/regfile/Mram_REGFILE11_RAMD" BEL
+        "cpu/regfile/Mram_REGFILE12_RAMA_D1" BEL
+        "cpu/regfile/Mram_REGFILE12_RAMA" BEL
+        "cpu/regfile/Mram_REGFILE12_RAMB_D1" BEL
+        "cpu/regfile/Mram_REGFILE12_RAMB" BEL
+        "cpu/regfile/Mram_REGFILE12_RAMC_D1" BEL
+        "cpu/regfile/Mram_REGFILE12_RAMC" BEL
+        "cpu/regfile/Mram_REGFILE12_RAMD_D1" BEL
+        "cpu/regfile/Mram_REGFILE12_RAMD" BEL
+        "cpu/regfile/Mram_REGFILE2_RAMA_D1" BEL
+        "cpu/regfile/Mram_REGFILE2_RAMA" BEL
+        "cpu/regfile/Mram_REGFILE2_RAMB_D1" BEL
+        "cpu/regfile/Mram_REGFILE2_RAMB" BEL
+        "cpu/regfile/Mram_REGFILE2_RAMC_D1" BEL
+        "cpu/regfile/Mram_REGFILE2_RAMC" BEL
+        "cpu/regfile/Mram_REGFILE2_RAMD_D1" BEL
+        "cpu/regfile/Mram_REGFILE2_RAMD" BEL
+        "g_memory/display/Mram_SEGREG1_RAMA_D1" BEL
+        "g_memory/display/Mram_SEGREG1_RAMA" BEL
+        "g_memory/display/Mram_SEGREG1_RAMB_D1" BEL
+        "g_memory/display/Mram_SEGREG1_RAMB" BEL
+        "g_memory/display/Mram_SEGREG1_RAMC_D1" BEL
+        "g_memory/display/Mram_SEGREG1_RAMC" BEL
+        "g_memory/display/Mram_SEGREG1_RAMD_D1" BEL
+        "g_memory/display/Mram_SEGREG1_RAMD";
+TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_pin" 100 MHz HIGH 50%;
+SCHEMATIC END;
+

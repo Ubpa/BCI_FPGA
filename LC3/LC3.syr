@@ -1,0 +1,1021 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Reading design: LC3.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "LC3.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "LC3"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : LC3
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v" into library work
+Parsing module <COUNTER>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" into library work
+Parsing module <BTN_I>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SWITCH.v" into library work
+Parsing module <SWITCH>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v" into library work
+Parsing module <SDA>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" into library work
+Parsing module <SCL>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\REGFILE.v" into library work
+Parsing module <REGFILE>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\MICROSEQUENCER.v" into library work
+Parsing module <MICROSEQUENCER>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\MEMORY.v" into library work
+Parsing module <MEMORY>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\KEYBOARD.v" into library work
+Parsing module <KEYBOARD>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\INT_CTL.v" into library work
+Parsing module <INT_CTL>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" into library work
+Parsing module <DISIPLAY>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CONTROLSTORE.v" into library work
+Parsing module <CONTROLSTORE>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ALU.v" into library work
+Parsing module <ALU>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v" into library work
+Parsing module <ADDR_CTL_LOGIC>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\G_MEMORY.v" into library work
+Parsing module <G_MEMORY>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\FSM.v" into library work
+Parsing module <FSM>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v" into library work
+Parsing module <CPU>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\LC3.v" into library work
+Parsing module <LC3>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <LC3>.
+
+Elaborating module <CPU>.
+
+Elaborating module <ALU>.
+
+Elaborating module <REGFILE>.
+WARNING:HDLCompiler:634 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v" Line 37: Net <PSR[14]> does not have a driver.
+
+Elaborating module <G_MEMORY>.
+
+Elaborating module <ADDR_CTL_LOGIC>.
+
+Elaborating module <MEMORY>.
+Reading initialization file \"MEMORY_INIT.v\".
+
+Elaborating module <KEYBOARD>.
+
+Elaborating module <BTN_I>.
+
+Elaborating module <COUNTER>.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v" Line 41: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" Line 41: Assignment to cnt ignored, since the identifier is never used
+
+Elaborating module <DISIPLAY>.
+Reading initialization file \"segOfASCII.v\".
+WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 42: Assignment to cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 90: Result of 3-bit expression is truncated to fit in 2-bit target.
+
+Elaborating module <SWITCH>.
+
+Elaborating module <SDA>.
+
+Elaborating module <SCL>.
+WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to cnt ignored, since the identifier is never used
+
+Elaborating module <INT_CTL>.
+
+Elaborating module <FSM>.
+
+Elaborating module <CONTROLSTORE>.
+Reading initialization file \"MicroI_ROM.v\".
+
+Elaborating module <MICROSEQUENCER>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <LC3>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\LC3.v".
+    Summary:
+	no macro.
+Unit <LC3> synthesized.
+
+Synthesizing Unit <CPU>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v".
+WARNING:Xst:2935 - Signal 'PSR<14:11>', unconnected in block 'CPU', is tied to its initial value (0000).
+WARNING:Xst:2935 - Signal 'PSR<7:3>', unconnected in block 'CPU', is tied to its initial value (00000).
+    Found 16-bit register for signal <PC>.
+    Found 1-bit register for signal <PSR<15>>.
+    Found 1-bit register for signal <PSR<10>>.
+    Found 1-bit register for signal <PSR<9>>.
+    Found 1-bit register for signal <PSR<8>>.
+    Found 1-bit register for signal <PSR<2>>.
+    Found 1-bit register for signal <PSR<1>>.
+    Found 1-bit register for signal <PSR<0>>.
+    Found 1-bit register for signal <BEN>.
+    Found 16-bit register for signal <Saved_SSP>.
+    Found 16-bit register for signal <Saved_USP>.
+    Found 16-bit register for signal <IR>.
+    Found 16-bit subtractor for signal <SR1OUT[15]_GND_2_o_sub_47_OUT> created at line 109.
+    Found 16-bit subtractor for signal <PC[15]_GND_2_o_sub_52_OUT> created at line 115.
+    Found 16-bit adder for signal <ADDER> created at line 61.
+    Found 16-bit adder for signal <PC[15]_GND_2_o_add_12_OUT> created at line 63.
+    Found 16-bit adder for signal <SR1OUT[15]_GND_2_o_add_44_OUT> created at line 108.
+    Found 1-bit 4-to-1 multiplexer for signal <IR[10]_IR[5]_MUX_24_o> created at line 58.
+    Found 1-bit 4-to-1 multiplexer for signal <IR[9]_IR[5]_MUX_30_o> created at line 58.
+    Found 16-bit 4-to-1 multiplexer for signal <SPMUX_OUT> created at line 39.
+    Found 1-bit tristate buffer for signal <BUS<15>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<14>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<13>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<12>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<11>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<10>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<9>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<8>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<7>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<6>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<5>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<4>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<3>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<2>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<1>> created at line 113
+    Found 1-bit tristate buffer for signal <BUS<0>> created at line 113
+    Found 3-bit comparator greater for signal <INT> created at line 81
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  72 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred  36 Multiplexer(s).
+	inferred  16 Tristate(s).
+Unit <CPU> synthesized.
+
+Synthesizing Unit <ALU>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ALU.v".
+    Found 16-bit adder for signal <OPA[15]_OPB[15]_add_1_OUT> created at line 26.
+    Found 16-bit 4-to-1 multiplexer for signal <out> created at line 24.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   1 Multiplexer(s).
+Unit <ALU> synthesized.
+
+Synthesizing Unit <REGFILE>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\REGFILE.v".
+    Found 8x16-bit dual-port RAM <Mram_REGFILE> for signal <REGFILE>.
+    Summary:
+	inferred   2 RAM(s).
+Unit <REGFILE> synthesized.
+
+Synthesizing Unit <G_MEMORY>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\G_MEMORY.v".
+    Found 1-bit register for signal <R>.
+    Found 16-bit register for signal <MDR>.
+    Found 1-bit register for signal <readed>.
+    Found 16-bit register for signal <MAR>.
+    Found 16-bit 12-to-1 multiplexer for signal <Z_5_o_dout[15]_mux_24_OUT> created at line 55.
+    Found 1-bit tristate buffer for signal <BUS<15>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<14>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<13>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<12>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<11>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<10>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<9>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<8>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<7>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<6>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<5>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<4>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<3>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<2>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<1>> created at line 41
+    Found 1-bit tristate buffer for signal <BUS<0>> created at line 41
+    Found 1-bit tristate buffer for signal <INMUX<15>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<14>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<13>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<12>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<11>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<10>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<9>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<8>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<7>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<6>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<5>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<4>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<3>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<2>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<1>> created at line 55
+    Found 1-bit tristate buffer for signal <INMUX<0>> created at line 55
+    Summary:
+	inferred  34 D-type flip-flop(s).
+	inferred   7 Multiplexer(s).
+	inferred  32 Tristate(s).
+Unit <G_MEMORY> synthesized.
+
+Synthesizing Unit <ADDR_CTL_LOGIC>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v".
+    Summary:
+	inferred   8 Multiplexer(s).
+Unit <ADDR_CTL_LOGIC> synthesized.
+
+Synthesizing Unit <MEMORY>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\MEMORY.v".
+WARNING:Xst:647 - Input <MAR<15:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 32768x16-bit single-port RAM <Mram_RAM> for signal <RAM>.
+    Found 1-bit register for signal <R>.
+    Found 16-bit register for signal <dout>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  17 D-type flip-flop(s).
+Unit <MEMORY> synthesized.
+
+Synthesizing Unit <KEYBOARD>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\KEYBOARD.v".
+WARNING:Xst:647 - Input <MDR<15:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <KBSR<14>>.
+    Found 1-bit register for signal <KBSR<13>>.
+    Found 1-bit register for signal <KBSR<12>>.
+    Found 1-bit register for signal <KBSR<11>>.
+    Found 1-bit register for signal <KBSR<10>>.
+    Found 1-bit register for signal <KBSR<9>>.
+    Found 1-bit register for signal <KBSR<8>>.
+    Found 1-bit register for signal <KBSR<7>>.
+    Found 1-bit register for signal <KBSR<6>>.
+    Found 1-bit register for signal <KBSR<5>>.
+    Found 1-bit register for signal <KBSR<4>>.
+    Found 1-bit register for signal <KBSR<3>>.
+    Found 1-bit register for signal <KBSR<2>>.
+    Found 1-bit register for signal <KBSR<1>>.
+    Found 1-bit register for signal <KBSR<0>>.
+    Found 1-bit register for signal <WR>.
+    Found 1-bit register for signal <KBDR<15>>.
+    Found 1-bit register for signal <KBDR<14>>.
+    Found 1-bit register for signal <KBDR<13>>.
+    Found 1-bit register for signal <KBDR<12>>.
+    Found 1-bit register for signal <KBDR<11>>.
+    Found 1-bit register for signal <KBDR<10>>.
+    Found 1-bit register for signal <KBDR<9>>.
+    Found 1-bit register for signal <KBDR<8>>.
+    Found 1-bit register for signal <KBDR<7>>.
+    Found 1-bit register for signal <KBDR<6>>.
+    Found 1-bit register for signal <KBDR<5>>.
+    Found 1-bit register for signal <KBDR<4>>.
+    Found 1-bit register for signal <KBDR<3>>.
+    Found 1-bit register for signal <KBDR<2>>.
+    Found 1-bit register for signal <KBDR<1>>.
+    Found 1-bit register for signal <KBDR<0>>.
+    Found 1-bit register for signal <KBSR<15>>.
+    Summary:
+	inferred  33 D-type flip-flop(s).
+Unit <KEYBOARD> synthesized.
+
+Synthesizing Unit <BTN_I>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v".
+        times = 16'b1111111111111111
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" line 37: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
+    Found 1-bit register for signal <Op>.
+    Found 1-bit register for signal <Ol>.
+    Found 1-bit register for signal <reset>.
+    Found 1-bit comparator equal for signal <in_Ol_equal_2_o> created at line 46
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <BTN_I> synthesized.
+
+Synthesizing Unit <COUNTER>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v".
+    Found 16-bit register for signal <cnt>.
+    Found 1-bit register for signal <inner_reset>.
+    Found 17-bit subtractor for signal <GND_58_o_GND_58_o_sub_5_OUT> created at line 40.
+    Found 16-bit adder for signal <cnt[15]_GND_58_o_add_6_OUT> created at line 41.
+    Found 32-bit comparator equal for signal <c> created at line 33
+    Found 1-bit comparator equal for signal <n0001> created at line 36
+    Found 32-bit comparator greater for signal <GND_58_o_GND_58_o_LessThan_6_o> created at line 40
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   3 Comparator(s).
+Unit <COUNTER> synthesized.
+
+Synthesizing Unit <DISIPLAY>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v".
+        dT = 16'b1111111111111111
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" line 42: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
+WARNING:Xst:2999 - Signal 'segOfASCII', unconnected in block 'DISIPLAY', is tied to its initial value.
+WARNING:Xst:2999 - Signal 'ANREG', unconnected in block 'DISIPLAY', is tied to its initial value.
+    Found 256x7-bit single-port Read Only RAM <Mram_segOfASCII> for signal <segOfASCII>.
+    Found 4x7-bit dual-port RAM <Mram_SEGREG> for signal <SEGREG>.
+    Found 4x4-bit single-port Read Only RAM <Mram_ANREG> for signal <ANREG>.
+    Found 1-bit register for signal <DSR<15>>.
+    Found 1-bit register for signal <DDR_WR>.
+    Found 1-bit register for signal <DSR<14>>.
+    Found 1-bit register for signal <DSR<13>>.
+    Found 1-bit register for signal <DSR<12>>.
+    Found 1-bit register for signal <DSR<11>>.
+    Found 1-bit register for signal <DSR<10>>.
+    Found 1-bit register for signal <DSR<9>>.
+    Found 1-bit register for signal <DSR<8>>.
+    Found 1-bit register for signal <DSR<7>>.
+    Found 1-bit register for signal <DSR<6>>.
+    Found 1-bit register for signal <DSR<5>>.
+    Found 1-bit register for signal <DSR<4>>.
+    Found 1-bit register for signal <DSR<3>>.
+    Found 1-bit register for signal <DSR<2>>.
+    Found 1-bit register for signal <DSR<1>>.
+    Found 1-bit register for signal <DSR<0>>.
+    Found 1-bit register for signal <DSR_WR>.
+    Found 2-bit register for signal <i>.
+    Found 16-bit register for signal <DDR>.
+    Found 2-bit adder for signal <i[1]_GND_59_o_add_12_OUT> created at line 90.
+    Summary:
+	inferred   3 RAM(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  36 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <DISIPLAY> synthesized.
+
+Synthesizing Unit <SWITCH>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SWITCH.v".
+    Found 8-bit register for signal <SWR>.
+    WARNING:Xst:2404 -  FFs/Latches <SWR<15:8>> (without init value) have a constant value of 0 in block <SWITCH>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <SWITCH> synthesized.
+
+Synthesizing Unit <SDA>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v".
+WARNING:Xst:647 - Input <MDR<15:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:2935 - Signal 'SDAER<15:1>', unconnected in block 'SDA', is tied to its initial value (000000000000000).
+WARNING:Xst:2935 - Signal 'SDADR<15:1>', unconnected in block 'SDA', is tied to its initial value (000000000000000).
+    Found 1-bit register for signal <WR>.
+    Found 1-bit register for signal <SDAER<0>>.
+    Found 1-bit register for signal <SDADR<0>>.
+    Found 1-bit tristate buffer for signal <SDA_BUS> created at line 28
+    Summary:
+	inferred   3 D-type flip-flop(s).
+	inferred   1 Tristate(s).
+Unit <SDA> synthesized.
+
+Synthesizing Unit <SCL>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v".
+        times = 16'b0000000111110100
+WARNING:Xst:647 - Input <MDR<15:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" line 33: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
+WARNING:Xst:2935 - Signal 'SCLER<15:1>', unconnected in block 'SCL', is tied to its initial value (000000000000000).
+    Found 1-bit register for signal <WR>.
+    Found 1-bit register for signal <reset>.
+    Found 1-bit register for signal <SCL_BUS>.
+    Found 1-bit register for signal <SCLER<0>>.
+    Summary:
+	inferred   4 D-type flip-flop(s).
+Unit <SCL> synthesized.
+
+Synthesizing Unit <INT_CTL>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\INT_CTL.v".
+WARNING:Xst:647 - Input <KBSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <DSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <Vector>.
+    Found 1-bit tristate buffer for signal <INTV<7>> created at line 33
+    Found 1-bit tristate buffer for signal <INTV<6>> created at line 33
+    Found 1-bit tristate buffer for signal <INTV<5>> created at line 33
+    Found 1-bit tristate buffer for signal <INTV<4>> created at line 33
+    Found 1-bit tristate buffer for signal <INTV<3>> created at line 33
+    Found 1-bit tristate buffer for signal <INTV<2>> created at line 33
+    Found 1-bit tristate buffer for signal <INTV<1>> created at line 33
+    Found 1-bit tristate buffer for signal <INTV<0>> created at line 33
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   8 Tristate(s).
+Unit <INT_CTL> synthesized.
+
+Synthesizing Unit <FSM>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\FSM.v".
+    Summary:
+	no macro.
+Unit <FSM> synthesized.
+
+Synthesizing Unit <CONTROLSTORE>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CONTROLSTORE.v".
+WARNING:Xst:2999 - Signal 'MicroI_ROM', unconnected in block 'CONTROLSTORE', is tied to its initial value.
+    Found 64x50-bit single-port Read Only RAM <Mram_MicroI_ROM> for signal <MicroI_ROM>.
+    Found 50-bit register for signal <MicroIR>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  50 D-type flip-flop(s).
+Unit <CONTROLSTORE> synthesized.
+
+Synthesizing Unit <MICROSEQUENCER>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\MICROSEQUENCER.v".
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <MICROSEQUENCER> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 256x7-bit single-port Read Only RAM                   : 1
+ 32768x16-bit single-port RAM                          : 1
+ 4x4-bit single-port Read Only RAM                     : 1
+ 4x7-bit dual-port RAM                                 : 1
+ 64x50-bit single-port Read Only RAM                   : 1
+ 8x16-bit dual-port RAM                                : 2
+# Adders/Subtractors                                   : 19
+ 16-bit adder                                          : 10
+ 16-bit addsub                                         : 1
+ 17-bit subtractor                                     : 7
+ 2-bit adder                                           : 1
+# Registers                                            : 106
+ 1-bit register                                        : 85
+ 16-bit register                                       : 15
+ 2-bit register                                        : 1
+ 3-bit register                                        : 2
+ 50-bit register                                       : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 27
+ 1-bit comparator equal                                : 12
+ 3-bit comparator greater                              : 1
+ 32-bit comparator equal                               : 7
+ 32-bit comparator greater                             : 7
+# Multiplexers                                         : 57
+ 1-bit 2-to-1 multiplexer                              : 22
+ 1-bit 4-to-1 multiplexer                              : 2
+ 16-bit 12-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 19
+ 16-bit 4-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 4-bit 2-to-1 multiplexer                              : 8
+ 6-bit 2-to-1 multiplexer                              : 1
+# Tristates                                            : 57
+ 1-bit tristate buffer                                 : 57
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:1293 - FF/Latch <KBDR_15> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_14> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_13> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_12> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_11> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_10> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_9> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_8> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_7> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_6> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <KBDR_5> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <inner_reset> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <DDR_8> of sequential type is unconnected in block <display>.
+WARNING:Xst:2677 - Node <DDR_9> of sequential type is unconnected in block <display>.
+WARNING:Xst:2677 - Node <DDR_10> of sequential type is unconnected in block <display>.
+WARNING:Xst:2677 - Node <DDR_11> of sequential type is unconnected in block <display>.
+WARNING:Xst:2677 - Node <DDR_12> of sequential type is unconnected in block <display>.
+WARNING:Xst:2677 - Node <DDR_13> of sequential type is unconnected in block <display>.
+
+Synthesizing (advanced) Unit <CONTROLSTORE>.
+INFO:Xst:3231 - The small RAM <Mram_MicroI_ROM> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 64-word x 50-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <Addr_next_state> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <CONTROLSTORE> synthesized (advanced).
+
+Synthesizing (advanced) Unit <COUNTER>.
+The following registers are absorbed into counter <cnt>: 1 register on signal <cnt>.
+Unit <COUNTER> synthesized (advanced).
+
+Synthesizing (advanced) Unit <DISIPLAY>.
+The following registers are absorbed into counter <i>: 1 register on signal <i>.
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <DDR> prevents it from being combined with the RAM <Mram_SEGREG> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 7-bit                      |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to internal node          | high     |
+    |     addrA          | connected to signal <DDR>           |          |
+    |     diA            | connected to signal <_n0065>        |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 4-word x 7-bit                      |          |
+    |     addrB          | connected to signal <i>             |          |
+    |     doB            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3212 - HDL ADVISOR - Asynchronous or synchronous initialization of the register <DDR> prevents it from being combined with the RAM <Mram_segOfASCII> for implementation as read-only block RAM.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 256-word x 7-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <DDR>           |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_ANREG> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 4-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <i>             |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_segOfASCII> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+Unit <DISIPLAY> synthesized (advanced).
+
+Synthesizing (advanced) Unit <G_MEMORY>.
+INFO:Xst:3226 - The RAM <memory/Mram_RAM> will be implemented as a BLOCK RAM, absorbing the following register(s): <memory/dout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 16-bit                 |          |
+    |     mode           | no-change                           |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <MEM_EN>        | high     |
+    |     weA            | connected to signal <R_W>           | high     |
+    |     addrA          | connected to signal <MAR<14:0>>     |          |
+    |     diA            | connected to signal <MDR>           |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <G_MEMORY> synthesized (advanced).
+
+Synthesizing (advanced) Unit <REGFILE>.
+INFO:Xst:3231 - The small RAM <Mram_REGFILE1> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <LD_REG>        | high     |
+    |     addrA          | connected to signal <DR>            |          |
+    |     diA            | connected to signal <BUS>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     addrB          | connected to signal <SR2>           |          |
+    |     doB            | connected to signal <SR2OUT>        |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_REGFILE> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <LD_REG>        | high     |
+    |     addrA          | connected to signal <DR>            |          |
+    |     diA            | connected to signal <BUS>           |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 8-word x 16-bit                     |          |
+    |     addrB          | connected to signal <SR1>           |          |
+    |     doB            | connected to signal <SR1OUT>        |          |
+    -----------------------------------------------------------------------
+Unit <REGFILE> synthesized (advanced).
+WARNING:Xst:2677 - Node <DDR_8> of sequential type is unconnected in block <DISIPLAY>.
+WARNING:Xst:2677 - Node <DDR_9> of sequential type is unconnected in block <DISIPLAY>.
+WARNING:Xst:2677 - Node <DDR_10> of sequential type is unconnected in block <DISIPLAY>.
+WARNING:Xst:2677 - Node <DDR_11> of sequential type is unconnected in block <DISIPLAY>.
+WARNING:Xst:2677 - Node <DDR_12> of sequential type is unconnected in block <DISIPLAY>.
+WARNING:Xst:2677 - Node <DDR_13> of sequential type is unconnected in block <DISIPLAY>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 7
+ 256x7-bit single-port distributed Read Only RAM       : 1
+ 32768x16-bit single-port block RAM                    : 1
+ 4x4-bit single-port distributed Read Only RAM         : 1
+ 4x7-bit dual-port distributed RAM                     : 1
+ 64x50-bit single-port distributed Read Only RAM       : 1
+ 8x16-bit dual-port distributed RAM                    : 2
+# Adders/Subtractors                                   : 11
+ 16-bit adder                                          : 3
+ 16-bit addsub                                         : 1
+ 17-bit subtractor                                     : 7
+# Counters                                             : 8
+ 16-bit up counter                                     : 7
+ 2-bit up counter                                      : 1
+# Registers                                            : 263
+ Flip-Flops                                            : 263
+# Comparators                                          : 27
+ 1-bit comparator equal                                : 12
+ 3-bit comparator greater                              : 1
+ 32-bit comparator equal                               : 7
+ 32-bit comparator greater                             : 7
+# Multiplexers                                         : 57
+ 1-bit 2-to-1 multiplexer                              : 22
+ 1-bit 4-to-1 multiplexer                              : 2
+ 16-bit 12-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 19
+ 16-bit 4-to-1 multiplexer                             : 1
+ 3-bit 2-to-1 multiplexer                              : 3
+ 4-bit 2-to-1 multiplexer                              : 8
+ 6-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1293 - FF/Latch <KBDR_15> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_14> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_13> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_10> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_12> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_11> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_9> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_8> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_5> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_7> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_6> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter/inner_reset> has a constant value of 0 in block <DISIPLAY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <MicroIR_0> (without init value) has a constant value of 0 in block <CONTROLSTORE>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2042 - Unit LC3: 16 internal tristates are replaced by logic (pull-up yes): g_memory/INMUX<0>, g_memory/INMUX<10>, g_memory/INMUX<11>, g_memory/INMUX<12>, g_memory/INMUX<13>, g_memory/INMUX<14>, g_memory/INMUX<15>, g_memory/INMUX<1>, g_memory/INMUX<2>, g_memory/INMUX<3>, g_memory/INMUX<4>, g_memory/INMUX<5>, g_memory/INMUX<6>, g_memory/INMUX<7>, g_memory/INMUX<8>, g_memory/INMUX<9>.
+WARNING:Xst:2040 - Unit LC3: 16 multi-source signals are replaced by logic (pull-up yes): BUS<0>, BUS<10>, BUS<11>, BUS<12>, BUS<13>, BUS<14>, BUS<15>, BUS<1>, BUS<2>, BUS<3>, BUS<4>, BUS<5>, BUS<6>, BUS<7>, BUS<8>, BUS<9>.
+WARNING:Xst:2042 - Unit CPU: 16 internal tristates are replaced by logic (pull-up yes): BUS<0>, BUS<10>, BUS<11>, BUS<12>, BUS<13>, BUS<14>, BUS<15>, BUS<1>, BUS<2>, BUS<3>, BUS<4>, BUS<5>, BUS<6>, BUS<7>, BUS<8>, BUS<9>.
+WARNING:Xst:2042 - Unit INT_CTL: 8 internal tristates are replaced by logic (pull-up yes): INTV<0>, INTV<1>, INTV<2>, INTV<3>, INTV<4>, INTV<5>, INTV<6>, INTV<7>.
+
+Optimizing unit <SWITCH> ...
+
+Optimizing unit <LC3> ...
+
+Optimizing unit <KEYBOARD> ...
+
+Optimizing unit <BTN_I> ...
+
+Optimizing unit <INT_CTL> ...
+INFO:Xst:2261 - The FF/Latch <Vector_2> in Unit <INT_CTL> is equivalent to the following 5 FFs/Latches, which will be removed : <Vector_3> <Vector_4> <Vector_5> <Vector_6> <Vector_7> 
+
+Optimizing unit <DISIPLAY> ...
+
+Optimizing unit <SCL> ...
+
+Optimizing unit <ALU> ...
+
+Optimizing unit <CONTROLSTORE> ...
+WARNING:Xst:1293 - FF/Latch <g_memory/scl/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_11> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_13> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_10> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_9> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 7.
+FlipFlop cpu/IR_5 has been replicated 2 time(s)
+FlipFlop fsm/controlstore/MicroIR_22 has been replicated 1 time(s)
+FlipFlop fsm/controlstore/MicroIR_24 has been replicated 1 time(s)
+FlipFlop fsm/controlstore/MicroIR_27 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 358
+ Flip-Flops                                            : 358
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : LC3.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 986
+#      GND                         : 1
+#      INV                         : 29
+#      LUT1                        : 113
+#      LUT2                        : 43
+#      LUT3                        : 74
+#      LUT4                        : 61
+#      LUT5                        : 103
+#      LUT6                        : 222
+#      MUXCY                       : 158
+#      MUXF7                       : 12
+#      VCC                         : 1
+#      XORCY                       : 169
+# FlipFlops/Latches                : 358
+#      FD                          : 66
+#      FDE                         : 159
+#      FDR                         : 109
+#      FDRE                        : 23
+#      FDSE                        : 1
+# RAMS                             : 46
+#      RAM16X1D                    : 9
+#      RAM32M                      : 5
+#      RAMB16BWER                  : 32
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 42
+#      IBUF                        : 13
+#      IOBUF                       : 1
+#      OBUF                        : 28
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             358  out of  18224     1%  
+ Number of Slice LUTs:                  683  out of   9112     7%  
+    Number used as Logic:               645  out of   9112     7%  
+    Number used as Memory:               38  out of   2176     1%  
+       Number used as RAM:               38
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    781
+   Number with an unused Flip Flop:     423  out of    781    54%  
+   Number with an unused LUT:            98  out of    781    12%  
+   Number of fully used LUT-FF pairs:   260  out of    781    33%  
+   Number of unique control sets:        59
+
+IO Utilization: 
+ Number of IOs:                          43
+ Number of bonded IOBs:                  43  out of    232    18%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               32  out of     32   100%  
+    Number using Block RAM only:         32
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 404   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.257ns (Maximum Frequency: 121.114MHz)
+   Minimum input arrival time before clock: 3.364ns
+   Maximum output required time after clock: 4.761ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.257ns (frequency: 121.114MHz)
+  Total number of paths / destination ports: 280715 / 1413
+-------------------------------------------------------------------------
+Delay:               8.257ns (Levels of Logic = 10)
+  Source:            fsm/controlstore/MicroIR_15 (FF)
+  Destination:       cpu/PSR_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: fsm/controlstore/MicroIR_15 to cpu/PSR_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               3   0.447   0.898  fsm/controlstore/MicroIR_15 (fsm/controlstore/MicroIR_15)
+     LUT4:I0->O           10   0.203   0.856  cpu/SR1<10>1 (cpu/SR1<1>)
+     RAM16X1D:DPRA1->DPO    7   0.205   0.774  cpu/regfile/Mram_REGFILE31 (cpu/SR1OUT<12>)
+     LUT4:I3->O            1   0.205   0.000  cpu/alu/Madd_OPA[15]_OPB[15]_add_1_OUT_lut<12> (cpu/alu/Madd_OPA[15]_OPB[15]_add_1_OUT_lut<12>)
+     XORCY:LI->O           1   0.136   0.580  cpu/alu/Madd_OPA[15]_OPB[15]_add_1_OUT_xor<12> (cpu/alu/OPA[15]_OPB[15]_add_1_OUT<12>)
+     LUT6:I5->O            2   0.205   0.721  cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_A86 (cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_A85)
+     LUT6:I4->O            1   0.203   0.000  cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_rs_lut<12> (cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_rs_lut<12>)
+     XORCY:LI->O           2   0.136   0.617  cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_rs_xor<12> (cpu/Z_2_o_MARMUX_OUT[15]_mux_57_OUT<12>)
+     LUT5:I4->O            7   0.205   0.774  BUS<12>LogicTrst1 (BUS<12>)
+     LUT6:I5->O            1   0.205   0.580  cpu/Mmux_PSRMUX_OUT<0>11 (cpu/Mmux_PSRMUX_OUT<0>1)
+     LUT6:I5->O            1   0.205   0.000  cpu/Mmux_PSRMUX_OUT<0>14 (cpu/PSRMUX_OUT<0>)
+     FDE:D                     0.102          cpu/PSR_0
+    ----------------------------------------
+    Total                      8.257ns (2.457ns logic, 5.800ns route)
+                                       (29.8% logic, 70.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 34 / 34
+-------------------------------------------------------------------------
+Offset:              3.364ns (Levels of Logic = 4)
+  Source:            SDA_BUS (PAD)
+  Destination:       g_memory/MDR_0 (FF)
+  Destination Clock: clk rising
+
+  Data Path: SDA_BUS to g_memory/MDR_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           1   1.222   0.808  SDA_BUS_IOBUF (N20)
+     LUT6:I3->O            1   0.205   0.000  g_memory/Mmux_Z_5_o_dout[15]_mux_24_OUT_6 (g_memory/Mmux_Z_5_o_dout[15]_mux_24_OUT_6)
+     MUXF7:I1->O           1   0.140   0.684  g_memory/Mmux_Z_5_o_dout[15]_mux_24_OUT_5_f7 (g_memory/Mmux_Z_5_o_dout[15]_mux_24_OUT_5_f7)
+     LUT5:I3->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_30_OUT1 (g_memory/MDR[15]_MDR[15]_mux_30_OUT<0>)
+     FDE:D                     0.102          g_memory/MDR_0
+    ----------------------------------------
+    Total                      3.364ns (1.872ns logic, 1.492ns route)
+                                       (55.7% logic, 44.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 21 / 14
+-------------------------------------------------------------------------
+Offset:              4.761ns (Levels of Logic = 2)
+  Source:            g_memory/display/i_0 (FF)
+  Destination:       an<3> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: g_memory/display/i_0 to an<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.447   0.961  g_memory/display/i_0 (g_memory/display/i_0)
+     LUT2:I0->O            1   0.203   0.579  g_memory/display/Mram_ANREG31 (an_3_OBUF)
+     OBUF:I->O                 2.571          an_3_OBUF (an<3>)
+    ----------------------------------------
+    Total                      4.761ns (3.221ns logic, 1.540ns route)
+                                       (67.7% logic, 32.3% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    8.257|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 20.00 secs
+Total CPU time to Xst completion: 20.03 secs
+ 
+--> 
+
+Total memory usage is 330308 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   69 (   0 filtered)
+Number of infos    :   13 (   0 filtered)
+

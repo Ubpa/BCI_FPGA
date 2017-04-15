@@ -1,0 +1,13 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	INIT_DATA               3051
+//	LOOP                    303E
+//	LOOP_END                3047
+//	ONE                     304F
+//	RD_FAIL                 3031
+//	WR_FAIL                 3015
+//	ZERO                    3050
+//	max30102_Bus_Read       301A
+//	max30102_Bus_Write      3002
+//	max30102_WR_address     304E
+//	max30102_init           3036
