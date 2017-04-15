@@ -21,13 +21,12 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "E:/CS/OSH/final_HW/fpga/LC3/test.v";
+static const char *ng0 = "E:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v";
 static int ng1[] = {0, 0};
-static int ng2[] = {1, 0};
-static unsigned int ng3[] = {1U, 1U};
-static unsigned int ng4[] = {0U, 1U};
-static unsigned int ng5[] = {1U, 0U};
-static unsigned int ng6[] = {0U, 0U};
+static unsigned int ng2[] = {1U, 1U};
+static unsigned int ng3[] = {0U, 1U};
+static unsigned int ng4[] = {1U, 0U};
+static unsigned int ng5[] = {0U, 0U};
 
 
 
@@ -139,46 +138,18 @@ static void Initial_32_2(char *t0)
 {
     char *t1;
     char *t2;
-    char *t3;
 
-LAB0:    t1 = (t0 + 4304U);
-    t2 = *((char **)t1);
-    if (t2 == 0)
-        goto LAB2;
+LAB0:    xsi_set_current_line(32, ng0);
 
-LAB3:    goto *t2;
-
-LAB2:    xsi_set_current_line(32, ng0);
-
-LAB4:    xsi_set_current_line(33, ng0);
-    t2 = ((char*)((ng1)));
-    t3 = (t0 + 2568);
-    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
-    xsi_set_current_line(35, ng0);
-    t2 = (t0 + 4112);
-    xsi_process_wait(t2, 9000000LL);
-    *((char **)t1) = &&LAB5;
+LAB2:    xsi_set_current_line(33, ng0);
+    t1 = ((char*)((ng1)));
+    t2 = (t0 + 2568);
+    xsi_vlogvar_assign_value(t2, t1, 0, 0, 1);
 
 LAB1:    return;
-LAB5:    xsi_set_current_line(37, ng0);
-    t2 = ((char*)((ng2)));
-    t3 = (t0 + 2568);
-    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
-    xsi_set_current_line(38, ng0);
-    t2 = (t0 + 4112);
-    xsi_process_wait(t2, 900000LL);
-    *((char **)t1) = &&LAB6;
-    goto LAB1;
-
-LAB6:    xsi_set_current_line(39, ng0);
-    t2 = ((char*)((ng1)));
-    t3 = (t0 + 2568);
-    xsi_vlogvar_assign_value(t3, t2, 0, 0, 1);
-    goto LAB1;
-
 }
 
-static void Always_49_3(char *t0)
+static void Always_43_3(char *t0)
 {
     char t4[8];
     char t5[8];
@@ -288,7 +259,7 @@ LAB0:    t1 = (t0 + 4552U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(49, ng0);
+LAB2:    xsi_set_current_line(43, ng0);
     t2 = (t0 + 5120);
     *((int *)t2) = 1;
     t3 = (t0 + 4584);
@@ -296,7 +267,7 @@ LAB2:    xsi_set_current_line(49, ng0);
     *((char **)t1) = &&LAB4;
 
 LAB1:    return;
-LAB4:    xsi_set_current_line(50, ng0);
+LAB4:    xsi_set_current_line(44, ng0);
     t6 = (t0 + 1048U);
     t7 = *((char **)t6);
     memset(t8, 0, 8);
@@ -359,7 +330,7 @@ LAB7:    t22 = (t5 + 4);
 
 LAB9:    t29 = (t0 + 1208U);
     t30 = *((char **)t29);
-    t29 = ((char*)((ng3)));
+    t29 = ((char*)((ng2)));
     memset(t31, 0, 8);
     if (*((unsigned int *)t30) != *((unsigned int *)t29))
         goto LAB20;
@@ -462,12 +433,12 @@ LAB23:    t40 = (t28 + 4);
     *((unsigned int *)t40) = 1;
     goto LAB24;
 
-LAB25:    t45 = ((char*)((ng4)));
+LAB25:    t45 = ((char*)((ng3)));
     goto LAB26;
 
 LAB27:    t52 = (t0 + 1208U);
     t53 = *((char **)t52);
-    t52 = ((char*)((ng4)));
+    t52 = ((char*)((ng3)));
     memset(t54, 0, 8);
     if (*((unsigned int *)t53) != *((unsigned int *)t52))
         goto LAB36;
@@ -530,7 +501,7 @@ LAB39:    t63 = (t51 + 4);
     *((unsigned int *)t63) = 1;
     goto LAB40;
 
-LAB41:    t68 = ((char*)((ng5)));
+LAB41:    t68 = ((char*)((ng4)));
     goto LAB42;
 
 LAB43:    t73 = (t0 + 1208U);
@@ -551,10 +522,10 @@ LAB52:    t89 = (t80 + 4);
     *((unsigned int *)t89) = 1;
     goto LAB53;
 
-LAB54:    t94 = ((char*)((ng6)));
+LAB54:    t94 = ((char*)((ng5)));
     goto LAB55;
 
-LAB56:    t99 = ((char*)((ng5)));
+LAB56:    t99 = ((char*)((ng4)));
     goto LAB57;
 
 LAB58:    xsi_vlog_unsigned_bit_combine(t79, 1, t94, 1, t99, 1);
@@ -565,7 +536,7 @@ LAB60:    memcpy(t79, t94, 8);
 
 }
 
-static void Cont_56_4(char *t0)
+static void Cont_50_4(char *t0)
 {
     char *t1;
     char *t2;
@@ -593,7 +564,7 @@ LAB0:    t1 = (t0 + 4800U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(56, ng0);
+LAB2:    xsi_set_current_line(50, ng0);
     t2 = (t0 + 2088);
     t3 = (t2 + 56U);
     t4 = *((char **)t3);
@@ -625,7 +596,7 @@ LAB1:    return;
 
 extern void work_m_00000000004235378997_1985558087_init()
 {
-	static char *pe[] = {(void *)Initial_29_0,(void *)Always_30_1,(void *)Initial_32_2,(void *)Always_49_3,(void *)Cont_56_4};
+	static char *pe[] = {(void *)Initial_29_0,(void *)Always_30_1,(void *)Initial_32_2,(void *)Always_43_3,(void *)Cont_50_4};
 	xsi_register_didat("work_m_00000000004235378997_1985558087", "isim/test_isim_beh.exe.sim/work/m_00000000004235378997_1985558087.didat");
 	xsi_register_executes(pe);
 }

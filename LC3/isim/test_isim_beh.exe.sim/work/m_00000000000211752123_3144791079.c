@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "E:/CS/OSH/final_HW/fpga/LC3/CONTROLSTORE.v";
+static const char *ng0 = "E:/CS/OSH/final_HW/BCI_FPGA/LC3/CONTROLSTORE.v";
 static const char *ng1 = "MicroI_ROM.v";
 static unsigned int ng2[] = {18U, 0U};
 

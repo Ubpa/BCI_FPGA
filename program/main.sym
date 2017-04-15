@@ -1,13 +1,23 @@
 //Symbol Name		Page Address
 //----------------	------------
-//	INIT_DATA               3051
-//	LOOP                    303E
-//	LOOP_END                3047
-//	ONE                     304F
-//	RD_FAIL                 3031
-//	WR_FAIL                 3015
-//	ZERO                    3050
-//	max30102_Bus_Read       301A
-//	max30102_Bus_Write      3002
-//	max30102_WR_address     304E
-//	max30102_init           3036
+//	ASCII_0                 3072
+//	DATA_addr               308F
+//	DONE_STR                3074
+//	FIFO_DATA_address       306D
+//	INIT_DATA               3079
+//	INIT_NUM_I              3078
+//	LED1I_address           306F
+//	LOOP                    305A
+//	LOOP_END                3063
+//	ONE                     3070
+//	RD_FAIL                 303A
+//	SCLER_ADDR              3073
+//	TEMP_address            306E
+//	TIME                    306B
+//	WR_FAIL                 301D
+//	ZERO                    3071
+//	max30102_Bus_Read       3022
+//	max30102_Bus_Write      300A
+//	max30102_WR_address     306C
+//	max30102_init           304E
+//	max30102_sample_Read    303F

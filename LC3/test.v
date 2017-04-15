@@ -31,13 +31,7 @@ always #0.5 clk = ~clk;
 
 initial begin
 	ack = 0;
-
-	#9000;
 	
-	ack = 1;
-	#900;
-	ack = 0;
-
 end
 
 wire SDA_BUS, SCL_BUS;
