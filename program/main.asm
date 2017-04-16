@@ -2,14 +2,35 @@
 					TRAP  x21
 					JSR   max30102_init
 					TRAP  x21
+					AND   R2, R2, #0
+main_LOOP			ADD   R2, R2, #1
+					ADD   R0, R2, #-4
+					BRp   main_LOOP_END
 					LD    R0, FIFO_RD_PTR_address
 					JSR   max30102_Bus_Read
+					TRAP  x1D
 					TRAP  x21
 					LD    R0, DATA_addr
 					JSR   max30102_sample_Read
+					LD    R1, DATA_addr
+					LDR   R0, R1, #0
+					TRAP  x1D
+					TRAP  x21
+					LDR   R0, R1, #1
+					TRAP  x1D
+					TRAP  x21
+					LDR   R0, R1, #2
+					TRAP  x1D
 					TRAP  x21
 					LD    R0, FIFO_RD_PTR_address
 					JSR   max30102_Bus_Read
+					TRAP  x1D
+					TRAP  x21
+					LD    R0, FIFO_RD_PTR_address
+					ADD   R1, R2, #0
+					JSR   max30102_Bus_Write
+					BR    main_LOOP
+main_LOOP_END       HALT
 					; LD    R0, DATA_addr
 					; JSR   max30102_sample_Read
 					; TRAP  x21
@@ -25,7 +46,7 @@
 					; LDR   R1, R2, #2
 					; LD    R0, LED1I_address
 					; JSR   max30102_Bus_Write
-                    HALT
+                    ; HALT
 max30102_Bus_Write;( R0 = (u8) Register_Address, R1 = (u8) Word_Data )
                     ADD   R6, R6, #-2
                     STR   R0, R6, #0
