@@ -5,7 +5,7 @@
 					LD    R2, DATA_addr
 					AND   R3, R3, #0
 main_LOOP			ADD   R3, R3, #1
-					ADD   R0, R3, #-4; number of samples
+					ADD   R0, R3, #-2; number of samples
 					BRp   main_LOOP_END
 					LD    R0, FIFO_RD_PTR_address
 					LD    R1, ONE
@@ -25,16 +25,16 @@ PRINT_LOOP			ADD   R4, R4, #-1
 					TRAP  x1D
 					TRAP  x21
 					BR    PRINT_LOOP
-PRINT_LOOP_END		LD    R0, FIFO_RD_PTR_address
+PRINT_LOOP_END		LD    R0, FIFO_WR_PTR_address
 					LD    R1, ONE
 					JSR   max30102_Bus_Read
 					TRAP  x1D
 					TRAP  x21
-					LD    R0, FIFO_RD_PTR_address
-					ADD   R1, R3, #0
-					JSR   max30102_Bus_Write
 					BR    main_LOOP
-main_LOOP_END       HALT
+main_LOOP_END       ADD   R0, R2, #0
+					TRAP  x1D
+					TRAP  x21
+					HALT
 					; LD    R0, DATA_addr
 					; JSR   max30102_sample_Read
 					; TRAP  x21
@@ -207,6 +207,7 @@ FIFO_DATA_address   .FILL x0007
 TEMP_address		.FILL x001F
 LED1I_address		.FILL x000C
 FIFO_RD_PTR_address .FILL x0006
+FIFO_WR_PTR_address .FILL x0004
 ONE                 .FILL x0001
 ZERO                .FILL x0000
 SAMPLE_SIZE			.FILL x0006
