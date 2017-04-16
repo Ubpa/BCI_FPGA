@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-THINKPAD::  Sun Apr 16 12:29:05 2017
+THINKPAD::  Sun Apr 16 13:53:44 2017
 
 par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
 
@@ -99,8 +99,8 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 3 secs 
-Finished initial Timing Analysis.  REAL time: 3 secs 
+Starting initial Timing Analysis.  REAL time: 4 secs 
+Finished initial Timing Analysis.  REAL time: 4 secs 
 
 WARNING:Par:288 - The signal cpu/regfile/Mram_REGFILE11_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal cpu/regfile/Mram_REGFILE2_RAMD_D1_O has no load.  PAR will not attempt to route this signal.
@@ -112,11 +112,11 @@ Starting Router
 
 Phase  1  : 4131 unrouted;      REAL time: 4 secs 
 
-Phase  2  : 3597 unrouted;      REAL time: 4 secs 
+Phase  2  : 3597 unrouted;      REAL time: 5 secs 
 
 Phase  3  : 1325 unrouted;      REAL time: 7 secs 
 
-Phase  4  : 1325 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Phase  4  : 1325 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 8 secs 
 
 Updating file: LC3.ncd with current fully routed design.
 
@@ -132,7 +132,7 @@ Phase  9  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL 
 
 Phase 10  : 0 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 12 secs 
 Total REAL time to Router completion: 12 secs 
-Total CPU time to Router completion: 12 secs 
+Total CPU time to Router completion: 13 secs 
 
 Partition Implementation Status
 -------------------------------
