@@ -2,12 +2,29 @@
 					TRAP  x21
 					JSR   max30102_init
 					TRAP  x21
-					LD    R0, LED1I_address
+					LD    R0, FIFO_RD_PTR_address
 					JSR   max30102_Bus_Read
-					ADD   R1, R0, #0
 					TRAP  x21
-					LD    R0, LED1I_address
-					JSR   max30102_Bus_Write
+					LD    R0, DATA_addr
+					JSR   max30102_sample_Read
+					TRAP  x21
+					LD    R0, FIFO_RD_PTR_address
+					JSR   max30102_Bus_Read
+					; LD    R0, DATA_addr
+					; JSR   max30102_sample_Read
+					; TRAP  x21
+					; LD    R2, DATA_addr
+					; LDR   R1, R2, #0
+					; LD    R0, LED1I_address
+					; JSR   max30102_Bus_Write
+					; TRAP  x21
+					; LDR   R1, R2, #1
+					; LD    R0, LED1I_address
+					; JSR   max30102_Bus_Write
+					; TRAP  x21
+					; LDR   R1, R2, #2
+					; LD    R0, LED1I_address
+					; JSR   max30102_Bus_Write
                     HALT
 max30102_Bus_Write;( R0 = (u8) Register_Address, R1 = (u8) Word_Data )
                     ADD   R6, R6, #-2
@@ -58,7 +75,7 @@ max30102_Bus_Read;( R0 = (u8) Register_Address )
                     ADD   R0, R0, #0
                     BRp   RD_FAIL
                     TRAP  x2B; i2c read byte
-					STR   R0, R6, #0
+					STR   R0, R6, #0;;貌似下面两个系统函数修改了R0
                     TRAP  x2A; i2c nack
 RD_FAIL             TRAP  x2C; i2c stop
 					LDR   R0, R6, #0
@@ -67,20 +84,58 @@ RD_FAIL             TRAP  x2C; i2c stop
                     RET; R0 = 8 bits reseive data
 					
 max30102_sample_Read;( R0 = address for sample )
-					ADD   R6, R6, #-2
-					STR   R0, R6, #0
-					STR   R7, R6, #1
-					LD    R0, FIFO_DATA_address
-					JSR   max30102_Bus_Read
-					STR   R0, R6, #0
-					LD    R0, FIFO_DATA_address
-					JSR   max30102_Bus_Read
-					STR   R0, R6, #1
-					LD    R0, FIFO_DATA_address
-					JSR   max30102_Bus_Read
-					STR   R0, R6, #2
-					LDR   R7, R6, #1
-					ADD   R6, R6, #2
+					ADD   R6, R6, #-2;这种连续读三次FIFO_DATA的方法可以读到不同的数据，但是FIFO_RD_PTR依然不会递增
+                    STR   R1, R6, #0
+                    STR   R7, R6, #1
+					ADD   R1, R0, #0
+                    TRAP  x28; i2c start
+                    LD    R0, max30102_WR_address
+                    TRAP  x29; i2c sent byte
+                    TRAP  x2A; i2c wait ack
+                    ADD   R0, R0, #0
+                    BRp   SRD_FAIL
+                    LD    R0, FIFO_DATA_address
+                    TRAP  x29; i2c sent byte
+                    TRAP  x2A; i2c wait ack
+                    ADD   R0, R0, #0
+                    BRp   SRD_FAIL
+                    TRAP  x28; i2c start
+                    LD    R0, max30102_WR_address
+                    ADD   R0, R0, #1
+                    TRAP  x29; i2c sent byte
+                    TRAP  x2A; i2c wait ack
+                    ADD   R0, R0, #0
+                    BRp   SRD_FAIL
+                    TRAP  x2B; i2c read byte
+					STR   R0, R1, #0
+					TRAP  x2E; i2c master ack
+					TRAP  x2B; i2c read byte
+					STR   R0, R1, #1
+					TRAP  x2E; i2c master ack
+					TRAP  x2B; i2c read byte
+					STR   R0, R1, #2
+                    TRAP  x2A; i2c nack
+SRD_FAIL             TRAP  x2C; i2c stop
+					LDR   R1, R6, #0
+                    LDR   R7, R6, #1
+                    ADD   R6, R6, #2
+                    RET
+					; ADD   R6, R6, #-2;; 这种实现并不能使得FIFO_RD_PTR递增，多次读取结果都相同
+					; STR   R1, R6, #0
+					; STR   R7, R6, #1
+					; ADD   R1, R0, #0
+					; LD    R0, FIFO_DATA_address
+					; JSR   max30102_Bus_Read
+					; STR   R0, R1, #0
+					; LD    R0, FIFO_DATA_address
+					; JSR   max30102_Bus_Read
+					; STR   R0, R1, #1
+					; LD    R0, FIFO_DATA_address
+					; JSR   max30102_Bus_Read
+					; STR   R0, R1, #2
+					; LDR   R1, R6, #0
+					; LDR   R7, R6, #1
+					; ADD   R6, R6, #2
 					RET
 
 max30102_init;()
@@ -119,6 +174,7 @@ max30102_WR_address .FILL x00AE
 FIFO_DATA_address   .FILL x0007
 TEMP_address		.FILL x001F
 LED1I_address		.FILL x000C
+FIFO_RD_PTR_address .FILL x0006
 ONE                 .FILL x0001
 ZERO                .FILL x0000
 ASCII_0				.FILL x0030
