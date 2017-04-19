@@ -3,54 +3,28 @@
 					JSR   max30102_init
 					TRAP  x21
 					LD    R2, DATA_addr
-					AND   R3, R3, #0
-main_LOOP			ADD   R3, R3, #1
-					ADD   R0, R3, #-2; number of samples
-					BRp   main_LOOP_END
+					LD    R3, NUM_SAMPLE
+main_LOOP			ADD   R3, R3, #-1
+					BRn   main_LOOP_END
 					LD    R0, FIFO_RD_PTR_address
 					LD    R1, ONE
-					JSR   max30102_Bus_Read
-					TRAP  x1D
-					TRAP  x21
+					JSR   max30102_Bus_Read; 读 FIFO_RD_PTR; 仅做检验用
 					LD    R0, FIFO_DATA_address
 					LD    R1, SAMPLE_SIZE
-					JSR   max30102_Bus_Read
-					LD    R4, SAMPLE_SIZE
-PRINT_LOOP			ADD   R4, R4, #-1
-					BRn   PRINT_LOOP_END
-					NOT   R5, R4
-					ADD   R5, R5, #1
-					ADD   R5, R2, R5
-					LDR   R0, R5, #-1
-					TRAP  x1D
-					TRAP  x21
-					BR    PRINT_LOOP
-PRINT_LOOP_END		LD    R0, FIFO_WR_PTR_address
-					LD    R1, ONE
-					JSR   max30102_Bus_Read
-					TRAP  x1D
-					TRAP  x21
+					JSR   max30102_Bus_Read; 读 sample
 					BR    main_LOOP
-main_LOOP_END       ADD   R0, R2, #0
-					TRAP  x1D
-					TRAP  x21
-					HALT
-					; LD    R0, DATA_addr
-					; JSR   max30102_sample_Read
-					; TRAP  x21
-					; LD    R2, DATA_addr
-					; LDR   R1, R2, #0
-					; LD    R0, LED1I_address
-					; JSR   max30102_Bus_Write
-					; TRAP  x21
-					; LDR   R1, R2, #1
-					; LD    R0, LED1I_address
-					; JSR   max30102_Bus_Write
-					; TRAP  x21
-					; LDR   R1, R2, #2
-					; LD    R0, LED1I_address
-					; JSR   max30102_Bus_Write
-                    ; HALT
+main_LOOP_END       LD    R1, DATA_addr
+					LD	  R2, NUM_DATA
+PRINT_LOOP			ADD	  R2, R2, #-1
+					BRn	  PRINT_LOOP_END
+WAIT				LDI	  R0, UARTSR_ADDR
+					BRzp  WAIT
+					LDR	  R0, R1, #0
+					STI	  R0, UARTDR_ADDR
+					ADD	  R1, R1, #1
+					BR	  PRINT_LOOP
+PRINT_LOOP_END		HALT
+
 max30102_Bus_Write;( R0 = (u8) Register_Address, R1 = (u8) Word_Data )
                     ADD   R6, R6, #-2
                     STR   R0, R6, #0
@@ -114,62 +88,6 @@ RD_FAIL             TRAP  x2C; i2c stop
                     ADD   R6, R6, #2
                     RET; R0 == final 8 bits data, R2 == address of data + n
 
-; max30102_sample_Read;( R0 = address for sample )
-					; ADD   R6, R6, #-2;这种连续读三次FIFO_DATA的方法可以读到不同的数据，但是FIFO_RD_PTR依然不会递增
-                    ; STR   R1, R6, #0
-                    ; STR   R7, R6, #1
-					; ADD   R1, R0, #0
-                    ; TRAP  x28; i2c start
-                    ; LD    R0, max30102_WR_address
-                    ; TRAP  x29; i2c sent byte
-                    ; TRAP  x2A; i2c wait ack
-                    ; ADD   R0, R0, #0
-                    ; BRp   SRD_FAIL
-                    ; LD    R0, FIFO_DATA_address
-                    ; TRAP  x29; i2c sent byte
-                    ; TRAP  x2A; i2c wait ack
-                    ; ADD   R0, R0, #0
-                    ; BRp   SRD_FAIL
-                    ; TRAP  x28; i2c start
-                    ; LD    R0, max30102_WR_address
-                    ; ADD   R0, R0, #1
-                    ; TRAP  x29; i2c sent byte
-                    ; TRAP  x2A; i2c wait ack
-                    ; ADD   R0, R0, #0
-                    ; BRp   SRD_FAIL
-					
-                    ; TRAP  x2B; i2c read byte
-					; STR   R0, R1, #0
-					; TRAP  x2E; i2c master ack
-					; TRAP  x2B; i2c read byte
-					; STR   R0, R1, #1
-					; TRAP  x2E; i2c master ack
-					; TRAP  x2B; i2c read byte
-					; STR   R0, R1, #2
-                    ; TRAP  x2A; i2c nack
-; SRD_FAIL             TRAP  x2C; i2c stop
-					; LDR   R1, R6, #0
-                    ; LDR   R7, R6, #1
-                    ; ADD   R6, R6, #2
-                    ; RET
-					; ; ADD   R6, R6, #-2;; 这种实现并不能使得FIFO_RD_PTR递增，多次读取结果都相同
-					; ; STR   R1, R6, #0
-					; ; STR   R7, R6, #1
-					; ; ADD   R1, R0, #0
-					; ; LD    R0, FIFO_DATA_address
-					; ; JSR   max30102_Bus_Read
-					; ; STR   R0, R1, #0
-					; ; LD    R0, FIFO_DATA_address
-					; ; JSR   max30102_Bus_Read
-					; ; STR   R0, R1, #1
-					; ; LD    R0, FIFO_DATA_address
-					; ; JSR   max30102_Bus_Read
-					; ; STR   R0, R1, #2
-					; ; LDR   R1, R6, #0
-					; ; LDR   R7, R6, #1
-					; ; ADD   R6, R6, #2
-					; RET
-
 max30102_init;()
                     ADD   R6, R6, #-6
                     STR   R0, R6, #0
@@ -202,6 +120,8 @@ LOOP_END            LDR   R0, R6, #0
                     RET
 
 TIME				.FILL #1000
+NUM_SAMPLE			.FILL x0020
+NUM_DATA			.FILL x00E0; NUM_SAMPLE * 7
 max30102_WR_address .FILL x00AE
 FIFO_DATA_address   .FILL x0007
 TEMP_address		.FILL x001F
@@ -238,4 +158,6 @@ INIT_DATA           .FILL x0009
 					.FILL x0006
 					.FILL x0000;11: clear FIFO_RD_PTR
 DATA_addr           .FILL x3500
+UARTSR_ADDR			.FILL x7E14
+UARTDR_ADDR			.FILL x7E16
                     .END

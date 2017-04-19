@@ -1,6 +1,0 @@
-xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/UART/testuart.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/UART/testuart.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc E:/CS/OSH/final_HW/BCI_FPGA/newUART/UART/Nexys3_Master.ucf -p xc6slx16-csg324-3 testuart.ngc testuart.ngd  
-map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o testuart_map.ncd testuart.ngd testuart.pcf 
-par -w -intstyle ise -ol high -mt off testuart_map.ncd testuart.ncd testuart.pcf 
-trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml testuart.twx testuart.ncd -o testuart.twr testuart.pcf 
-bitgen -intstyle ise -f testuart.ut testuart.ncd 

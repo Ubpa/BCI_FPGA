@@ -1,9 +1,0 @@
-MO clk1 NULL clk1.v vlg2B/clk1.bin 1492528602
-MO clk2 NULL clk.v vlg2C/clk2.bin 1492528602
-MO rxd2 NULL rxd2.v vlg08/rxd2.bin 1492528602
-MO fdd NULL fd.v vlg4E/fdd.bin 1492528602
-MO clks NULL showclk.v vlg6D/clks.bin 1492528602
-MO txd NULL txd.v vlg10/txd.bin 1492528602
-MO showr NULL showr.v vlg27/showr.bin 1492528602
-MO data NULL data.v vlg72/data.bin 1492528602
-MO uart NULL top.v vlg48/uart.bin 1492528602

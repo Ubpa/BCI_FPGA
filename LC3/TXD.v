@@ -67,8 +67,8 @@ always@( * ) begin
 		idle    : next_state = flag ? start : idle;
 		start   : next_state = shift;
 		shift   : next_state = bit_counter == 7 ? ( parity_en ? parity : stop ) : shift;
-		parity  : next_state = ft == 1 ? stop : error;
-		stop    : next_state = ft == 1 ? idle : error;
+		parity  : next_state = ft ? stop : error;
+		stop    : next_state = ft ? idle : error;
 		default : next_state = error;//错误标志, 一直维持在error状态
 	endcase
 end
