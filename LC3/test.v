@@ -38,7 +38,7 @@ wire SDA_BUS, SCL_BUS;
 wire [6:0] seg;
 wire [3:0] an;
 
-LC3 lc3( SDA_BUS, SCL_BUS, sw, btn, clk, seg, an, SDAER );
+LC3 lc3( SDA_BUS, SCL_BUS, sw, btn, rxd, clk, SDAER, seg, an, txd );
 
 always @( posedge clk )
 	SDA_BUS_reg <= ( SDAER[0] ? 

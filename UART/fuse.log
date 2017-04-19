@@ -1,23 +1,31 @@
-Running: E:\XiISE\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o E:/DES/test1_isim_beh.exe -prj E:/DES/test1_beh.prj work.test1 work.glbl 
-ISim P.20131013 (signature 0x7708f090)
-Number of CPUs detected in this system: 8
-Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Running: E:\Xilinx_ISE_DS_Win_12\ise\ISE_DS\ISE\bin\nt\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o D:/UART/uart_isim_beh.exe -prj D:/UART/uart_beh.prj uart work.glbl 
+ISim M.70d (signature 0x36e8438f)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "E:/DES/transfer.v" into library work
-Analyzing Verilog file "E:/DES/clk.v" into library work
-Analyzing Verilog file "E:/DES/s_top.v" into library work
-Analyzing Verilog file "E:/DES/test1.v" into library work
-Analyzing Verilog file "E:/XiISE/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file \"D:/UART/txd.v\" into library work
+Analyzing Verilog file \"D:/UART/showr.v\" into library work
+Analyzing Verilog file \"D:/UART/showclk.v\" into library work
+Analyzing Verilog file \"D:/UART/rxd.v\" into library work
+Analyzing Verilog file \"D:/UART/clk1.v\" into library work
+Analyzing Verilog file \"D:/UART/clk.v\" into library work
+Analyzing Verilog file \"D:/UART/top.v\" into library work
+Analyzing Verilog file \"E:/Xilinx_ISE_DS_Win_12/ise/ISE_DS/ISE//verilog/src/glbl.v\" into library work
 Starting static elaboration
 Completed static elaboration
+Fuse Memory Usage: 151248 KB
+Fuse CPU Usage: 203 ms
+Compiling module clk1
 Compiling module clk2
-Compiling module transfer
-Compiling module s_top
-Compiling module test1
+Compiling module clks
+Compiling module rxd
+Compiling module showr
+Compiling module txd
+Compiling module uart
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 5 Verilog Units
-Built simulation executable E:/DES/test1_isim_beh.exe
-Fuse Memory Usage: 29956 KB
-Fuse CPU Usage: 326 ms
+Compiled 8 Verilog Units
+Built simulation executable D:/UART/uart_isim_beh.exe
+Fuse Memory Usage: 157848 KB
+Fuse CPU Usage: 312 ms

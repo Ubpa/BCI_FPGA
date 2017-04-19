@@ -1,0 +1,17 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Apr 19 22:02:43 2017
+
+drc -z testuart.ncd testuart.pcf
+
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   _i000002/rxd1/rst_n_parity_kind_AND_2_o is sourced by a combinatorial pin.
+   This is not good design practice. Use the CE pin to control the loading of
+   data into the flip-flop.
+WARNING:PhysDesignRules:372 - Gated clock. Clock net
+   _i000002/showr1/clks[1]_rst_n_Mux_7_o is sourced by a combinatorial pin. This
+   is not good design practice. Use the CE pin to control the loading of data
+   into the flip-flop.
+DRC detected 0 errors and 2 warnings.  Please see the previously displayed
+individual error or warning messages for more details.

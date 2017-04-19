@@ -4,7 +4,10 @@ Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
 Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/COUNTER.v" into library work
+Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/TXD.v" into library work
+Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/RXD.v" into library work
 Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/BTN_I.v" into library work
+Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/UART.v" into library work
 Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/SWITCH.v" into library work
 Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/SDA.v" into library work
 Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/SCL.v" into library work
@@ -37,6 +40,9 @@ Compiling module DISIPLAY
 Compiling module SWITCH
 Compiling module SDA
 Compiling module SCL
+Compiling module RXD
+Compiling module TXD
+Compiling module UART
 Compiling module INT_CTL
 Compiling module G_MEMORY
 Compiling module CONTROLSTORE
@@ -46,8 +52,8 @@ Compiling module LC3
 Compiling module test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 13 sub-compilation(s) to finish...
-Compiled 20 Verilog Units
+Waiting for 16 sub-compilation(s) to finish...
+Compiled 23 Verilog Units
 Built simulation executable E:/CS/OSH/final_HW/BCI_FPGA/LC3/test_isim_beh.exe
-Fuse Memory Usage: 29008 KB
-Fuse CPU Usage: 655 ms
+Fuse Memory Usage: 29116 KB
+Fuse CPU Usage: 717 ms

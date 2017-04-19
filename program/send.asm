@@ -1,0 +1,21 @@
+				.ORIG   x3000
+				LEA		R0, DATA
+				LD      R1, SIZE
+LOOP			ADD		R1, R1, #-1
+				BRn		LOOP_END
+WAIT			LDI		R2, UARTSR_ADDR
+				BRzp	WAIT
+				LDR		R2, R0, #0
+				STI		R2, UARTDR_ADDR
+				ADD		R0, R0, #1
+				BR		LOOP
+LOOP_END		HALT
+
+DATA			.FILL   x0089
+				.FILL	x0013
+				.FILL	x0054
+				.FILL   x1113
+SIZE			.FILL   x0004
+UARTSR_ADDR		.FILL	x7E14
+UARTDR_ADDR		.FILL	x7E16
+				.END

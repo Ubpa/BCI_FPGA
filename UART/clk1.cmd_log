@@ -1,0 +1,3 @@
+xst -intstyle ise -ifn "D:/UART/clk1.xst" -ofn "D:/UART/clk1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys2.ucf -p xc3s500e-fg320-5 clk1.ngc clk1.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys2.ucf -p xc3s500e-fg320-5 clk1.ngc clk1.ngd  

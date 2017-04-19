@@ -1,5 +1,8 @@
 verilog work "COUNTER.v"
+verilog work "TXD.v"
+verilog work "RXD.v"
 verilog work "BTN_I.v"
+verilog work "UART.v"
 verilog work "SWITCH.v"
 verilog work "SDA.v"
 verilog work "SCL.v"

@@ -1,0 +1,9 @@
+//Symbol Name		Page Address
+//----------------	------------
+//	DATA                    300B
+//	LOOP                    3002
+//	LOOP_END                300A
+//	SIZE                    300F
+//	UARTDR_ADDR             3011
+//	UARTSR_ADDR             3010
+//	WAIT                    3004

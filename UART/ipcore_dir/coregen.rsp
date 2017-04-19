@@ -1,0 +1,3 @@
+NEWPROJECT "D:/UART/ipcore_dir/coregen.cgp"
+SETPROJECT "D:/UART/ipcore_dir/coregen.cgp"
+LAUNCHXCO "D:/UART/ipcore_dir/mydata.xco"

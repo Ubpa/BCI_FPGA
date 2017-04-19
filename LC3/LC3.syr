@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: LC3.prj
 
@@ -107,8 +107,14 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v" into library work
 Parsing module <COUNTER>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" into library work
+Parsing module <TXD>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" into library work
+Parsing module <RXD>.
 Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" into library work
 Parsing module <BTN_I>.
+Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" into library work
+Parsing module <UART>.
 Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SWITCH.v" into library work
 Parsing module <SWITCH>.
 Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v" into library work
@@ -182,6 +188,27 @@ Elaborating module <SDA>.
 Elaborating module <SCL>.
 WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to cnt ignored, since the identifier is never used
 
+Elaborating module <UART>.
+
+Elaborating module <RXD>.
+WARNING:HDLCompiler:872 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 35: Using initial value of reset since it is never assigned
+WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 34: Assignment to cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 64: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 67: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 83: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 87: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 91: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 76: Assignment to r1 ignored, since the identifier is never used
+
+Elaborating module <TXD>.
+WARNING:HDLCompiler:872 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 32: Using initial value of reset since it is never assigned
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 67: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 69: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 70: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 71: Result of 32-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 93: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 78: Assignment to ft ignored, since the identifier is never used
+
 Elaborating module <INT_CTL>.
 
 Elaborating module <FSM>.
@@ -190,6 +217,7 @@ Elaborating module <CONTROLSTORE>.
 Reading initialization file \"MicroI_ROM.v\".
 
 Elaborating module <MICROSEQUENCER>.
+WARNING:Xst:2972 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76. All outputs of instance <_rxd> of block <RXD> are unconnected in block <UART>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -272,49 +300,49 @@ Synthesizing Unit <G_MEMORY>.
     Found 16-bit register for signal <MDR>.
     Found 1-bit register for signal <readed>.
     Found 16-bit register for signal <MAR>.
-    Found 16-bit 12-to-1 multiplexer for signal <Z_5_o_dout[15]_mux_24_OUT> created at line 55.
-    Found 1-bit tristate buffer for signal <BUS<15>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<14>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<13>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<12>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<11>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<10>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<9>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<8>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<7>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<6>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<5>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<4>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<3>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<2>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<1>> created at line 41
-    Found 1-bit tristate buffer for signal <BUS<0>> created at line 41
-    Found 1-bit tristate buffer for signal <INMUX<15>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<14>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<13>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<12>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<11>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<10>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<9>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<8>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<7>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<6>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<5>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<4>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<3>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<2>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<1>> created at line 55
-    Found 1-bit tristate buffer for signal <INMUX<0>> created at line 55
+    Found 16-bit 12-to-1 multiplexer for signal <Z_5_o_dout[15]_mux_26_OUT> created at line 56.
+    Found 1-bit tristate buffer for signal <BUS<15>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<14>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<13>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<12>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<11>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<10>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<9>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<8>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<7>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<6>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<5>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<4>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<3>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<2>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<1>> created at line 42
+    Found 1-bit tristate buffer for signal <BUS<0>> created at line 42
+    Found 1-bit tristate buffer for signal <INMUX<15>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<14>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<13>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<12>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<11>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<10>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<9>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<8>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<7>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<6>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<5>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<4>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<3>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<2>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<1>> created at line 56
+    Found 1-bit tristate buffer for signal <INMUX<0>> created at line 56
     Summary:
 	inferred  34 D-type flip-flop(s).
-	inferred   7 Multiplexer(s).
+	inferred   8 Multiplexer(s).
 	inferred  32 Tristate(s).
 Unit <G_MEMORY> synthesized.
 
 Synthesizing Unit <ADDR_CTL_LOGIC>.
     Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v".
     Summary:
-	inferred   8 Multiplexer(s).
+	inferred   9 Multiplexer(s).
 Unit <ADDR_CTL_LOGIC> synthesized.
 
 Synthesizing Unit <MEMORY>.
@@ -469,22 +497,85 @@ WARNING:Xst:2935 - Signal 'SCLER<15:1>', unconnected in block 'SCL', is tied to 
 	inferred   4 D-type flip-flop(s).
 Unit <SCL> synthesized.
 
+Synthesizing Unit <UART>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v".
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r1> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r2> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r3> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r4> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <fr> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 78: Output port <ft> of the instance <_txd> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <UARTDR>.
+    Found 1-bit register for signal <UARTSR<15>>.
+    Found 1-bit register for signal <flag_buff>.
+    Found 1-bit register for signal <UARTDR_WR>.
+    Found 1-bit register for signal <UARTSR<14>>.
+    Found 1-bit register for signal <UARTSR<13>>.
+    Found 1-bit register for signal <UARTSR<12>>.
+    Found 1-bit register for signal <UARTSR<11>>.
+    Found 1-bit register for signal <UARTSR<10>>.
+    Found 1-bit register for signal <UARTSR<9>>.
+    Found 1-bit register for signal <UARTSR<8>>.
+    Found 1-bit register for signal <UARTSR<7>>.
+    Found 1-bit register for signal <UARTSR<6>>.
+    Found 1-bit register for signal <UARTSR<5>>.
+    Found 1-bit register for signal <UARTSR<4>>.
+    Found 1-bit register for signal <UARTSR<3>>.
+    Found 1-bit register for signal <UARTSR<2>>.
+    Found 1-bit register for signal <UARTSR<1>>.
+    Found 1-bit register for signal <UARTSR<0>>.
+    Found 1-bit register for signal <UARTSR_WR>.
+    Found 1-bit register for signal <rst_n>.
+    Summary:
+	inferred  36 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+Unit <UART> synthesized.
+
+Synthesizing Unit <TXD>.
+    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v".
+        times = 16'b0010100010110000
+        idle = 0
+        start = 1
+        shift = 2
+        parity = 3
+        stop = 4
+        error = 5
+WARNING:Xst:647 - Input <UARTDR<15:8>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 3-bit register for signal <bit_counter>.
+    Found 1-bit register for signal <txd>.
+    Found 1-bit register for signal <ft>.
+    Found 1-bit register for signal <bf1>.
+    Found 1-bit register for signal <curr_state<2>>.
+    Found 1-bit register for signal <curr_state<1>>.
+    Found 1-bit register for signal <curr_state<0>>.
+    Found 1-bit register for signal <flag>.
+    Found 1-bit register for signal <bf0>.
+    Found 1-bit register for signal <parity1>.
+    Found 3-bit adder for signal <bit_counter[2]_GND_67_o_add_12_OUT> created at line 93.
+    Found 1-bit 8-to-1 multiplexer for signal <bit_counter[2]_UARTDR[7]_Mux_11_o> created at line 92.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  12 D-type flip-flop(s).
+	inferred  19 Multiplexer(s).
+Unit <TXD> synthesized.
+
 Synthesizing Unit <INT_CTL>.
     Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\INT_CTL.v".
 WARNING:Xst:647 - Input <KBSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <DSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <UARTSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit register for signal <Vector>.
-    Found 1-bit tristate buffer for signal <INTV<7>> created at line 33
-    Found 1-bit tristate buffer for signal <INTV<6>> created at line 33
-    Found 1-bit tristate buffer for signal <INTV<5>> created at line 33
-    Found 1-bit tristate buffer for signal <INTV<4>> created at line 33
-    Found 1-bit tristate buffer for signal <INTV<3>> created at line 33
-    Found 1-bit tristate buffer for signal <INTV<2>> created at line 33
-    Found 1-bit tristate buffer for signal <INTV<1>> created at line 33
-    Found 1-bit tristate buffer for signal <INTV<0>> created at line 33
+    Found 1-bit tristate buffer for signal <INTV<7>> created at line 34
+    Found 1-bit tristate buffer for signal <INTV<6>> created at line 34
+    Found 1-bit tristate buffer for signal <INTV<5>> created at line 34
+    Found 1-bit tristate buffer for signal <INTV<4>> created at line 34
+    Found 1-bit tristate buffer for signal <INTV<3>> created at line 34
+    Found 1-bit tristate buffer for signal <INTV<2>> created at line 34
+    Found 1-bit tristate buffer for signal <INTV<1>> created at line 34
+    Found 1-bit tristate buffer for signal <INTV<0>> created at line 34
     Summary:
 	inferred   8 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred   3 Multiplexer(s).
 	inferred   8 Tristate(s).
 Unit <INT_CTL> synthesized.
 
@@ -521,32 +612,35 @@ Macro Statistics
  4x7-bit dual-port RAM                                 : 1
  64x50-bit single-port Read Only RAM                   : 1
  8x16-bit dual-port RAM                                : 2
-# Adders/Subtractors                                   : 19
- 16-bit adder                                          : 10
+# Adders/Subtractors                                   : 22
+ 16-bit adder                                          : 11
  16-bit addsub                                         : 1
- 17-bit subtractor                                     : 7
+ 17-bit subtractor                                     : 8
  2-bit adder                                           : 1
-# Registers                                            : 106
- 1-bit register                                        : 85
- 16-bit register                                       : 15
+ 3-bit adder                                           : 1
+# Registers                                            : 139
+ 1-bit register                                        : 115
+ 16-bit register                                       : 17
  2-bit register                                        : 1
- 3-bit register                                        : 2
+ 3-bit register                                        : 3
  50-bit register                                       : 1
  8-bit register                                        : 2
-# Comparators                                          : 27
- 1-bit comparator equal                                : 12
+# Comparators                                          : 30
+ 1-bit comparator equal                                : 13
  3-bit comparator greater                              : 1
- 32-bit comparator equal                               : 7
- 32-bit comparator greater                             : 7
-# Multiplexers                                         : 57
- 1-bit 2-to-1 multiplexer                              : 22
+ 32-bit comparator equal                               : 8
+ 32-bit comparator greater                             : 8
+# Multiplexers                                         : 82
+ 1-bit 2-to-1 multiplexer                              : 42
  1-bit 4-to-1 multiplexer                              : 2
+ 1-bit 8-to-1 multiplexer                              : 1
  16-bit 12-to-1 multiplexer                            : 1
  16-bit 2-to-1 multiplexer                             : 19
  16-bit 4-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 3
- 4-bit 2-to-1 multiplexer                              : 8
+ 3-bit 2-to-1 multiplexer                              : 5
+ 4-bit 2-to-1 multiplexer                              : 9
  6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
 # Tristates                                            : 57
  1-bit tristate buffer                                 : 57
 
@@ -557,6 +651,8 @@ INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmet
 *                       Advanced HDL Synthesis                          *
 =========================================================================
 
+WARNING:Xst:1426 - The value init of the FF/Latch rst_n hinder the constant cleaning in the block uart.
+   You should achieve better results by setting this init to 1.
 WARNING:Xst:1293 - FF/Latch <KBDR_15> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <KBDR_14> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <KBDR_13> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
@@ -569,6 +665,15 @@ WARNING:Xst:1293 - FF/Latch <KBDR_7> has a constant value of 0 in block <keyboar
 WARNING:Xst:1293 - FF/Latch <KBDR_6> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <KBDR_5> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <inner_reset> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <inner_reset> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <UARTDR_8> of sequential type is unconnected in block <uart>.
+WARNING:Xst:2677 - Node <UARTDR_9> of sequential type is unconnected in block <uart>.
+WARNING:Xst:2677 - Node <UARTDR_10> of sequential type is unconnected in block <uart>.
+WARNING:Xst:2677 - Node <UARTDR_11> of sequential type is unconnected in block <uart>.
+WARNING:Xst:2677 - Node <UARTDR_12> of sequential type is unconnected in block <uart>.
+WARNING:Xst:2677 - Node <UARTDR_13> of sequential type is unconnected in block <uart>.
+WARNING:Xst:2677 - Node <UARTDR_14> of sequential type is unconnected in block <uart>.
+WARNING:Xst:2677 - Node <UARTDR_15> of sequential type is unconnected in block <uart>.
 WARNING:Xst:2677 - Node <DDR_8> of sequential type is unconnected in block <display>.
 WARNING:Xst:2677 - Node <DDR_9> of sequential type is unconnected in block <display>.
 WARNING:Xst:2677 - Node <DDR_10> of sequential type is unconnected in block <display>.
@@ -690,6 +795,10 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_REGFILE> will be implemented on LUTs
     |     doB            | connected to signal <SR1OUT>        |          |
     -----------------------------------------------------------------------
 Unit <REGFILE> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TXD>.
+The following registers are absorbed into counter <bit_counter>: 1 register on signal <bit_counter>.
+Unit <TXD> synthesized (advanced).
 WARNING:Xst:2677 - Node <DDR_8> of sequential type is unconnected in block <DISIPLAY>.
 WARNING:Xst:2677 - Node <DDR_9> of sequential type is unconnected in block <DISIPLAY>.
 WARNING:Xst:2677 - Node <DDR_10> of sequential type is unconnected in block <DISIPLAY>.
@@ -708,29 +817,32 @@ Macro Statistics
  4x7-bit dual-port distributed RAM                     : 1
  64x50-bit single-port distributed Read Only RAM       : 1
  8x16-bit dual-port distributed RAM                    : 2
-# Adders/Subtractors                                   : 11
+# Adders/Subtractors                                   : 12
  16-bit adder                                          : 3
  16-bit addsub                                         : 1
- 17-bit subtractor                                     : 7
-# Counters                                             : 8
- 16-bit up counter                                     : 7
+ 17-bit subtractor                                     : 8
+# Counters                                             : 10
+ 16-bit up counter                                     : 8
  2-bit up counter                                      : 1
-# Registers                                            : 263
- Flip-Flops                                            : 263
-# Comparators                                          : 27
- 1-bit comparator equal                                : 12
+ 3-bit up counter                                      : 1
+# Registers                                            : 309
+ Flip-Flops                                            : 309
+# Comparators                                          : 30
+ 1-bit comparator equal                                : 13
  3-bit comparator greater                              : 1
- 32-bit comparator equal                               : 7
- 32-bit comparator greater                             : 7
-# Multiplexers                                         : 57
- 1-bit 2-to-1 multiplexer                              : 22
+ 32-bit comparator equal                               : 8
+ 32-bit comparator greater                             : 8
+# Multiplexers                                         : 81
+ 1-bit 2-to-1 multiplexer                              : 42
  1-bit 4-to-1 multiplexer                              : 2
+ 1-bit 8-to-1 multiplexer                              : 1
  16-bit 12-to-1 multiplexer                            : 1
  16-bit 2-to-1 multiplexer                             : 19
  16-bit 4-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 3
- 4-bit 2-to-1 multiplexer                              : 8
+ 3-bit 2-to-1 multiplexer                              : 4
+ 4-bit 2-to-1 multiplexer                              : 9
  6-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
 
@@ -748,6 +860,9 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_8> has a const
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_5> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_7> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <KBDR_6> has a constant value of 0 in block <KEYBOARD>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1426 - The value init of the FF/Latch rst_n hinder the constant cleaning in the block UART.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1293 - FF/Latch <counter/inner_reset> has a constant value of 0 in block <TXD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <counter/inner_reset> has a constant value of 0 in block <DISIPLAY>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <MicroIR_0> (without init value) has a constant value of 0 in block <CONTROLSTORE>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2042 - Unit LC3: 16 internal tristates are replaced by logic (pull-up yes): g_memory/INMUX<0>, g_memory/INMUX<10>, g_memory/INMUX<11>, g_memory/INMUX<12>, g_memory/INMUX<13>, g_memory/INMUX<14>, g_memory/INMUX<15>, g_memory/INMUX<1>, g_memory/INMUX<2>, g_memory/INMUX<3>, g_memory/INMUX<4>, g_memory/INMUX<5>, g_memory/INMUX<6>, g_memory/INMUX<7>, g_memory/INMUX<8>, g_memory/INMUX<9>.
@@ -764,7 +879,11 @@ Optimizing unit <KEYBOARD> ...
 Optimizing unit <BTN_I> ...
 
 Optimizing unit <INT_CTL> ...
-INFO:Xst:2261 - The FF/Latch <Vector_2> in Unit <INT_CTL> is equivalent to the following 5 FFs/Latches, which will be removed : <Vector_3> <Vector_4> <Vector_5> <Vector_6> <Vector_7> 
+INFO:Xst:2261 - The FF/Latch <Vector_3> in Unit <INT_CTL> is equivalent to the following 4 FFs/Latches, which will be removed : <Vector_4> <Vector_5> <Vector_6> <Vector_7> 
+
+Optimizing unit <UART> ...
+
+Optimizing unit <TXD> ...
 
 Optimizing unit <DISIPLAY> ...
 
@@ -773,7 +892,17 @@ Optimizing unit <SCL> ...
 Optimizing unit <ALU> ...
 
 Optimizing unit <CONTROLSTORE> ...
-WARNING:Xst:1293 - FF/Latch <g_memory/scl/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_15> of sequential type is unconnected in block <LC3>.
+WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_14> of sequential type is unconnected in block <LC3>.
+WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_13> of sequential type is unconnected in block <LC3>.
+WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_12> of sequential type is unconnected in block <LC3>.
+WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_11> of sequential type is unconnected in block <LC3>.
+WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_10> of sequential type is unconnected in block <LC3>.
+WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_9> of sequential type is unconnected in block <LC3>.
+WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_8> of sequential type is unconnected in block <LC3>.
+WARNING:Xst:1293 - FF/Latch <g_memory/uart/_txd/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_11> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
@@ -783,11 +912,12 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counte
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 7.
-FlipFlop cpu/IR_5 has been replicated 2 time(s)
+Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 8.
+FlipFlop cpu/IR_5 has been replicated 1 time(s)
 FlipFlop fsm/controlstore/MicroIR_22 has been replicated 1 time(s)
 FlipFlop fsm/controlstore/MicroIR_24 has been replicated 1 time(s)
 FlipFlop fsm/controlstore/MicroIR_27 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_13 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -795,8 +925,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 358
- Flip-Flops                                            : 358
+# Registers                                            : 413
+ Flip-Flops                                            : 413
 
 =========================================================================
 
@@ -819,24 +949,27 @@ Top Level Output File Name         : LC3.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 986
+# BELS                             : 1081
 #      GND                         : 1
-#      INV                         : 29
-#      LUT1                        : 113
+#      INV                         : 33
+#      LUT1                        : 126
 #      LUT2                        : 43
-#      LUT3                        : 74
-#      LUT4                        : 61
-#      LUT5                        : 103
-#      LUT6                        : 222
-#      MUXCY                       : 158
-#      MUXF7                       : 12
+#      LUT3                        : 78
+#      LUT4                        : 68
+#      LUT5                        : 83
+#      LUT6                        : 274
+#      MUXCY                       : 171
+#      MUXF7                       : 20
 #      VCC                         : 1
-#      XORCY                       : 169
-# FlipFlops/Latches                : 358
-#      FD                          : 66
-#      FDE                         : 159
-#      FDR                         : 109
-#      FDRE                        : 23
+#      XORCY                       : 183
+# FlipFlops/Latches                : 413
+#      FD                          : 70
+#      FDC                         : 5
+#      FDCE                        : 5
+#      FDE                         : 174
+#      FDPE                        : 2
+#      FDR                         : 123
+#      FDRE                        : 33
 #      FDSE                        : 1
 # RAMS                             : 46
 #      RAM16X1D                    : 9
@@ -844,10 +977,10 @@ Primitive and Black Box Usage:
 #      RAMB16BWER                  : 32
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 42
+# IO Buffers                       : 43
 #      IBUF                        : 13
 #      IOBUF                       : 1
-#      OBUF                        : 28
+#      OBUF                        : 29
 
 Device utilization summary:
 ---------------------------
@@ -856,22 +989,22 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             358  out of  18224     1%  
- Number of Slice LUTs:                  683  out of   9112     7%  
-    Number used as Logic:               645  out of   9112     7%  
+ Number of Slice Registers:             413  out of  18224     2%  
+ Number of Slice LUTs:                  743  out of   9112     8%  
+    Number used as Logic:               705  out of   9112     7%  
     Number used as Memory:               38  out of   2176     1%  
        Number used as RAM:               38
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    781
-   Number with an unused Flip Flop:     423  out of    781    54%  
-   Number with an unused LUT:            98  out of    781    12%  
-   Number of fully used LUT-FF pairs:   260  out of    781    33%  
-   Number of unique control sets:        59
+ Number of LUT Flip Flop pairs used:    858
+   Number with an unused Flip Flop:     445  out of    858    51%  
+   Number with an unused LUT:           115  out of    858    13%  
+   Number of fully used LUT-FF pairs:   298  out of    858    34%  
+   Number of unique control sets:        70
 
 IO Utilization: 
- Number of IOs:                          43
- Number of bonded IOBs:                  43  out of    232    18%  
+ Number of IOs:                          45
+ Number of bonded IOBs:                  44  out of    232    18%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               32  out of     32   100%  
@@ -896,11 +1029,16 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
------------------------------------+------------------------+-------+
-Clock Signal                       | Clock buffer(FF name)  | Load  |
------------------------------------+------------------------+-------+
-clk                                | BUFGP                  | 404   |
------------------------------------+------------------------+-------+
+---------------------------------------------+------------------------------------------+-------+
+Clock Signal                                 | Clock buffer(FF name)                    | Load  |
+---------------------------------------------+------------------------------------------+-------+
+clk                                          | BUFGP                                    | 450   |
+g_memory/uart/_txd/c(g_memory/uart/_txd/c1:O)| NONE(*)(g_memory/uart/_txd/bit_counter_2)| 9     |
+---------------------------------------------+------------------------------------------+-------+
+(*) This 1 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -922,7 +1060,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.257ns (frequency: 121.114MHz)
-  Total number of paths / destination ports: 280715 / 1413
+  Total number of paths / destination ports: 285271 / 1512
 -------------------------------------------------------------------------
 Delay:               8.257ns (Levels of Logic = 10)
   Source:            fsm/controlstore/MicroIR_15 (FF)
@@ -951,6 +1089,30 @@ Delay:               8.257ns (Levels of Logic = 10)
                                        (29.8% logic, 70.2% route)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'g_memory/uart/_txd/c'
+  Clock period: 3.022ns (frequency: 330.852MHz)
+  Total number of paths / destination ports: 55 / 14
+-------------------------------------------------------------------------
+Delay:               3.022ns (Levels of Logic = 3)
+  Source:            g_memory/uart/_txd/bit_counter_0 (FF)
+  Destination:       g_memory/uart/_txd/txd (FF)
+  Source Clock:      g_memory/uart/_txd/c rising
+  Destination Clock: g_memory/uart/_txd/c rising
+
+  Data Path: g_memory/uart/_txd/bit_counter_0 to g_memory/uart/_txd/txd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.447   1.118  g_memory/uart/_txd/bit_counter_0 (g_memory/uart/_txd/bit_counter_0)
+     LUT6:I1->O            1   0.203   0.000  g_memory/uart/_txd/Mmux_bit_counter[2]_UARTDR[7]_Mux_11_o_3 (g_memory/uart/_txd/Mmux_bit_counter[2]_UARTDR[7]_Mux_11_o_3)
+     MUXF7:I1->O           1   0.140   0.808  g_memory/uart/_txd/Mmux_bit_counter[2]_UARTDR[7]_Mux_11_o_2_f7 (g_memory/uart/_txd/bit_counter[2]_UARTDR[7]_Mux_11_o)
+     LUT5:I2->O            1   0.205   0.000  g_memory/uart/_txd/Mmux_curr_state[2]_txd_Mux_16_o11 (g_memory/uart/_txd/curr_state[2]_txd_Mux_16_o)
+     FDPE:D                    0.102          g_memory/uart/_txd/txd
+    ----------------------------------------
+    Total                      3.022ns (1.097ns logic, 1.926ns route)
+                                       (36.3% logic, 63.7% route)
+
+=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 34 / 34
 -------------------------------------------------------------------------
@@ -963,10 +1125,10 @@ Offset:              3.364ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.222   0.808  SDA_BUS_IOBUF (N20)
-     LUT6:I3->O            1   0.205   0.000  g_memory/Mmux_Z_5_o_dout[15]_mux_24_OUT_6 (g_memory/Mmux_Z_5_o_dout[15]_mux_24_OUT_6)
-     MUXF7:I1->O           1   0.140   0.684  g_memory/Mmux_Z_5_o_dout[15]_mux_24_OUT_5_f7 (g_memory/Mmux_Z_5_o_dout[15]_mux_24_OUT_5_f7)
-     LUT5:I3->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_30_OUT1 (g_memory/MDR[15]_MDR[15]_mux_30_OUT<0>)
+     IOBUF:IO->O           1   1.222   0.808  SDA_BUS_IOBUF (N24)
+     LUT6:I3->O            1   0.205   0.000  g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_6 (g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_6)
+     MUXF7:I1->O           1   0.140   0.684  g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_5_f7 (g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_5_f7)
+     LUT5:I3->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_32_OUT1 (g_memory/MDR[15]_MDR[15]_mux_32_OUT<0>)
      FDE:D                     0.102          g_memory/MDR_0
     ----------------------------------------
     Total                      3.364ns (1.872ns logic, 1.492ns route)
@@ -993,29 +1155,58 @@ Offset:              4.761ns (Levels of Logic = 2)
                                        (67.7% logic, 32.3% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'g_memory/uart/_txd/c'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.634ns (Levels of Logic = 1)
+  Source:            g_memory/uart/_txd/txd (FF)
+  Destination:       txd (PAD)
+  Source Clock:      g_memory/uart/_txd/c rising
+
+  Data Path: g_memory/uart/_txd/txd to txd
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDPE:C->Q             2   0.447   0.616  g_memory/uart/_txd/txd (g_memory/uart/_txd/txd)
+     OBUF:I->O                 2.571          txd_OBUF (txd)
+    ----------------------------------------
+    Total                      3.634ns (3.018ns logic, 0.616ns route)
+                                       (83.0% logic, 17.0% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
 Clock to Setup on destination clock clk
----------------+---------+---------+---------+---------+
-               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
----------------+---------+---------+---------+---------+
-clk            |    8.257|         |         |         |
----------------+---------+---------+---------+---------+
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+clk                 |    8.257|         |         |         |
+g_memory/uart/_txd/c|    2.725|         |         |         |
+--------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock g_memory/uart/_txd/c
+--------------------+---------+---------+---------+---------+
+                    | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------+---------+---------+---------+---------+
+clk                 |    2.732|         |         |         |
+g_memory/uart/_txd/c|    3.022|         |         |         |
+--------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 19.43 secs
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.46 secs
  
 --> 
 
 Total memory usage is 330308 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   69 (   0 filtered)
-Number of infos    :   13 (   0 filtered)
+Number of warnings :  109 (   0 filtered)
+Number of infos    :   20 (   0 filtered)
 

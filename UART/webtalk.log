@@ -3,8 +3,8 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 
 Project Information
 --------------------
-ProjectID=87BFE8B5C8574CA8ADC0BCA41C30A4AC
-ProjectIteration=22
+ProjectID=66463881F5B74FE0AECFC1F9A58F61F8
+ProjectIteration=61
 
 WebTalk Summary
 ----------------
@@ -13,4 +13,4 @@ INFO:WebTalk:2 - WebTalk is enabled.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:5 - E:/DES/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at E:/XiISE/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:5 - E:/CS/OSH/final_HW/BCI_FPGA/UART/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at D:/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html

@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sun Apr 16 14:35:47 2017
+Thu Apr 20 01:12:01 2017
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -252,8 +252,8 @@ Pinout by Pin Number:
 |N14       |seg<5>     |IOB      |IO_L53N_VREF_1               |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |N15       |an<1>      |IOB      |IO_L50P_M1UDQS_1             |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |N16       |an<0>      |IOB      |IO_L50N_M1UDQSN_1            |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
-|N17       |           |IOBM     |IO_L48P_HDC_M1DQ8_1          |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
-|N18       |           |IOBS     |IO_L48N_M1DQ9_1              |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
+|N17       |rxd        |IOB      |IO_L48P_HDC_M1DQ8_1          |INPUT    |LVCMOS33   |1             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
+|N18       |txd        |IOB      |IO_L48N_M1DQ9_1              |OUTPUT   |LVCMOS33   |1             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |P1        |SDAER<9>   |IOB      |IO_L34N_M3UDQSN_3            |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |P2        |SDAER<8>   |IOB      |IO_L34P_M3UDQS_3             |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |
 |P3        |SDAER<2>   |IOB      |IO_L2N_3                     |OUTPUT   |LVCMOS25*  |3             |12        |SLOW     |           |         |         |UNLOCATED |NO         |NONE            |

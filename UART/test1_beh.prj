@@ -1,5 +1,0 @@
-verilog work "transfer.v"
-verilog work "clk.v"
-verilog work "s_top.v"
-verilog work "test1.v"
-verilog work "E:/XiISE/14.7/ISE_DS/ISE//verilog/src/glbl.v"

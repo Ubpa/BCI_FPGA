@@ -33,11 +33,16 @@
          <ClosedNode>/LC3 E:|CS|SDMD|Verilog|LC3|LC3.v/cpu - CPU/fsm - FSM</ClosedNode>
          <ClosedNode>/LC3 E:|CS|SDMD|Verilog|LC3|LC3.v/g_memory - G_MEMORY/display - DISIPLAY</ClosedNode>
          <ClosedNode>/LC3 E:|CS|SDMD|Verilog|LC3|LC3.v/g_memory - G_MEMORY/keyboard - KEYBOARD</ClosedNode>
+         <ClosedNode>/UART E:|CS|OSH|final_HW|BCI_FPGA|LC3|UART.v</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/cpu - CPU</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/fsm - FSM</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/display - DISIPLAY</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/scl - SCL</ClosedNode>
+         <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/uart - UART/_rxd - RXD</ClosedNode>
+         <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/uart - UART/_txd - TXD</ClosedNode>
+         <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/uart - UART/rxd - RXD</ClosedNode>
+         <ClosedNode>/test E:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/uart - UART/txd - TXD</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/display - DISIPLAY</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/scl - SCL</ClosedNode>
@@ -190,12 +195,12 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>User Constraints</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014d0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>User Constraints</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
 </Project>

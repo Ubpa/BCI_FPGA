@@ -23,6 +23,54 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to <arg fmt="%s" index="1">cnt</arg> ignored, since the identifier is never used
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 35: Using initial value of <arg fmt="%s" index="1">reset</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 34: Assignment to <arg fmt="%s" index="1">cnt</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 64: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 67: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 83: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 87: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 91: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 76: Assignment to <arg fmt="%s" index="1">r1</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 32: Using initial value of <arg fmt="%s" index="1">reset</arg> since it is never assigned
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 67: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 69: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 70: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 71: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 93: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 78: Assignment to <arg fmt="%s" index="1">ft</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%d" index="2">76</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">_rxd</arg>&gt; of block &lt;<arg fmt="%s" index="4">RXD</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">UART</arg>&gt;. Underlying logic will be removed.
+</msg>
+
 <msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">PSR&lt;14:11&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">CPU</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
 </msg>
 
@@ -68,16 +116,44 @@
 <msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">SCLER&lt;15:1&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">SCL</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000</arg>).
 </msg>
 
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">fr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">78</arg>: Output port &lt;<arg fmt="%s" index="3">ft</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_txd</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">UARTDR&lt;15:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">KBSR&lt;13:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">DSR&lt;13:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">UARTSR&lt;13:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">MicroI_ROM</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">CONTROLSTORE</arg>&apos;, is tied to its initial value.
 </msg>
 
 <msg type="info" file="Xst" num="1767" delta="old" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">rst_n</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">uart</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">KBDR_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">keyboard</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -114,6 +190,33 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">inner_reset</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">counter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">inner_reset</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">counter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">UARTDR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">UARTDR_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">UARTDR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">UARTDR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">UARTDR_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">UARTDR_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">UARTDR_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">UARTDR_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">uart</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DDR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">display</arg>&gt;.
@@ -208,6 +311,13 @@
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">KBDR_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">KEYBOARD</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1426" delta="old" >The value init of the FF/Latch <arg fmt="%s" index="1">rst_n</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">UART</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">counter/inner_reset</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">TXD</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">counter/inner_reset</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DISIPLAY</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -222,10 +332,40 @@
 
 <msg type="warning" file="Xst" num="2042" delta="old" >Unit <arg fmt="%s" index="1">INT_CTL</arg>: <arg fmt="%d" index="2">8</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
 
-<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Vector_2</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">INT_CTL</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">5 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Vector_3&gt; &lt;Vector_4&gt; &lt;Vector_5&gt; &lt;Vector_6&gt; &lt;Vector_7&gt; </arg>
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">Vector_3</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">INT_CTL</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">4 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;Vector_4&gt; &lt;Vector_5&gt; &lt;Vector_6&gt; &lt;Vector_7&gt; </arg>
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -244,6 +384,9 @@
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

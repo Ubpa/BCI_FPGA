@@ -1,9 +1,11 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Apr 16 14:35:31 2017
+// Written by: Map P.20131013 on Thu Apr 20 01:11:37 2017
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk" LOCATE = SITE "V10" LEVEL 1;
+COMP "rxd" LOCATE = SITE "N17" LEVEL 1;
+COMP "txd" LOCATE = SITE "N18" LEVEL 1;
 COMP "an<0>" LOCATE = SITE "N16" LEVEL 1;
 COMP "an<1>" LOCATE = SITE "N15" LEVEL 1;
 COMP "an<2>" LOCATE = SITE "P18" LEVEL 1;
@@ -56,11 +58,11 @@ PIN g_memory/memory/Mram_RAM21_pins<14> = BEL "g_memory/memory/Mram_RAM21"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM20_pins<14> = BEL "g_memory/memory/Mram_RAM20"
         PINNAME CLKA;
-PIN g_memory/memory/Mram_RAM19_pins<14> = BEL "g_memory/memory/Mram_RAM19"
-        PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM18_pins<14> = BEL "g_memory/memory/Mram_RAM18"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM17_pins<14> = BEL "g_memory/memory/Mram_RAM17"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM19_pins<14> = BEL "g_memory/memory/Mram_RAM19"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM16_pins<14> = BEL "g_memory/memory/Mram_RAM16"
         PINNAME CLKA;
@@ -238,8 +240,37 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/keyboard/btn_up/counter/cnt_2" BEL
         "g_memory/keyboard/btn_up/counter/inner_reset" BEL
         "g_memory/keyboard/btn_up/Op" BEL "g_memory/keyboard/btn_up/reset" BEL
-        "g_memory/keyboard/btn_up/Ol" BEL "g_memory/int_ctl/Vector_2" BEL
-        "g_memory/int_ctl/Vector_1" BEL "g_memory/int_ctl/Vector_0" BEL
+        "g_memory/keyboard/btn_up/Ol" BEL "g_memory/int_ctl/Vector_3" BEL
+        "g_memory/int_ctl/Vector_2" BEL "g_memory/int_ctl/Vector_1" BEL
+        "g_memory/int_ctl/Vector_0" BEL "g_memory/uart/flag_buff" BEL
+        "g_memory/uart/rst_n" BEL "g_memory/uart/UARTSR_1" BEL
+        "g_memory/uart/UARTSR_2" BEL "g_memory/uart/UARTSR_0" BEL
+        "g_memory/uart/UARTSR_4" BEL "g_memory/uart/UARTSR_5" BEL
+        "g_memory/uart/UARTSR_3" BEL "g_memory/uart/UARTSR_7" BEL
+        "g_memory/uart/UARTSR_8" BEL "g_memory/uart/UARTSR_6" BEL
+        "g_memory/uart/UARTSR_10" BEL "g_memory/uart/UARTSR_11" BEL
+        "g_memory/uart/UARTSR_9" BEL "g_memory/uart/UARTSR_13" BEL
+        "g_memory/uart/UARTSR_14" BEL "g_memory/uart/UARTSR_12" BEL
+        "g_memory/uart/UARTSR_WR" BEL "g_memory/uart/UARTDR_WR" BEL
+        "g_memory/uart/UARTDR_7" BEL "g_memory/uart/UARTDR_6" BEL
+        "g_memory/uart/UARTDR_5" BEL "g_memory/uart/UARTDR_4" BEL
+        "g_memory/uart/UARTDR_3" BEL "g_memory/uart/UARTDR_2" BEL
+        "g_memory/uart/UARTDR_1" BEL "g_memory/uart/UARTDR_0" BEL
+        "g_memory/uart/_txd/counter/cnt_0" BEL
+        "g_memory/uart/_txd/counter/cnt_13" BEL
+        "g_memory/uart/_txd/counter/cnt_12" BEL
+        "g_memory/uart/_txd/counter/cnt_11" BEL
+        "g_memory/uart/_txd/counter/cnt_10" BEL
+        "g_memory/uart/_txd/counter/cnt_8" BEL
+        "g_memory/uart/_txd/counter/cnt_7" BEL
+        "g_memory/uart/_txd/counter/cnt_9" BEL
+        "g_memory/uart/_txd/counter/cnt_6" BEL
+        "g_memory/uart/_txd/counter/cnt_5" BEL
+        "g_memory/uart/_txd/counter/cnt_3" BEL
+        "g_memory/uart/_txd/counter/cnt_2" BEL
+        "g_memory/uart/_txd/counter/cnt_4" BEL
+        "g_memory/uart/_txd/counter/cnt_1" BEL "g_memory/uart/_txd/bf1" BEL
+        "g_memory/uart/_txd/flag" BEL "g_memory/uart/_txd/bf0" BEL
         "g_memory/display/i_1" BEL "g_memory/display/i_0" BEL
         "g_memory/display/counter/cnt_0" BEL "g_memory/display/counter/cnt_15"
         BEL "g_memory/display/counter/cnt_13" BEL
@@ -298,9 +329,10 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "fsm/controlstore/MicroIR_3" BEL "fsm/controlstore/MicroIR_2" BEL
         "fsm/controlstore/MicroIR_1" BEL "g_memory/R" BEL "g_memory/readed"
         BEL "g_memory/sda/WR" BEL "g_memory/keyboard/KBSR_15" BEL
-        "g_memory/display/DSR_15" BEL "fsm/controlstore/MicroIR_24_1" BEL
-        "fsm/controlstore/MicroIR_22_1" BEL "fsm/controlstore/MicroIR_27_1"
-        BEL "cpu/IR_5_1" BEL "cpu/IR_5_2" BEL "clk_BUFGP/BUFG" PIN
+        "g_memory/uart/UARTSR_15" BEL "g_memory/display/DSR_15" BEL
+        "fsm/controlstore/MicroIR_24_1" BEL "fsm/controlstore/MicroIR_22_1"
+        BEL "fsm/controlstore/MicroIR_27_1" BEL "g_memory/MAR_13_1" BEL
+        "cpu/IR_5_1" BEL "clk_BUFGP/BUFG" PIN
         "g_memory/memory/Mram_RAM32_pins<14>" PIN
         "g_memory/memory/Mram_RAM31_pins<14>" PIN
         "g_memory/memory/Mram_RAM30_pins<14>" PIN
@@ -314,9 +346,9 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/memory/Mram_RAM22_pins<14>" PIN
         "g_memory/memory/Mram_RAM21_pins<14>" PIN
         "g_memory/memory/Mram_RAM20_pins<14>" PIN
-        "g_memory/memory/Mram_RAM19_pins<14>" PIN
         "g_memory/memory/Mram_RAM18_pins<14>" PIN
         "g_memory/memory/Mram_RAM17_pins<14>" PIN
+        "g_memory/memory/Mram_RAM19_pins<14>" PIN
         "g_memory/memory/Mram_RAM16_pins<14>" PIN
         "g_memory/memory/Mram_RAM15_pins<14>" PIN
         "g_memory/memory/Mram_RAM14_pins<14>" PIN

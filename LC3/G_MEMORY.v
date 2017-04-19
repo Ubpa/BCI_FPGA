@@ -18,23 +18,24 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module G_MEMORY( BUS, SDA_BUS, SCL_BUS, sw, btn, VectorMUX, LD_Vector, LD_MAR, LD_MDR, MIO_EN, R_W, GateMDR, GateVector, clk, seg, an, INT_Priority, R, SDAER );
+module G_MEMORY( BUS, SDA_BUS, SCL_BUS, sw, btn, VectorMUX, LD_Vector, LD_MAR, LD_MDR, MIO_EN, R_W, GateMDR, GateVector, rxd, clk, SDAER, seg, an, INT_Priority, R, txd );
 inout [15:0] BUS;
 inout SDA_BUS;
 output SCL_BUS;
 input [7:0] sw;
 input [4:0] btn;
 input [1:0] VectorMUX;
-input LD_Vector, LD_MAR, LD_MDR, MIO_EN, R_W, GateMDR, GateVector, clk;
+input LD_Vector, LD_MAR, LD_MDR, MIO_EN, R_W, GateMDR, GateVector, rxd, clk;
 output [15:0] SDAER;
 output [6:0] seg;
 output [3:0] an;
 output [2:0] INT_Priority;
+output txd;
 output reg R;
 
 reg [15:0] MAR, MDR;
 reg readed;
-wire [15:0] INMUX, dout, KBDR, KBSR, DSR, SDADR, SCLER, SWR;
+wire [15:0] INMUX, dout, KBDR, KBSR, DSR, SDADR, SCLER, SWR, UARTSR;
 wire [7:0] Vector;
 wire [3:0] INMUX_Sel;
 
@@ -62,9 +63,10 @@ assign INMUX =   ( INMUX_Sel == 4'b0000 ? dout
 					: ( INMUX_Sel == 4'b0111 ? { 15'b0, SDA_BUS }
 					: ( INMUX_Sel == 4'b1000 ? SCLER
 					: ( INMUX_Sel == 4'b1001 ? { 15'b0, SCL_BUS }
-					: 16'hzzzz ))))))))));
+					: ( INMUX_Sel == 4'b1010 ? UARTSR
+					: 16'hzzzz )))))))))));
 
-ADDR_CTL_LOGIC addr_ctl_logic( MAR, R_W, MIO_EN, INMUX_Sel, MEM_EN, LD_KBSR, LD_DDR, LD_DSR, LD_SDAER, LD_SDADR, LD_SCLER );
+ADDR_CTL_LOGIC addr_ctl_logic( MAR, R_W, MIO_EN, INMUX_Sel, MEM_EN, LD_KBSR, LD_DDR, LD_DSR, LD_SDAER, LD_SDADR, LD_SCLER, LD_UARTDR, LD_UARTSR );
 
 MEMORY memory( MDR, MAR, R_W, MEM_EN, clk, dout, R_MEM );
 
@@ -77,6 +79,8 @@ SWITCH switch( sw, clk, SWR );
 SDA sda( SDA_BUS, MDR, LD_SDAER, LD_SDADR, clk, SDAER, SDADR, WR_SDA );
 
 SCL scl( SCL_BUS, MDR, LD_SCLER, clk, SCLER, WR_SCL );
+
+UART uart( MDR, rxd, LD_UARTDR, LD_UARTSR, clk, UARTSR, txd, WR_UART );
 
 always @( posedge clk ) begin
 	if( ~MIO_EN ) begin
@@ -91,7 +95,8 @@ always @( posedge clk ) begin
 			: ( LD_KBSR ? WR_KB
 			: ( LD_DDR | LD_DSR ? WR_DSP
 			: ( LD_SDAER | LD_SDADR ? WR_SDA
-			: WR_SCL ))));
+			: ( LD_SCLER ? WR_SCL
+			: WR_UART )))));
 		readed <= 0;
 	end
 	else if( ~R & ( R_MEM | ~MEM_EN ) )begin // 此时 LD_MDR 必定为 1
@@ -105,6 +110,6 @@ always @( posedge clk ) begin
 		readed <= 0;
 end
 
-INT_CTL int_ctl( KBSR, DSR, VectorMUX, LD_Vector, clk, Vector, INT_Priority );
+INT_CTL int_ctl( KBSR, DSR, UARTSR, VectorMUX, LD_Vector, clk, Vector, INT_Priority );
 
 endmodule

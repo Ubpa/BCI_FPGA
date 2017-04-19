@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "D:/UART/top.v.xst" -ofn "D:/UART/top.v.syr" 

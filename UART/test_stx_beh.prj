@@ -1,0 +1,6 @@
+verilog isim_temp "txd.v"
+verilog isim_temp "rxd.v"
+verilog isim_temp "clk.v"
+verilog isim_temp "top.v"
+verilog isim_temp "test.v"
+verilog isim_temp "E:/Xilinx_ISE_DS_Win_12/ise/ISE_DS/ISE//verilog/src/glbl.v"
