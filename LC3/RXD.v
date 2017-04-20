@@ -23,6 +23,8 @@ input rst_n, parity_en, parity_kind, rxd, clk;
 output reg [7:0] r1, r2, r3, r4;
 output reg fr;
 
+parameter times = 16'h006C;
+
 wire [15:0] cnt;
 reg [1:0] wr;
 reg [1:0] receiveflag;
@@ -31,7 +33,7 @@ reg [3:0] bit_counter;
 reg [7:0] rcv_sr,rcv_data;
 reg reset, parity1;
 
-COUNTER counter( 16'h0516, clk, reset, cnt, c );//9600 bps
+COUNTER counter( times, clk, reset, cnt, c );//9600 bps
 initial reset = 0;
 
 always@(posedge clk or negedge rst_n)

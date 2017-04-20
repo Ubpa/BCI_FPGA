@@ -23,25 +23,25 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to <arg fmt="%s" index="1">cnt</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 35: Using initial value of <arg fmt="%s" index="1">reset</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 37: Using initial value of <arg fmt="%s" index="1">reset</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 34: Assignment to <arg fmt="%s" index="1">cnt</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 36: Assignment to <arg fmt="%s" index="1">cnt</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 64: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 66: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 67: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 69: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 83: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 85: Result of <arg fmt="%d" index="1">2</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 87: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 89: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 91: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 93: Result of <arg fmt="%d" index="1">4</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 76: Assignment to <arg fmt="%s" index="1">r1</arg> ignored, since the identifier is never used
@@ -351,6 +351,18 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: LC3.prj
 
@@ -191,13 +191,13 @@ WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assi
 Elaborating module <UART>.
 
 Elaborating module <RXD>.
-WARNING:HDLCompiler:872 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 35: Using initial value of reset since it is never assigned
-WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 34: Assignment to cnt ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 64: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 67: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 83: Result of 2-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 87: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 91: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:872 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 37: Using initial value of reset since it is never assigned
+WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 36: Assignment to cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 66: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 69: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 85: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 89: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 93: Result of 4-bit expression is truncated to fit in 3-bit target.
 WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 76: Assignment to r1 ignored, since the identifier is never used
 
 Elaborating module <TXD>.
@@ -529,7 +529,7 @@ Unit <UART> synthesized.
 
 Synthesizing Unit <TXD>.
     Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v".
-        times = 16'b0010100010110000
+        times = 16'b0000001101100100
         idle = 3'b000
         start = 3'b001
         shift = 3'b010
@@ -923,6 +923,10 @@ WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_9> of sequential type is unconnect
 WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_8> of sequential type is unconnected in block <LC3>.
 WARNING:Xst:1293 - FF/Latch <g_memory/uart/_txd/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_13> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_11> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_10> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
@@ -946,8 +950,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 413
- Flip-Flops                                            : 413
+# Registers                                            : 409
+ Flip-Flops                                            : 409
 
 =========================================================================
 
@@ -970,26 +974,26 @@ Top Level Output File Name         : LC3.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1081
+# BELS                             : 1067
 #      GND                         : 1
 #      INV                         : 33
-#      LUT1                        : 126
+#      LUT1                        : 122
 #      LUT2                        : 43
-#      LUT3                        : 78
-#      LUT4                        : 68
+#      LUT3                        : 76
+#      LUT4                        : 69
 #      LUT5                        : 83
-#      LUT6                        : 274
-#      MUXCY                       : 171
+#      LUT6                        : 273
+#      MUXCY                       : 167
 #      MUXF7                       : 20
 #      VCC                         : 1
-#      XORCY                       : 183
-# FlipFlops/Latches                : 413
+#      XORCY                       : 179
+# FlipFlops/Latches                : 409
 #      FD                          : 70
 #      FDC                         : 5
 #      FDCE                        : 5
 #      FDE                         : 174
 #      FDPE                        : 2
-#      FDR                         : 123
+#      FDR                         : 119
 #      FDRE                        : 33
 #      FDSE                        : 1
 # RAMS                             : 46
@@ -1010,17 +1014,17 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             413  out of  18224     2%  
- Number of Slice LUTs:                  743  out of   9112     8%  
-    Number used as Logic:               705  out of   9112     7%  
+ Number of Slice Registers:             409  out of  18224     2%  
+ Number of Slice LUTs:                  737  out of   9112     8%  
+    Number used as Logic:               699  out of   9112     7%  
     Number used as Memory:               38  out of   2176     1%  
        Number used as RAM:               38
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    858
-   Number with an unused Flip Flop:     445  out of    858    51%  
-   Number with an unused LUT:           115  out of    858    13%  
-   Number of fully used LUT-FF pairs:   298  out of    858    34%  
+ Number of LUT Flip Flop pairs used:    852
+   Number with an unused Flip Flop:     443  out of    852    51%  
+   Number with an unused LUT:           115  out of    852    13%  
+   Number of fully used LUT-FF pairs:   294  out of    852    34%  
    Number of unique control sets:        70
 
 IO Utilization: 
@@ -1053,7 +1057,7 @@ Clock Information:
 ---------------------------------------------+------------------------------------------------+-------+
 Clock Signal                                 | Clock buffer(FF name)                          | Load  |
 ---------------------------------------------+------------------------------------------------+-------+
-clk                                          | BUFGP                                          | 450   |
+clk                                          | BUFGP                                          | 446   |
 g_memory/uart/_txd/c(g_memory/uart/_txd/c1:O)| NONE(*)(g_memory/uart/_txd/curr_state_FSM_FFd1)| 9     |
 ---------------------------------------------+------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -1081,7 +1085,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.257ns (frequency: 121.114MHz)
-  Total number of paths / destination ports: 285271 / 1512
+  Total number of paths / destination ports: 285121 / 1504
 -------------------------------------------------------------------------
 Delay:               8.257ns (Levels of Logic = 10)
   Source:            fsm/controlstore/MicroIR_15 (FF)
@@ -1146,7 +1150,7 @@ Offset:              3.364ns (Levels of Logic = 4)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.222   0.808  SDA_BUS_IOBUF (N24)
+     IOBUF:IO->O           1   1.222   0.808  SDA_BUS_IOBUF (N26)
      LUT6:I3->O            1   0.205   0.000  g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_6 (g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_6)
      MUXF7:I1->O           1   0.140   0.684  g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_5_f7 (g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_5_f7)
      LUT5:I3->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_32_OUT1 (g_memory/MDR[15]_MDR[15]_mux_32_OUT<0>)
@@ -1205,7 +1209,7 @@ Clock to Setup on destination clock clk
 Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------+---------+---------+---------+---------+
 clk                 |    8.257|         |         |         |
-g_memory/uart/_txd/c|    2.690|         |         |         |
+g_memory/uart/_txd/c|    2.745|         |         |         |
 --------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock g_memory/uart/_txd/c
@@ -1220,14 +1224,14 @@ g_memory/uart/_txd/c|    3.022|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 23.70 secs
+Total REAL time to Xst completion: 19.00 secs
+Total CPU time to Xst completion: 19.30 secs
  
 --> 
 
 Total memory usage is 330308 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  105 (   0 filtered)
+Number of warnings :  109 (   0 filtered)
 Number of infos    :   20 (   0 filtered)
 

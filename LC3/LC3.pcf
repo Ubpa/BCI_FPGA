@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Apr 20 01:57:32 2017
+// Written by: Map P.20131013 on Thu Apr 20 18:41:09 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -257,10 +257,6 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/uart/UARTDR_3" BEL "g_memory/uart/UARTDR_2" BEL
         "g_memory/uart/UARTDR_1" BEL "g_memory/uart/UARTDR_0" BEL
         "g_memory/uart/_txd/counter/cnt_0" BEL
-        "g_memory/uart/_txd/counter/cnt_13" BEL
-        "g_memory/uart/_txd/counter/cnt_11" BEL
-        "g_memory/uart/_txd/counter/cnt_10" BEL
-        "g_memory/uart/_txd/counter/cnt_12" BEL
         "g_memory/uart/_txd/counter/cnt_9" BEL
         "g_memory/uart/_txd/counter/cnt_8" BEL
         "g_memory/uart/_txd/counter/cnt_7" BEL
