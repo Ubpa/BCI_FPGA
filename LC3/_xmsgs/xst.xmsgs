@@ -20,6 +20,9 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 90: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v" Line 49: Assignment to <arg fmt="%s" index="1">temp</arg> ignored, since the identifier is never used
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to <arg fmt="%s" index="1">cnt</arg> ignored, since the identifier is never used
 </msg>
 
@@ -86,13 +89,19 @@
 <msg type="warning" file="Xst" num="2404" delta="old" > FFs/Latches &lt;<arg fmt="%s" index="1">SWR</arg>&lt;<arg fmt="%d" index="2">15</arg>:<arg fmt="%d" index="3">8</arg>&gt;&gt; (without init value) have a constant value of <arg fmt="%c" index="4">0</arg> in block &lt;<arg fmt="%s" index="5">SWITCH</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">MDR&lt;15:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">MDR&lt;15:3&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
 <msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">SDAER&lt;15:1&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">SDA</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000</arg>).
 </msg>
 
 <msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">SDADR&lt;15:1&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">SDA</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">SDASR&lt;15:3&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">SDA</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000000000000</arg>).
+</msg>
+
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">SDA_MODE</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">SDA</arg>&apos;, is tied to its initial value.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">MDR&lt;15:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -246,6 +255,9 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_REGFILE</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram_SDA_MODE</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">DDR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">DISIPLAY</arg>&gt;.

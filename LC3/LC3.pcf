@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Apr 20 18:41:09 2017
+// Written by: Map P.20131013 on Fri Apr 21 13:09:04 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -30,8 +30,16 @@ COMP "seg<3>" LOCATE = SITE "U18" LEVEL 1;
 COMP "seg<4>" LOCATE = SITE "M14" LEVEL 1;
 COMP "seg<5>" LOCATE = SITE "N14" LEVEL 1;
 COMP "seg<6>" LOCATE = SITE "L14" LEVEL 1;
-COMP "SDA_BUS" LOCATE = SITE "V12" LEVEL 1;
-COMP "SCL_BUS" LOCATE = SITE "T12" LEVEL 1;
+COMP "newSCL" LOCATE = SITE "K1" LEVEL 1;
+COMP "SDA_BUS<0>" LOCATE = SITE "T12" LEVEL 1;
+COMP "SDA_BUS<1>" LOCATE = SITE "V12" LEVEL 1;
+COMP "SDA_BUS<2>" LOCATE = SITE "N10" LEVEL 1;
+COMP "SDA_BUS<3>" LOCATE = SITE "P11" LEVEL 1;
+COMP "SDA_BUS<4>" LOCATE = SITE "M10" LEVEL 1;
+COMP "SDA_BUS<5>" LOCATE = SITE "N9" LEVEL 1;
+COMP "SDA_BUS<6>" LOCATE = SITE "U11" LEVEL 1;
+COMP "SDA_BUS<7>" LOCATE = SITE "V11" LEVEL 1;
+COMP "SCL_BUS" LOCATE = SITE "K2" LEVEL 1;
 PIN g_memory/memory/Mram_RAM32_pins<14> = BEL "g_memory/memory/Mram_RAM32"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM31_pins<14> = BEL "g_memory/memory/Mram_RAM31"
@@ -92,9 +100,9 @@ PIN g_memory/memory/Mram_RAM4_pins<14> = BEL "g_memory/memory/Mram_RAM4"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM3_pins<14> = BEL "g_memory/memory/Mram_RAM3"
         PINNAME CLKA;
-PIN g_memory/memory/Mram_RAM2_pins<14> = BEL "g_memory/memory/Mram_RAM2"
-        PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM1_pins<14> = BEL "g_memory/memory/Mram_RAM1"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM2_pins<14> = BEL "g_memory/memory/Mram_RAM2"
         PINNAME CLKA;
 TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/MDR_14" BEL "g_memory/MDR_13" BEL "g_memory/MDR_12" BEL
@@ -107,28 +115,29 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/MAR_10" BEL "g_memory/MAR_9" BEL "g_memory/MAR_8" BEL
         "g_memory/MAR_7" BEL "g_memory/MAR_6" BEL "g_memory/MAR_5" BEL
         "g_memory/MAR_4" BEL "g_memory/MAR_3" BEL "g_memory/MAR_2" BEL
-        "g_memory/MAR_1" BEL "g_memory/MAR_0" BEL "g_memory/sda/SDAER_0" BEL
-        "g_memory/sda/SDADR_0" BEL "cpu/PSR_10" BEL "cpu/PSR_9" BEL
-        "cpu/PSR_8" BEL "cpu/PSR_2" BEL "cpu/PSR_1" BEL "cpu/PSR_0" BEL
-        "cpu/PSR_15" BEL "cpu/IR_15" BEL "cpu/IR_14" BEL "cpu/IR_13" BEL
-        "cpu/IR_12" BEL "cpu/IR_11" BEL "cpu/IR_10" BEL "cpu/IR_9" BEL
-        "cpu/IR_8" BEL "cpu/IR_7" BEL "cpu/IR_6" BEL "cpu/IR_5" BEL "cpu/IR_4"
-        BEL "cpu/IR_3" BEL "cpu/IR_2" BEL "cpu/IR_1" BEL "cpu/IR_0" BEL
-        "cpu/Saved_USP_15" BEL "cpu/Saved_USP_14" BEL "cpu/Saved_USP_13" BEL
-        "cpu/Saved_USP_12" BEL "cpu/Saved_USP_11" BEL "cpu/Saved_USP_10" BEL
-        "cpu/Saved_USP_9" BEL "cpu/Saved_USP_8" BEL "cpu/Saved_USP_7" BEL
-        "cpu/Saved_USP_6" BEL "cpu/Saved_USP_5" BEL "cpu/Saved_USP_4" BEL
-        "cpu/Saved_USP_3" BEL "cpu/Saved_USP_2" BEL "cpu/Saved_USP_1" BEL
-        "cpu/Saved_USP_0" BEL "cpu/Saved_SSP_15" BEL "cpu/Saved_SSP_14" BEL
-        "cpu/Saved_SSP_13" BEL "cpu/Saved_SSP_12" BEL "cpu/Saved_SSP_11" BEL
-        "cpu/Saved_SSP_10" BEL "cpu/Saved_SSP_9" BEL "cpu/Saved_SSP_8" BEL
-        "cpu/Saved_SSP_7" BEL "cpu/Saved_SSP_6" BEL "cpu/Saved_SSP_5" BEL
-        "cpu/Saved_SSP_4" BEL "cpu/Saved_SSP_3" BEL "cpu/Saved_SSP_2" BEL
-        "cpu/Saved_SSP_1" BEL "cpu/Saved_SSP_0" BEL "cpu/PC_15" BEL
-        "cpu/PC_14" BEL "cpu/PC_13" BEL "cpu/PC_12" BEL "cpu/PC_11" BEL
-        "cpu/PC_10" BEL "cpu/PC_9" BEL "cpu/PC_8" BEL "cpu/PC_7" BEL
-        "cpu/PC_6" BEL "cpu/PC_5" BEL "cpu/PC_4" BEL "cpu/PC_3" BEL "cpu/PC_2"
-        BEL "cpu/PC_1" BEL "cpu/PC_0" BEL "cpu/BEN" BEL
+        "g_memory/MAR_1" BEL "g_memory/MAR_0" BEL "g_memory/sda/SDASR_0" BEL
+        "g_memory/sda/SDASR_1" BEL "g_memory/sda/SDASR_2" BEL
+        "g_memory/sda/SDAER_0" BEL "g_memory/sda/SDADR_0" BEL "cpu/PSR_10" BEL
+        "cpu/PSR_9" BEL "cpu/PSR_8" BEL "cpu/PSR_2" BEL "cpu/PSR_1" BEL
+        "cpu/PSR_0" BEL "cpu/PSR_15" BEL "cpu/IR_15" BEL "cpu/IR_14" BEL
+        "cpu/IR_13" BEL "cpu/IR_12" BEL "cpu/IR_11" BEL "cpu/IR_10" BEL
+        "cpu/IR_9" BEL "cpu/IR_8" BEL "cpu/IR_7" BEL "cpu/IR_6" BEL "cpu/IR_5"
+        BEL "cpu/IR_4" BEL "cpu/IR_3" BEL "cpu/IR_2" BEL "cpu/IR_1" BEL
+        "cpu/IR_0" BEL "cpu/Saved_USP_15" BEL "cpu/Saved_USP_14" BEL
+        "cpu/Saved_USP_13" BEL "cpu/Saved_USP_12" BEL "cpu/Saved_USP_11" BEL
+        "cpu/Saved_USP_10" BEL "cpu/Saved_USP_9" BEL "cpu/Saved_USP_8" BEL
+        "cpu/Saved_USP_7" BEL "cpu/Saved_USP_6" BEL "cpu/Saved_USP_5" BEL
+        "cpu/Saved_USP_4" BEL "cpu/Saved_USP_3" BEL "cpu/Saved_USP_2" BEL
+        "cpu/Saved_USP_1" BEL "cpu/Saved_USP_0" BEL "cpu/Saved_SSP_15" BEL
+        "cpu/Saved_SSP_14" BEL "cpu/Saved_SSP_13" BEL "cpu/Saved_SSP_12" BEL
+        "cpu/Saved_SSP_11" BEL "cpu/Saved_SSP_10" BEL "cpu/Saved_SSP_9" BEL
+        "cpu/Saved_SSP_8" BEL "cpu/Saved_SSP_7" BEL "cpu/Saved_SSP_6" BEL
+        "cpu/Saved_SSP_5" BEL "cpu/Saved_SSP_4" BEL "cpu/Saved_SSP_3" BEL
+        "cpu/Saved_SSP_2" BEL "cpu/Saved_SSP_1" BEL "cpu/Saved_SSP_0" BEL
+        "cpu/PC_15" BEL "cpu/PC_14" BEL "cpu/PC_13" BEL "cpu/PC_12" BEL
+        "cpu/PC_11" BEL "cpu/PC_10" BEL "cpu/PC_9" BEL "cpu/PC_8" BEL
+        "cpu/PC_7" BEL "cpu/PC_6" BEL "cpu/PC_5" BEL "cpu/PC_4" BEL "cpu/PC_3"
+        BEL "cpu/PC_2" BEL "cpu/PC_1" BEL "cpu/PC_0" BEL "cpu/BEN" BEL
         "g_memory/switch/SWR_7" BEL "g_memory/switch/SWR_6" BEL
         "g_memory/switch/SWR_5" BEL "g_memory/switch/SWR_4" BEL
         "g_memory/switch/SWR_3" BEL "g_memory/switch/SWR_2" BEL
@@ -327,8 +336,9 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         BEL "g_memory/sda/WR" BEL "g_memory/keyboard/KBSR_15" BEL
         "g_memory/uart/UARTSR_15" BEL "g_memory/display/DSR_15" BEL
         "fsm/controlstore/MicroIR_24_1" BEL "fsm/controlstore/MicroIR_22_1"
-        BEL "fsm/controlstore/MicroIR_27_1" BEL "g_memory/MAR_13_1" BEL
-        "cpu/IR_5_1" BEL "clk_BUFGP/BUFG" PIN
+        BEL "fsm/controlstore/MicroIR_27_1" BEL "cpu/IR_5_1" BEL
+        "g_memory/MAR_13_1" BEL "g_memory/MAR_5_1" BEL "g_memory/MAR_10_1" BEL
+        "g_memory/MAR_11_1" BEL "cpu/IR_5_2" BEL "clk_BUFGP/BUFG" PIN
         "g_memory/memory/Mram_RAM32_pins<14>" PIN
         "g_memory/memory/Mram_RAM31_pins<14>" PIN
         "g_memory/memory/Mram_RAM30_pins<14>" PIN
@@ -359,8 +369,8 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/memory/Mram_RAM5_pins<14>" PIN
         "g_memory/memory/Mram_RAM4_pins<14>" PIN
         "g_memory/memory/Mram_RAM3_pins<14>" PIN
-        "g_memory/memory/Mram_RAM2_pins<14>" PIN
-        "g_memory/memory/Mram_RAM1_pins<14>" BEL
+        "g_memory/memory/Mram_RAM1_pins<14>" PIN
+        "g_memory/memory/Mram_RAM2_pins<14>" BEL
         "cpu/regfile/Mram_REGFILE131/DP" BEL "cpu/regfile/Mram_REGFILE131/SP"
         BEL "cpu/regfile/Mram_REGFILE132/DP" BEL
         "cpu/regfile/Mram_REGFILE132/SP" BEL "cpu/regfile/Mram_REGFILE133/DP"

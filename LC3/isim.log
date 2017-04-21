@@ -17,39 +17,8 @@ Finished circuit initialization process.
 # run 1.00us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# run 1.00us
-# restart
-# run 1s
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-Stopped at time : 1524231500 ps : File "E:/CS/OSH/final_HW/BCI_FPGA/LC3/COUNTER.v" Line 33
+# run all
+Stopped at time : 900157500 ps : File "E:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v" Line 46
 ISim P.20131013 (signature 0x7708f090)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -60,16 +29,8 @@ This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# restart
-# run 1s
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-Stopped at time : 863862500 ps : File "E:/CS/OSH/final_HW/BCI_FPGA/LC3/CPU.v" Line 57
-# restart
-# run 1s
-Simulator is doing circuit initialization process.
-Finished circuit initialization process.
-Stopped at time : 269579500 ps : File "E:/CS/OSH/final_HW/BCI_FPGA/LC3/MICROSEQUENCER.v" Line 29
+# run all
+Stopped at time : 670605500 ps : File "E:/CS/OSH/final_HW/BCI_FPGA/LC3/COUNTER.v" Line 33
 ISim P.20131013 (signature 0x7708f090)
 ----------------------------------------------------------------------
 WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
@@ -80,8 +41,17 @@ This is a Full version of ISim.
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# restart
-# run 1s
+# run all
+Stopped at time : 865989500 ps : File "E:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v" Line 48
+ISim P.20131013 (signature 0x7708f090)
+----------------------------------------------------------------------
+WARNING:Security:42 - Your software subscription period has lapsed. Your current version of Xilinx tools will continue to function, but you no longer qualify for Xilinx software updates or new releases.
+
+
+----------------------------------------------------------------------
+This is a Full version of ISim.
+# run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-Stopped at time : 3318680500 ps : File "E:/CS/OSH/final_HW/BCI_FPGA/LC3/DISIPLAY.v" Line 63
+# run all
+Stopped at time : 1324320 ns : File "E:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v" Line 32

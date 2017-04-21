@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total CPU time to Xst completion: 0.10 secs
  
 --> Reading design: LC3.prj
 
@@ -184,6 +184,7 @@ WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 90: 
 Elaborating module <SWITCH>.
 
 Elaborating module <SDA>.
+WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v" Line 49: Assignment to temp ignored, since the identifier is never used
 
 Elaborating module <SCL>.
 WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to cnt ignored, since the identifier is never used
@@ -296,7 +297,8 @@ Synthesizing Unit <G_MEMORY>.
     Found 16-bit register for signal <MDR>.
     Found 1-bit register for signal <readed>.
     Found 16-bit register for signal <MAR>.
-    Found 16-bit 12-to-1 multiplexer for signal <Z_5_o_dout[15]_mux_26_OUT> created at line 56.
+    Found 1-bit 8-to-1 multiplexer for signal <SDASR[2]_SDA_BUS[7]_Mux_14_o> created at line 64.
+    Found 16-bit 13-to-1 multiplexer for signal <Z_5_o_dout[15]_mux_29_OUT> created at line 56.
     Found 1-bit tristate buffer for signal <BUS<15>> created at line 42
     Found 1-bit tristate buffer for signal <BUS<14>> created at line 42
     Found 1-bit tristate buffer for signal <BUS<13>> created at line 42
@@ -331,14 +333,14 @@ Synthesizing Unit <G_MEMORY>.
     Found 1-bit tristate buffer for signal <INMUX<0>> created at line 56
     Summary:
 	inferred  34 D-type flip-flop(s).
-	inferred   8 Multiplexer(s).
+	inferred   9 Multiplexer(s).
 	inferred  32 Tristate(s).
 Unit <G_MEMORY> synthesized.
 
 Synthesizing Unit <ADDR_CTL_LOGIC>.
     Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v".
     Summary:
-	inferred   9 Multiplexer(s).
+	inferred  10 Multiplexer(s).
 Unit <ADDR_CTL_LOGIC> synthesized.
 
 Synthesizing Unit <MEMORY>.
@@ -467,16 +469,31 @@ Unit <SWITCH> synthesized.
 
 Synthesizing Unit <SDA>.
     Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v".
-WARNING:Xst:647 - Input <MDR<15:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <MDR<15:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:2935 - Signal 'SDAER<15:1>', unconnected in block 'SDA', is tied to its initial value (000000000000000).
 WARNING:Xst:2935 - Signal 'SDADR<15:1>', unconnected in block 'SDA', is tied to its initial value (000000000000000).
+WARNING:Xst:2935 - Signal 'SDASR<15:3>', unconnected in block 'SDA', is tied to its initial value (0000000000000).
+WARNING:Xst:2999 - Signal 'SDA_MODE', unconnected in block 'SDA', is tied to its initial value.
+    Found 16x8-bit single-port Read Only RAM <Mram_SDA_MODE> for signal <SDA_MODE>.
     Found 1-bit register for signal <WR>.
     Found 1-bit register for signal <SDAER<0>>.
+    Found 1-bit register for signal <SDASR<2>>.
+    Found 1-bit register for signal <SDASR<1>>.
+    Found 1-bit register for signal <SDASR<0>>.
     Found 1-bit register for signal <SDADR<0>>.
-    Found 1-bit tristate buffer for signal <SDA_BUS> created at line 28
+    Found 1-bit tristate buffer for signal <SDA_BUS<7>> created at line 50
+    Found 1-bit tristate buffer for signal <SDA_BUS<6>> created at line 50
+    Found 1-bit tristate buffer for signal <SDA_BUS<5>> created at line 50
+    Found 1-bit tristate buffer for signal <SDA_BUS<4>> created at line 50
+    Found 1-bit tristate buffer for signal <SDA_BUS<3>> created at line 50
+    Found 1-bit tristate buffer for signal <SDA_BUS<2>> created at line 50
+    Found 1-bit tristate buffer for signal <SDA_BUS<1>> created at line 50
+    Found 1-bit tristate buffer for signal <SDA_BUS<0>> created at line 50
     Summary:
-	inferred   3 D-type flip-flop(s).
-	inferred   1 Tristate(s).
+	inferred   1 RAM(s).
+	inferred   6 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+	inferred   8 Tristate(s).
 Unit <SDA> synthesized.
 
 Synthesizing Unit <SCL>.
@@ -558,7 +575,7 @@ WARNING:Xst:647 - Input <UARTDR<15:8>> is never used. This port will be preserve
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <bit_counter[2]_GND_67_o_add_11_OUT> created at line 93.
+    Found 3-bit adder for signal <bit_counter[2]_GND_74_o_add_11_OUT> created at line 93.
     Found 1-bit 8-to-1 multiplexer for signal <bit_counter[2]_UARTDR[7]_Mux_10_o> created at line 92.
     Summary:
 	inferred   1 Adder/Subtractor(s).
@@ -613,7 +630,8 @@ Unit <MICROSEQUENCER> synthesized.
 HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 7
+# RAMs                                                 : 8
+ 16x8-bit single-port Read Only RAM                    : 1
  256x7-bit single-port Read Only RAM                   : 1
  32768x16-bit single-port RAM                          : 1
  4x4-bit single-port Read Only RAM                     : 1
@@ -626,8 +644,8 @@ Macro Statistics
  17-bit subtractor                                     : 8
  2-bit adder                                           : 1
  3-bit adder                                           : 1
-# Registers                                            : 136
- 1-bit register                                        : 112
+# Registers                                            : 139
+ 1-bit register                                        : 115
  16-bit register                                       : 17
  2-bit register                                        : 1
  3-bit register                                        : 3
@@ -638,19 +656,19 @@ Macro Statistics
  3-bit comparator greater                              : 1
  32-bit comparator equal                               : 8
  32-bit comparator greater                             : 8
-# Multiplexers                                         : 68
- 1-bit 2-to-1 multiplexer                              : 28
+# Multiplexers                                         : 71
+ 1-bit 2-to-1 multiplexer                              : 29
  1-bit 4-to-1 multiplexer                              : 2
- 1-bit 8-to-1 multiplexer                              : 1
- 16-bit 12-to-1 multiplexer                            : 1
+ 1-bit 8-to-1 multiplexer                              : 2
+ 16-bit 13-to-1 multiplexer                            : 1
  16-bit 2-to-1 multiplexer                             : 19
  16-bit 4-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 5
- 4-bit 2-to-1 multiplexer                              : 9
+ 4-bit 2-to-1 multiplexer                              : 10
  6-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
-# Tristates                                            : 57
- 1-bit tristate buffer                                 : 57
+# Tristates                                            : 64
+ 1-bit tristate buffer                                 : 64
 # FSMs                                                 : 1
 
 =========================================================================
@@ -805,6 +823,20 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_REGFILE> will be implemented on LUTs
     -----------------------------------------------------------------------
 Unit <REGFILE> synthesized (advanced).
 
+Synthesizing (advanced) Unit <SDA>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SDA_MODE> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 8-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <(SDADR,SDASR)> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <SDA> synthesized (advanced).
+
 Synthesizing (advanced) Unit <TXD>.
 The following registers are absorbed into counter <bit_counter>: 1 register on signal <bit_counter>.
 Unit <TXD> synthesized (advanced).
@@ -819,7 +851,8 @@ WARNING:Xst:2677 - Node <DDR_13> of sequential type is unconnected in block <DIS
 Advanced HDL Synthesis Report
 
 Macro Statistics
-# RAMs                                                 : 7
+# RAMs                                                 : 8
+ 16x8-bit single-port distributed Read Only RAM        : 1
  256x7-bit single-port distributed Read Only RAM       : 1
  32768x16-bit single-port block RAM                    : 1
  4x4-bit single-port distributed Read Only RAM         : 1
@@ -834,22 +867,22 @@ Macro Statistics
  16-bit up counter                                     : 8
  2-bit up counter                                      : 1
  3-bit up counter                                      : 1
-# Registers                                            : 306
- Flip-Flops                                            : 306
+# Registers                                            : 309
+ Flip-Flops                                            : 309
 # Comparators                                          : 30
  1-bit comparator equal                                : 13
  3-bit comparator greater                              : 1
  32-bit comparator equal                               : 8
  32-bit comparator greater                             : 8
-# Multiplexers                                         : 67
+# Multiplexers                                         : 69
  1-bit 2-to-1 multiplexer                              : 28
  1-bit 4-to-1 multiplexer                              : 2
- 1-bit 8-to-1 multiplexer                              : 1
- 16-bit 12-to-1 multiplexer                            : 1
+ 1-bit 8-to-1 multiplexer                              : 2
+ 16-bit 13-to-1 multiplexer                            : 1
  16-bit 2-to-1 multiplexer                             : 19
  16-bit 4-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 4
- 4-bit 2-to-1 multiplexer                              : 9
+ 4-bit 2-to-1 multiplexer                              : 10
  6-bit 2-to-1 multiplexer                              : 1
  8-bit 2-to-1 multiplexer                              : 1
 # FSMs                                                 : 1
@@ -937,12 +970,15 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counte
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 8.
-FlipFlop cpu/IR_5 has been replicated 1 time(s)
+Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 9.
+FlipFlop cpu/IR_5 has been replicated 2 time(s)
 FlipFlop fsm/controlstore/MicroIR_22 has been replicated 1 time(s)
 FlipFlop fsm/controlstore/MicroIR_24 has been replicated 1 time(s)
 FlipFlop fsm/controlstore/MicroIR_27 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_10 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_11 has been replicated 1 time(s)
 FlipFlop g_memory/MAR_13 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_5 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -950,8 +986,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 409
- Flip-Flops                                            : 409
+# Registers                                            : 416
+ Flip-Flops                                            : 416
 
 =========================================================================
 
@@ -974,24 +1010,24 @@ Top Level Output File Name         : LC3.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1067
+# BELS                             : 1088
 #      GND                         : 1
 #      INV                         : 33
 #      LUT1                        : 122
-#      LUT2                        : 43
-#      LUT3                        : 76
-#      LUT4                        : 69
-#      LUT5                        : 83
-#      LUT6                        : 273
+#      LUT2                        : 46
+#      LUT3                        : 88
+#      LUT4                        : 77
+#      LUT5                        : 80
+#      LUT6                        : 265
 #      MUXCY                       : 167
-#      MUXF7                       : 20
+#      MUXF7                       : 29
 #      VCC                         : 1
 #      XORCY                       : 179
-# FlipFlops/Latches                : 409
+# FlipFlops/Latches                : 416
 #      FD                          : 70
 #      FDC                         : 5
 #      FDCE                        : 5
-#      FDE                         : 174
+#      FDE                         : 181
 #      FDPE                        : 2
 #      FDR                         : 119
 #      FDRE                        : 33
@@ -1002,10 +1038,10 @@ Primitive and Black Box Usage:
 #      RAMB16BWER                  : 32
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 43
+# IO Buffers                       : 51
 #      IBUF                        : 13
-#      IOBUF                       : 1
-#      OBUF                        : 29
+#      IOBUF                       : 8
+#      OBUF                        : 30
 
 Device utilization summary:
 ---------------------------
@@ -1014,22 +1050,22 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             409  out of  18224     2%  
- Number of Slice LUTs:                  737  out of   9112     8%  
-    Number used as Logic:               699  out of   9112     7%  
+ Number of Slice Registers:             416  out of  18224     2%  
+ Number of Slice LUTs:                  749  out of   9112     8%  
+    Number used as Logic:               711  out of   9112     7%  
     Number used as Memory:               38  out of   2176     1%  
        Number used as RAM:               38
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    852
-   Number with an unused Flip Flop:     443  out of    852    51%  
-   Number with an unused LUT:           115  out of    852    13%  
-   Number of fully used LUT-FF pairs:   294  out of    852    34%  
-   Number of unique control sets:        70
+ Number of LUT Flip Flop pairs used:    862
+   Number with an unused Flip Flop:     446  out of    862    51%  
+   Number with an unused LUT:           113  out of    862    13%  
+   Number of fully used LUT-FF pairs:   303  out of    862    35%  
+   Number of unique control sets:        71
 
 IO Utilization: 
- Number of IOs:                          45
- Number of bonded IOBs:                  44  out of    232    18%  
+ Number of IOs:                          53
+ Number of bonded IOBs:                  52  out of    232    22%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               32  out of     32   100%  
@@ -1057,7 +1093,7 @@ Clock Information:
 ---------------------------------------------+------------------------------------------------+-------+
 Clock Signal                                 | Clock buffer(FF name)                          | Load  |
 ---------------------------------------------+------------------------------------------------+-------+
-clk                                          | BUFGP                                          | 446   |
+clk                                          | BUFGP                                          | 453   |
 g_memory/uart/_txd/c(g_memory/uart/_txd/c1:O)| NONE(*)(g_memory/uart/_txd/curr_state_FSM_FFd1)| 9     |
 ---------------------------------------------+------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -1074,8 +1110,8 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 8.257ns (Maximum Frequency: 121.114MHz)
-   Minimum input arrival time before clock: 3.364ns
-   Maximum output required time after clock: 4.761ns
+   Minimum input arrival time before clock: 4.677ns
+   Maximum output required time after clock: 4.930ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -1085,7 +1121,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.257ns (frequency: 121.114MHz)
-  Total number of paths / destination ports: 285121 / 1504
+  Total number of paths / destination ports: 293730 / 1518
 -------------------------------------------------------------------------
 Delay:               8.257ns (Levels of Logic = 10)
   Source:            fsm/controlstore/MicroIR_15 (FF)
@@ -1139,45 +1175,47 @@ Delay:               3.022ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 34 / 34
+  Total number of paths / destination ports: 41 / 34
 -------------------------------------------------------------------------
-Offset:              3.364ns (Levels of Logic = 4)
-  Source:            SDA_BUS (PAD)
+Offset:              4.677ns (Levels of Logic = 6)
+  Source:            SDA_BUS<6> (PAD)
   Destination:       g_memory/MDR_0 (FF)
   Destination Clock: clk rising
 
-  Data Path: SDA_BUS to g_memory/MDR_0
+  Data Path: SDA_BUS<6> to g_memory/MDR_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.222   0.808  SDA_BUS_IOBUF (N26)
-     LUT6:I3->O            1   0.205   0.000  g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_6 (g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_6)
-     MUXF7:I1->O           1   0.140   0.684  g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_5_f7 (g_memory/Mmux_Z_5_o_dout[15]_mux_26_OUT_5_f7)
-     LUT5:I3->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_32_OUT1 (g_memory/MDR[15]_MDR[15]_mux_32_OUT<0>)
+     IOBUF:IO->O           1   1.222   0.827  SDA_BUS_6_IOBUF (N67)
+     LUT6:I2->O            1   0.203   0.000  g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_3 (g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_3)
+     MUXF7:I1->O           1   0.140   0.808  g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_2_f7 (g_memory/SDASR[2]_SDA_BUS[7]_Mux_14_o)
+     LUT6:I3->O            1   0.205   0.827  g_memory/Mmux_Z_5_o_dout[15]_mux_29_OUT_71 (g_memory/Mmux_Z_5_o_dout[15]_mux_29_OUT_71)
+     LUT6:I2->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_35_OUT1_G (N301)
+     MUXF7:I1->O           1   0.140   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_35_OUT1 (g_memory/MDR[15]_MDR[15]_mux_35_OUT<0>)
      FDE:D                     0.102          g_memory/MDR_0
     ----------------------------------------
-    Total                      3.364ns (1.872ns logic, 1.492ns route)
-                                       (55.7% logic, 44.3% route)
+    Total                      4.677ns (2.215ns logic, 2.462ns route)
+                                       (47.4% logic, 52.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 21 / 14
+  Total number of paths / destination ports: 60 / 22
 -------------------------------------------------------------------------
-Offset:              4.761ns (Levels of Logic = 2)
-  Source:            g_memory/display/i_0 (FF)
-  Destination:       an<3> (PAD)
+Offset:              4.930ns (Levels of Logic = 2)
+  Source:            g_memory/sda/SDASR_1 (FF)
+  Destination:       SDA_BUS<6> (PAD)
   Source Clock:      clk rising
 
-  Data Path: g_memory/display/i_0 to an<3>
+  Data Path: g_memory/sda/SDASR_1 to SDA_BUS<6>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             10   0.447   0.961  g_memory/display/i_0 (g_memory/display/i_0)
-     LUT2:I0->O            1   0.203   0.579  g_memory/display/Mram_ANREG31 (an_3_OBUF)
-     OBUF:I->O                 2.571          an_3_OBUF (an<3>)
+     FDE:C->Q             11   0.447   1.130  g_memory/sda/SDASR_1 (g_memory/sda/SDASR_1)
+     LUT4:I0->O            1   0.203   0.579  g_memory/sda/Mram_SDA_MODE61 (g_memory/sda/Mram_SDA_MODE6)
+     IOBUF:I->IO               2.571          SDA_BUS_6_IOBUF (SDA_BUS<6>)
     ----------------------------------------
-    Total                      4.761ns (3.221ns logic, 1.540ns route)
-                                       (67.7% logic, 32.3% route)
+    Total                      4.930ns (3.221ns logic, 1.709ns route)
+                                       (65.3% logic, 34.7% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'g_memory/uart/_txd/c'
@@ -1224,14 +1262,14 @@ g_memory/uart/_txd/c|    3.022|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 19.30 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.47 secs
  
 --> 
 
-Total memory usage is 330308 kilobytes
+Total memory usage is 328304 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  109 (   0 filtered)
-Number of infos    :   20 (   0 filtered)
+Number of warnings :  112 (   0 filtered)
+Number of infos    :   21 (   0 filtered)
 

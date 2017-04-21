@@ -469,3 +469,70 @@ map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -re
 par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
 trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
 bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 
+xst -intstyle ise -ifn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.xst" -ofn "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Nexys3_Master.ucf -p xc6slx16-csg324-3 LC3.ngc LC3.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o LC3_map.ncd LC3.ngd LC3.pcf 
+par -w -intstyle ise -ol high -mt off LC3_map.ncd LC3.ncd LC3.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml LC3.twx LC3.ncd -o LC3.twr LC3.pcf -ucf Nexys3_Master.ucf 
+bitgen -intstyle ise -f LC3.ut LC3.ncd 

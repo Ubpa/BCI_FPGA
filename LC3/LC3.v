@@ -18,8 +18,9 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module LC3( SDA_BUS, SCL_BUS, sw, btn, rxd, clk, SDAER, seg, an, txd );
-inout SDA_BUS, SCL_BUS;
+module LC3( SDA_BUS, SCL_BUS, newSCL, sw, btn, rxd, clk, SDAER, seg, an, txd );
+inout [7:0] SDA_BUS;
+inout SCL_BUS, newSCL;
 input [7:0] sw;
 input [4:0] btn;
 input rxd, clk;
@@ -27,6 +28,8 @@ output [15:0] SDAER;
 output [6:0] seg;
 output [3:0] an;
 output txd;
+
+assign newSCL = SCL_BUS;
 
 wire [15:0] BUS;
 wire [4:0] IR_15_11;

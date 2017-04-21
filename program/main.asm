@@ -1,33 +1,42 @@
                     .ORIG x3000
+					LD    R1, NUM_CHIP
+INIT				ADD   R1, R1, #-1
+					BRn   INIT_DONE
+					STI   R1, SDASR_ADDR
 					TRAP  x21
 					JSR   max30102_init
-main_LOOP			LEA   R2, DATA_BUFF; R2 : DATA_BUFF
-					LD    R0, FIFO_RD_PTR_address
-					LD    R1, ONE
-					JSR   max30102_Bus_Read; 读 FIFO_RD_PTR
-WAIT_SAMPLE		    LD    R0, FIFO_WR_PTR_address
-					LD    R1, ONE
-					JSR   max30102_Bus_Read; 读 FIFO_WD_PTR
-					LDR   R0, R2, #-1
-					LDR   R1, R2, #-2
-					ADD   R2, R2, #-1
-					NOT   R1, R1
-					ADD   R1, R1, #1
-					ADD   R0, R0, R1
-					BRz   WAIT_SAMPLE
-					ADD   R2, R2, #-1
-					LD    R0, FIFO_DATA_address
-					LD    R1, SAMPLE_SIZE
-					JSR   max30102_Bus_Read; 读 sample
-					LEA   R2, DATA_BUFF
-					LD    R1, SAMPLE_SIZE
-SEND_LOOP			ADD   R1, R1, #-1
-					BRn   SEND_LOOP_END
-					LDR   R0, R2, #0
-					JSR   uart_send
-					ADD   R2, R2, #1
-					BR    SEND_LOOP
-SEND_LOOP_END		BR    main_LOOP
+					ADD   R0, R1, #0
+					TRAP  x1D
+					BR    INIT
+INIT_DONE			HALT
+
+; main_LOOP			LEA   R2, DATA_BUFF; R2 : DATA_BUFF
+					; LD    R0, FIFO_RD_PTR_address
+					; LD    R1, ONE
+					; JSR   max30102_Bus_Read; 读 FIFO_RD_PTR
+; WAIT_SAMPLE		    LD    R0, FIFO_WR_PTR_address
+					; LD    R1, ONE
+					; JSR   max30102_Bus_Read; 读 FIFO_WD_PTR
+					; LDR   R0, R2, #-1
+					; LDR   R1, R2, #-2
+					; ADD   R2, R2, #-1
+					; NOT   R1, R1
+					; ADD   R1, R1, #1
+					; ADD   R0, R0, R1
+					; BRz   WAIT_SAMPLE
+					; ADD   R2, R2, #-1
+					; LD    R0, FIFO_DATA_address
+					; LD    R1, SAMPLE_SIZE
+					; JSR   max30102_Bus_Read; 读 sample
+					; LEA   R2, DATA_BUFF
+					; LD    R1, SAMPLE_SIZE
+; SEND_LOOP			ADD   R1, R1, #-1
+					; BRn   SEND_LOOP_END
+					; LDR   R0, R2, #0
+					; JSR   uart_send
+					; ADD   R2, R2, #1
+					; BR    SEND_LOOP
+; SEND_LOOP_END		BR    main_LOOP
 
 max30102_Bus_Write;( R0 = (u8) Register_Address, R1 = (u8) Word_Data )
                     ADD   R6, R6, #-2
@@ -133,6 +142,7 @@ LOOP_END            LDR   R0, R6, #0
                     RET
 
 TIME				.FILL #1000
+NUM_CHIP			.FILL x0006
 max30102_WR_address .FILL x00AE
 FIFO_DATA_address   .FILL x0007
 TEMP_address		.FILL x001F
@@ -144,6 +154,7 @@ ZERO                .FILL x0000
 SAMPLE_SIZE			.FILL x0006
 ASCII_0				.FILL x0030
 SCLER_ADDR			.FILL x7E10
+SDASR_ADDR			.FILL x7E0D
 INIT_NUM_I          .FILL x000B;number of initial instructions
 INIT_DATA           .FILL x0009
                     .FILL x000b;1: mode configuration : temp_en[3]      MODE[2:0]=010 HR only enabled    011 SP02 enabled
