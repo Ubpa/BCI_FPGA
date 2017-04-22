@@ -23,7 +23,7 @@ input rst_n, parity_en, parity_kind, rxd, clk;
 output reg [7:0] r1, r2, r3, r4;
 output reg fr;
 
-parameter times = 16'h006C;
+parameter times = 16'h0036;
 
 wire [15:0] cnt;
 reg [1:0] wr;

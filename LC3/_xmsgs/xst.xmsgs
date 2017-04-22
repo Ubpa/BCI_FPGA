@@ -20,9 +20,6 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 90: Result of <arg fmt="%d" index="1">3</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">2</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v" Line 49: Assignment to <arg fmt="%s" index="1">temp</arg> ignored, since the identifier is never used
-</msg>
-
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to <arg fmt="%s" index="1">cnt</arg> ignored, since the identifier is never used
 </msg>
 
@@ -377,6 +374,12 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -396,6 +399,9 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Apr 21 13:09:04 2017
+// Written by: Map P.20131013 on Sat Apr 22 19:28:22 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -266,8 +266,6 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/uart/UARTDR_3" BEL "g_memory/uart/UARTDR_2" BEL
         "g_memory/uart/UARTDR_1" BEL "g_memory/uart/UARTDR_0" BEL
         "g_memory/uart/_txd/counter/cnt_0" BEL
-        "g_memory/uart/_txd/counter/cnt_9" BEL
-        "g_memory/uart/_txd/counter/cnt_8" BEL
         "g_memory/uart/_txd/counter/cnt_7" BEL
         "g_memory/uart/_txd/counter/cnt_6" BEL
         "g_memory/uart/_txd/counter/cnt_4" BEL
@@ -303,32 +301,32 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/display/DDR_2" BEL "g_memory/display/DDR_1" BEL
         "g_memory/display/DDR_0" BEL "g_memory/scl/counter/cnt_0" BEL
         "g_memory/scl/counter/cnt_7" BEL "g_memory/scl/counter/cnt_6" BEL
-        "g_memory/scl/counter/cnt_8" BEL "g_memory/scl/counter/cnt_5" BEL
-        "g_memory/scl/counter/cnt_4" BEL "g_memory/scl/counter/cnt_2" BEL
-        "g_memory/scl/counter/cnt_1" BEL "g_memory/scl/counter/cnt_3" BEL
-        "g_memory/scl/counter/inner_reset" BEL "g_memory/scl/SCL_BUS" BEL
-        "g_memory/scl/reset" BEL "g_memory/scl/SCLER_0" BEL "g_memory/scl/WR"
-        BEL "fsm/controlstore/MicroIR_49" BEL "fsm/controlstore/MicroIR_48"
-        BEL "fsm/controlstore/MicroIR_47" BEL "fsm/controlstore/MicroIR_46"
-        BEL "fsm/controlstore/MicroIR_45" BEL "fsm/controlstore/MicroIR_44"
-        BEL "fsm/controlstore/MicroIR_43" BEL "fsm/controlstore/MicroIR_42"
-        BEL "fsm/controlstore/MicroIR_41" BEL "fsm/controlstore/MicroIR_40"
-        BEL "fsm/controlstore/MicroIR_39" BEL "fsm/controlstore/MicroIR_38"
-        BEL "fsm/controlstore/MicroIR_37" BEL "fsm/controlstore/MicroIR_36"
-        BEL "fsm/controlstore/MicroIR_35" BEL "fsm/controlstore/MicroIR_34"
-        BEL "fsm/controlstore/MicroIR_33" BEL "fsm/controlstore/MicroIR_32"
-        BEL "fsm/controlstore/MicroIR_31" BEL "fsm/controlstore/MicroIR_30"
-        BEL "fsm/controlstore/MicroIR_29" BEL "fsm/controlstore/MicroIR_28"
-        BEL "fsm/controlstore/MicroIR_27" BEL "fsm/controlstore/MicroIR_26"
-        BEL "fsm/controlstore/MicroIR_25" BEL "fsm/controlstore/MicroIR_24"
-        BEL "fsm/controlstore/MicroIR_23" BEL "fsm/controlstore/MicroIR_22"
-        BEL "fsm/controlstore/MicroIR_21" BEL "fsm/controlstore/MicroIR_20"
-        BEL "fsm/controlstore/MicroIR_19" BEL "fsm/controlstore/MicroIR_18"
-        BEL "fsm/controlstore/MicroIR_17" BEL "fsm/controlstore/MicroIR_16"
-        BEL "fsm/controlstore/MicroIR_15" BEL "fsm/controlstore/MicroIR_14"
-        BEL "fsm/controlstore/MicroIR_13" BEL "fsm/controlstore/MicroIR_12"
-        BEL "fsm/controlstore/MicroIR_11" BEL "fsm/controlstore/MicroIR_10"
-        BEL "fsm/controlstore/MicroIR_9" BEL "fsm/controlstore/MicroIR_8" BEL
+        "g_memory/scl/counter/cnt_5" BEL "g_memory/scl/counter/cnt_4" BEL
+        "g_memory/scl/counter/cnt_2" BEL "g_memory/scl/counter/cnt_1" BEL
+        "g_memory/scl/counter/cnt_3" BEL "g_memory/scl/counter/inner_reset"
+        BEL "g_memory/scl/SCL_BUS" BEL "g_memory/scl/reset" BEL
+        "g_memory/scl/SCLER_0" BEL "g_memory/scl/WR" BEL
+        "fsm/controlstore/MicroIR_49" BEL "fsm/controlstore/MicroIR_48" BEL
+        "fsm/controlstore/MicroIR_47" BEL "fsm/controlstore/MicroIR_46" BEL
+        "fsm/controlstore/MicroIR_45" BEL "fsm/controlstore/MicroIR_44" BEL
+        "fsm/controlstore/MicroIR_43" BEL "fsm/controlstore/MicroIR_42" BEL
+        "fsm/controlstore/MicroIR_41" BEL "fsm/controlstore/MicroIR_40" BEL
+        "fsm/controlstore/MicroIR_39" BEL "fsm/controlstore/MicroIR_38" BEL
+        "fsm/controlstore/MicroIR_37" BEL "fsm/controlstore/MicroIR_36" BEL
+        "fsm/controlstore/MicroIR_35" BEL "fsm/controlstore/MicroIR_34" BEL
+        "fsm/controlstore/MicroIR_33" BEL "fsm/controlstore/MicroIR_32" BEL
+        "fsm/controlstore/MicroIR_31" BEL "fsm/controlstore/MicroIR_30" BEL
+        "fsm/controlstore/MicroIR_29" BEL "fsm/controlstore/MicroIR_28" BEL
+        "fsm/controlstore/MicroIR_27" BEL "fsm/controlstore/MicroIR_26" BEL
+        "fsm/controlstore/MicroIR_25" BEL "fsm/controlstore/MicroIR_24" BEL
+        "fsm/controlstore/MicroIR_23" BEL "fsm/controlstore/MicroIR_22" BEL
+        "fsm/controlstore/MicroIR_21" BEL "fsm/controlstore/MicroIR_20" BEL
+        "fsm/controlstore/MicroIR_19" BEL "fsm/controlstore/MicroIR_18" BEL
+        "fsm/controlstore/MicroIR_17" BEL "fsm/controlstore/MicroIR_16" BEL
+        "fsm/controlstore/MicroIR_15" BEL "fsm/controlstore/MicroIR_14" BEL
+        "fsm/controlstore/MicroIR_13" BEL "fsm/controlstore/MicroIR_12" BEL
+        "fsm/controlstore/MicroIR_11" BEL "fsm/controlstore/MicroIR_10" BEL
+        "fsm/controlstore/MicroIR_9" BEL "fsm/controlstore/MicroIR_8" BEL
         "fsm/controlstore/MicroIR_7" BEL "fsm/controlstore/MicroIR_6" BEL
         "fsm/controlstore/MicroIR_5" BEL "fsm/controlstore/MicroIR_4" BEL
         "fsm/controlstore/MicroIR_3" BEL "fsm/controlstore/MicroIR_2" BEL

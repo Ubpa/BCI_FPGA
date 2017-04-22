@@ -1,42 +1,26 @@
                     .ORIG x3000
+					LD    R0, TIME
+					TRAP  x27
 					LD    R1, NUM_CHIP
-INIT				ADD   R1, R1, #-1
-					BRn   INIT_DONE
+INIT_ALL_CHIP		ADD   R1, R1, #-1
+					BRn   LOOP_READ
 					STI   R1, SDASR_ADDR
-					TRAP  x21
 					JSR   max30102_init
-					ADD   R0, R1, #0
-					TRAP  x1D
-					BR    INIT
-INIT_DONE			HALT
-
-; main_LOOP			LEA   R2, DATA_BUFF; R2 : DATA_BUFF
-					; LD    R0, FIFO_RD_PTR_address
-					; LD    R1, ONE
-					; JSR   max30102_Bus_Read; 读 FIFO_RD_PTR
-; WAIT_SAMPLE		    LD    R0, FIFO_WR_PTR_address
-					; LD    R1, ONE
-					; JSR   max30102_Bus_Read; 读 FIFO_WD_PTR
-					; LDR   R0, R2, #-1
-					; LDR   R1, R2, #-2
-					; ADD   R2, R2, #-1
-					; NOT   R1, R1
-					; ADD   R1, R1, #1
-					; ADD   R0, R0, R1
-					; BRz   WAIT_SAMPLE
-					; ADD   R2, R2, #-1
-					; LD    R0, FIFO_DATA_address
-					; LD    R1, SAMPLE_SIZE
-					; JSR   max30102_Bus_Read; 读 sample
-					; LEA   R2, DATA_BUFF
-					; LD    R1, SAMPLE_SIZE
-; SEND_LOOP			ADD   R1, R1, #-1
-					; BRn   SEND_LOOP_END
-					; LDR   R0, R2, #0
-					; JSR   uart_send
-					; ADD   R2, R2, #1
-					; BR    SEND_LOOP
-; SEND_LOOP_END		BR    main_LOOP
+					BR    INIT_ALL_CHIP
+LOOP_READ			LD    R5, NUM_CHIP
+LOOP_CHIP			ADD   R5, R5, #-1
+					BRn   LOOP_READ
+					STI   R5, SDASR_ADDR
+					LEA   R0, DATA_BUFF
+					JSR   max30102_Sample_Read
+					ADD   R0, R0, #0
+					BRz   LOOP_CHIP
+					LEA   R0, DATA_BUFF
+					STR   R5, R0, #6; DATA_BUFF[6] == ID of chip
+					LD    R1, SAMPLE_SIZE
+					ADD   R1, R1, #1
+					JSR   uart_send
+					BR    LOOP_CHIP
 
 max30102_Bus_Write;( R0 = (u8) Register_Address, R1 = (u8) Word_Data )
                     ADD   R6, R6, #-2
@@ -56,8 +40,6 @@ max30102_Bus_Write;( R0 = (u8) Register_Address, R1 = (u8) Word_Data )
                     ADD   R0, R1, #0
                     TRAP  x29; i2c sent byte
                     TRAP  x2A; i2c wait ack
-                    ADD   R0, R0, #0
-                    BRp   WR_FAIL
 WR_FAIL             TRAP  x2C; i2c stop
                     LDR   R0, R6, #0
                     LDR   R7, R6, #1
@@ -100,16 +82,56 @@ RD_FAIL             TRAP  x2C; i2c stop
                     LDR   R7, R6, #1
                     ADD   R6, R6, #2
                     RET; R0 == final 8 bits data, R2 == address of data + n
-					
-uart_send;( R0 = (u8)data )
-					ADD   R6, R6, #-1
+
+max30102_Sample_Read;( R0 = address of DATA_BUFF )
+					ADD   R6, R6, #-3
 					STR   R1, R6, #0
-WAIT				LDI	  R1, UARTSR_ADDR
-					BRzp  WAIT
-					STI	  R0, UARTDR_ADDR
-					LDR   R1, R6, #0
-					ADD   R6, R6, #1
+					STR   R2, R6, #1
+					STR   R7, R6, #2
+					ADD   R2, R0, #0
+					LD    R0, FIFO_RD_PTR_address
+					LD    R1, ONE
+					JSR   max30102_Bus_Read; 读 FIFO_RD_PTR_address
+					LD    R0, FIFO_WR_PTR_address
+					LD    R1, ONE
+					JSR   max30102_Bus_Read; 读 FIFO_WD_PTR
+					LDR   R0, R2, #-1
+					LDR   R1, R2, #-2
+					ADD   R2, R2, #-1
+					NOT   R1, R1
+					ADD   R1, R1, #1
+					ADD   R0, R0, R1
+					BRz   NO_SAMPLE
+					ADD   R2, R2, #-1
+					LD    R0, FIFO_DATA_address
+					LD    R1, SAMPLE_SIZE
+					JSR   max30102_Bus_Read; 读 sample
+					LD    R0, ONE; have sample
+					BR    Sample_Read_DONE
+NO_SAMPLE			LD    R0, ZERO; no sample
+Sample_Read_DONE	LDR   R1, R6, #0
+					LDR   R2, R6, #1
+					LDR   R7, R6, #2
+					ADD   R6, R6, #3
 					RET
+					
+uart_send;( R0 = address of DATA_BUFF, R1 = num of data )
+					ADD   R6, R6, #-2
+					STR   R2, R6, #0
+					STR   R3, R6, #1
+SEND_LOOP			ADD   R1, R1, #-1
+					BRn   SEND_DONE
+					LDR   R2, R0, #0
+					ADD   R0, R0, #1
+WAIT				LDI	  R3, UARTSR_ADDR
+					BRzp  WAIT
+					STI	  R2, UARTDR_ADDR
+					BR    SEND_LOOP
+SEND_DONE			LDR   R2, R6, #0
+					LDR   R3, R6, #1
+					ADD   R6, R6, #2
+					RET
+
 max30102_init;()
                     ADD   R6, R6, #-6
                     STR   R0, R6, #0
@@ -123,16 +145,16 @@ max30102_init;()
 					NOT   R4, R4
 					ADD   R4, R4, #1; R4 == - INIT_NUM_I
                     AND   R3, R3, #0
-LOOP                ADD   R0, R3, R4
-                    BRz   LOOP_END
+INIT_LOOP           ADD   R0, R3, R4
+                    BRz   INIT_LOOP_END
                     ADD   R0, R3, R3
                     ADD   R0, R2, R0
                     LDR   R1, R0, #1
                     LDR   R0, R0, #0
                     JSR   max30102_Bus_Write
                     ADD   R3, R3, #1
-                    BR    LOOP
-LOOP_END            LDR   R0, R6, #0
+                    BR    INIT_LOOP
+INIT_LOOP_END       LDR   R0, R6, #0
                     LDR   R1, R6, #1
                     LDR   R2, R6, #2
                     LDR   R3, R6, #3
@@ -141,8 +163,8 @@ LOOP_END            LDR   R0, R6, #0
                     ADD   R6, R6, #6
                     RET
 
-TIME				.FILL #1000
-NUM_CHIP			.FILL x0006
+TIME				.FILL #0100
+NUM_CHIP			.FILL x0008
 max30102_WR_address .FILL x00AE
 FIFO_DATA_address   .FILL x0007
 TEMP_address		.FILL x001F
@@ -180,5 +202,5 @@ INIT_DATA           .FILL x0009
 					.FILL x0000;11: clear FIFO_RD_PTR
 UARTSR_ADDR			.FILL x7E14
 UARTDR_ADDR			.FILL x7E16
-DATA_BUFF			.BLKW x0006
+DATA_BUFF			.BLKW x0007; RED[23:16], RED[15:8], RED[7:0], IR[23:16], IR[15:8], IR[7:0], ID of chip
                     .END

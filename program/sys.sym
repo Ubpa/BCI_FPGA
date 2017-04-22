@@ -1,6 +1,6 @@
 //Symbol Name		Page Address
 //----------------	------------
-//	ADD_DONE                0330
+//	ADD_DONE                0332
 //	ASCII_0                 0222
 //	ASCII_A                 0221
 //	DDR_ADDR                0283
@@ -13,10 +13,10 @@
 //	LOOP10                  02E0
 //	LOOP10_END              02E3
 //	LOOP11                  02EA
-//	LOOP12                  0301
-//	LOOP12_END              030C
-//	LOOP13                  0328
-//	LOOP13_END              0332
+//	LOOP12                  0302
+//	LOOP12_END              030D
+//	LOOP13                  0327
+//	LOOP13_END              0333
 //	LOOP2                   0268
 //	LOOP3                   0275
 //	LOOP4                   0279
@@ -31,20 +31,20 @@
 //	MASK_1                  024B
 //	MASK_4                  0220
 //	MILLISEC                02E7
-//	ONE                     0379
+//	ONE                     0376
 //	P                       0281
-//	SCLER_ADDR              0377
-//	SCL_BUS_ADDR            0378
-//	SCL_HIGH                036F
-//	SCL_LOW                 0368
-//	SDADR_ADDR              0375
-//	SDAER_ADDR              0374
-//	SDA_BUS_ADDR            0376
-//	SET_SDADR               0308
+//	SCLER_ADDR              0374
+//	SCL_BUS_ADDR            0375
+//	SCL_HIGH                036C
+//	SCL_LOW                 0365
+//	SDADR_ADDR              0372
+//	SDAER_ADDR              0371
+//	SDA_BUS_ADDR            0373
+//	SET_SDADR               0309
 //	SW_ADDR                 0270
-//	WAIT_SCL_H              0366
-//	WAIT_SCL_L              036D
-//	ZERO                    037A
+//	WAIT_SCL_H              0363
+//	WAIT_SCL_L              036A
+//	ZERO                    0377
 //	x1D_ASCII_DONE          0217
 //	x1D_LOOP                0208
 //	x1D_LOOP_END            021A

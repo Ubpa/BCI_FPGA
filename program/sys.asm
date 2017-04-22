@@ -15,8 +15,8 @@
                 .FILL  x02E8; x28 i2c start
                 .FILL  x02F7; x29 i2c send byte
                 .FILL  x0315; x2A i2c wait ack
-                .FILL  x031F; x2B i2c read byte
-                .FILL  x0338; x2C i2c stop
+                .FILL  x031E; x2B i2c read byte
+                .FILL  x0339; x2C i2c stop
                 .FILL  x0349; x2D i2c nack
                 .FILL  x0357; x2E i2c master ack
                 .BLKW  x01D1
@@ -274,7 +274,7 @@ MILLISEC        .FILL x11C0
 ; x28 i2c start
                 ADD   R6, R6, #-1
                 STR   R0, R6, #0
-LOOP11             LDI   R0, SDA_BUS_ADDR
+LOOP11          LDI   R0, SDA_BUS_ADDR
                 BRz   LOOP11
                 LDI   R0, SCL_BUS_ADDR
                 BRz   LOOP11
@@ -295,11 +295,12 @@ LOOP11             LDI   R0, SDA_BUS_ADDR
                 STR   R2, R6, #1
                 STR   R3, R6, #2
                 STR   R7, R6, #3
-                LD    R1, ONE                  ;;;;;;;;;;;;;start 处已经获取 SDA 的掌控权
-                STI   R1, SDAER_ADDR; en SDA;;;;;;;;;;;;;
                 LEA   R1, MASK_1
                 AND   R3, R3, #0; R3 : i
                 ADD   R3, R3, #8
+                LD    R2, ONE
+				JSR   WAIT_SCL_L
+                STI   R2, SDAER_ADDR; en SDA
 LOOP12          ADD   R3, R3, #-1
                 BRn   LOOP12_END
                 ADD   R2, R1, R3
@@ -308,12 +309,11 @@ LOOP12          ADD   R3, R3, #-1
                 BRz   SET_SDADR
                 LD    R2, ONE
 SET_SDADR     ; R2 == byte[i]
-                JSR   WAIT_SCL_L
                 STI   R2, SDADR_ADDR; SDA_BUS <= byte[i]
                 JSR   WAIT_SCL_H
+                JSR   WAIT_SCL_L
                 BR    LOOP12
-LOOP12_END      JSR   WAIT_SCL_L
-                LD    R1, ZERO
+LOOP12_END      LD    R1, ZERO
                 STI   R1, SDAER_ADDR; dis SDA;;;;;;;;;;;;;; 释放 SDL 掌控权
                 LDR   R1, R6, #0
                 LDR   R2, R6, #1
@@ -327,7 +327,7 @@ LOOP12_END      JSR   WAIT_SCL_L
                 STR   R7, R6, #1
                 JSR   WAIT_SCL_H
                 LDI   R0, SDA_BUS_ADDR
-                JSR   WAIT_SCL_L
+                ;JSR   WAIT_SCL_L;为了效率就先不等了
                 ;LD    R1, ONE
                 ;STI   R1, SDAER_ADDR; en SDA
                 ;STI   R1, SDADR_ADDR; SDA_BUS <= H;;;;;自动到高
@@ -349,14 +349,16 @@ LOOP12_END      JSR   WAIT_SCL_L
                 ADD   R3, R3, #8
 LOOP13          ADD   R3, R3, #-1
                 BRn   LOOP13_END
+                JSR   WAIT_SCL_L; 当离开 wait ack 或 master ack 时SCL == H
+				LD    R2, ZERO
+				STI   R2, SDAER_ADDR; dis SDA ( 当从 master ack 离开时还没有 dis SDA  )
                 JSR   WAIT_SCL_H
                 LDI   R2, SDA_BUS_ADDR
                 BRz   ADD_DONE
                 ADD   R2, R1, R3
                 LDR   R2, R2, #0
                 ADD   R0, R0, R2
-ADD_DONE        JSR   WAIT_SCL_L
-                BR    LOOP13
+ADD_DONE        BR    LOOP13
 LOOP13_END      LDR   R1, R6, #0
                 LDR   R2, R6, #1
                 LDR   R3, R6, #2
@@ -367,13 +369,12 @@ LOOP13_END      LDR   R1, R6, #0
                 ADD   R6, R6, #-2
                 STR   R0, R6, #0
                 STR   R7, R6, #1
+				JSR   WAIT_SCL_L
                 LD    R0, ONE
                 STI   R0, SDAER_ADDR; en SDA
                 LD    R0, ZERO
                 STI   R0, SDADR_ADDR; SDA <= L
                 JSR   WAIT_SCL_H
-                LD    R0, ONE
-                STI   R0, SDADR_ADDR; SDA <= H
                 LD    R0, ZERO
                 STI   R0, SDAER_ADDR; dis SDA
                 STI   R0, SCLER_ADDR; dis SCL
@@ -405,9 +406,9 @@ LOOP13_END      LDR   R1, R6, #0
                 LD    R0, ZERO
                 STI   R0, SDADR_ADDR; SDA <= L
                 JSR   WAIT_SCL_H
-                JSR   WAIT_SCL_L
-                LD    R0, ZERO
-                STI   R0, SDAER_ADDR; dis SDA
+                ;JSR   WAIT_SCL_L;为了效率就先不等了
+                ;LD    R0, ZERO
+                ;STI   R0, SDAER_ADDR; dis SDA
                 LDR   R0, R6, #0
                 LDR   R7, R6, #1
                 ADD   R6, R6, #2

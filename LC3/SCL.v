@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 module SCL( SCL_BUS, MDR, LD_SCLER, clk, SCLER, WR );
 
-parameter times = 16'h01F4;// 100,000 kHZ / 200 kHZ / 2 = 500 = 16'h01F4
+parameter times = 16'h00FA;// 100,000 kHZ / 400 kHZ / 2 = 250 = 16'h00FA
 
 input [15:0] MDR;
 input LD_SCLER, clk;

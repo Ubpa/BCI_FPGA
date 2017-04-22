@@ -27,26 +27,27 @@ output reg WR;
 
 reg [7:0] SDA_MODE [15:0];
 initial begin
-	SDA_MODE[ 0] = 8'bzzzzzzz0;
-	SDA_MODE[ 1] = 8'bzzzzzz0z;
-	SDA_MODE[ 2] = 8'bzzzzz0zz;
-	SDA_MODE[ 3] = 8'bzzzz0zzz;
-	SDA_MODE[ 4] = 8'bzzz0zzzz;
-	SDA_MODE[ 5] = 8'bzz0zzzzz;
-	SDA_MODE[ 6] = 8'bz0zzzzzz;
-	SDA_MODE[ 7] = 8'b0zzzzzzz;
-	SDA_MODE[ 8] = 8'bzzzzzzz1;
-	SDA_MODE[ 9] = 8'bzzzzzz1z;
-	SDA_MODE[10] = 8'bzzzzz1zz;
-	SDA_MODE[11] = 8'bzzzz1zzz;
-	SDA_MODE[12] = 8'bzzz1zzzz;
-	SDA_MODE[13] = 8'bzz1zzzzz;
-	SDA_MODE[14] = 8'bz1zzzzzz;
-	SDA_MODE[15] = 8'b1zzzzzzz;
+	SDA_MODE[ 0] = 8'b11111110;
+	SDA_MODE[ 1] = 8'b11111101;
+	SDA_MODE[ 2] = 8'b11111011;
+	SDA_MODE[ 3] = 8'b11110111;
+	SDA_MODE[ 4] = 8'b11101111;
+	SDA_MODE[ 5] = 8'b11011111;
+	SDA_MODE[ 6] = 8'b10111111;
+	SDA_MODE[ 7] = 8'b01111111;
+	SDA_MODE[ 8] = 8'b11111111;
+	SDA_MODE[ 9] = 8'b11111111;
+	SDA_MODE[10] = 8'b11111111;
+	SDA_MODE[11] = 8'b11111111;
+	SDA_MODE[12] = 8'b11111111;
+	SDA_MODE[13] = 8'b11111111;
+	SDA_MODE[14] = 8'b11111111;
+	SDA_MODE[15] = 8'b11111111;
+
 end
 
 wire [7:0] temp;
-assign temp = SDAER[0] ? SDA_MODE[{SDADR[0], SDASR[2:0]}] : 8'bzzzzzzzz;
+
 assign SDA_BUS = SDAER[0] ? SDA_MODE[{SDADR[0], SDASR[2:0]}] : 8'bzzzzzzzz;
 
 initial begin

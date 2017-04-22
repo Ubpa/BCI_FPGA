@@ -23,7 +23,7 @@ input [15:0] UARTDR;
 input rst_n, sd_en, parity_en, parity_kind, clk;
 output reg txd, ft, flag;
 
-parameter times = 16'h0364;
+parameter times = 16'h00D9;
 
 wire [15:0] cnt;
 reg bf3, bf2, bf1, bf0, reset;
