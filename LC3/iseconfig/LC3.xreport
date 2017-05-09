@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2017-04-22T15:41:05</DateModified>
+  <DateModified>2017-05-09T18:27:57</DateModified>
   <ModuleName>LC3</ModuleName>
   <SummaryTimeStamp>2017-04-20T00:20:30</SummaryTimeStamp>
-  <SavedFilePath>E:/CS/OSH/final_HW/BCI_FPGA/LC3/iseconfig/LC3.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/CS/OSH/final_HW/BCI_FPGA/LC3\</ImplementationReportsDirectory>
+  <SavedFilePath>F:/CS/OSH/final_HW/BCI_FPGA/LC3/iseconfig/LC3.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>F:/CS/OSH/final_HW/BCI_FPGA/LC3\</ImplementationReportsDirectory>
   <DateInitialized>2017-04-11T15:19:14</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

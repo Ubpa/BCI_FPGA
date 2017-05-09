@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.12 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: LC3.prj
 
@@ -105,47 +105,47 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v" into library work
 Parsing module <COUNTER>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" into library work
 Parsing module <TXD>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" into library work
 Parsing module <RXD>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" into library work
 Parsing module <BTN_I>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" into library work
 Parsing module <UART>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SWITCH.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SWITCH.v" into library work
 Parsing module <SWITCH>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v" into library work
 Parsing module <SDA>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" into library work
 Parsing module <SCL>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\REGFILE.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\REGFILE.v" into library work
 Parsing module <REGFILE>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\MICROSEQUENCER.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\MICROSEQUENCER.v" into library work
 Parsing module <MICROSEQUENCER>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\MEMORY.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\MEMORY.v" into library work
 Parsing module <MEMORY>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\KEYBOARD.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\KEYBOARD.v" into library work
 Parsing module <KEYBOARD>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\INT_CTL.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\INT_CTL.v" into library work
 Parsing module <INT_CTL>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" into library work
 Parsing module <DISIPLAY>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CONTROLSTORE.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\CONTROLSTORE.v" into library work
 Parsing module <CONTROLSTORE>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ALU.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\ALU.v" into library work
 Parsing module <ALU>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v" into library work
 Parsing module <ADDR_CTL_LOGIC>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\G_MEMORY.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\G_MEMORY.v" into library work
 Parsing module <G_MEMORY>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\FSM.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\FSM.v" into library work
 Parsing module <FSM>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v" into library work
 Parsing module <CPU>.
-Analyzing Verilog file "E:\CS\OSH\final_HW\BCI_FPGA\LC3\LC3.v" into library work
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\LC3.v" into library work
 Parsing module <LC3>.
 
 =========================================================================
@@ -159,7 +159,7 @@ Elaborating module <CPU>.
 Elaborating module <ALU>.
 
 Elaborating module <REGFILE>.
-WARNING:HDLCompiler:634 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v" Line 37: Net <PSR[14]> does not have a driver.
+WARNING:HDLCompiler:634 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v" Line 37: Net <PSR[14]> does not have a driver.
 
 Elaborating module <G_MEMORY>.
 
@@ -173,37 +173,37 @@ Elaborating module <KEYBOARD>.
 Elaborating module <BTN_I>.
 
 Elaborating module <COUNTER>.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v" Line 41: Result of 17-bit expression is truncated to fit in 16-bit target.
-WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" Line 41: Assignment to cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v" Line 41: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:1127 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" Line 41: Assignment to cnt ignored, since the identifier is never used
 
 Elaborating module <DISIPLAY>.
 Reading initialization file \"segOfASCII.v\".
-WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 42: Assignment to cnt ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 90: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:1127 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 42: Assignment to cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" Line 90: Result of 3-bit expression is truncated to fit in 2-bit target.
 
 Elaborating module <SWITCH>.
 
 Elaborating module <SDA>.
 
 Elaborating module <SCL>.
-WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" Line 33: Assignment to cnt ignored, since the identifier is never used
 
 Elaborating module <UART>.
 
 Elaborating module <RXD>.
-WARNING:HDLCompiler:872 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 37: Using initial value of reset since it is never assigned
-WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 36: Assignment to cnt ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 66: Result of 3-bit expression is truncated to fit in 2-bit target.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 69: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 85: Result of 2-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 89: Result of 5-bit expression is truncated to fit in 4-bit target.
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 93: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 76: Assignment to r1 ignored, since the identifier is never used
+WARNING:HDLCompiler:872 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 37: Using initial value of reset since it is never assigned
+WARNING:HDLCompiler:1127 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 36: Assignment to cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 66: Result of 3-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 69: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 85: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 89: Result of 5-bit expression is truncated to fit in 4-bit target.
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\RXD.v" Line 93: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 76: Assignment to r1 ignored, since the identifier is never used
 
 Elaborating module <TXD>.
-WARNING:HDLCompiler:872 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 32: Using initial value of reset since it is never assigned
-WARNING:HDLCompiler:413 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 93: Result of 4-bit expression is truncated to fit in 3-bit target.
-WARNING:HDLCompiler:1127 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 78: Assignment to ft ignored, since the identifier is never used
+WARNING:HDLCompiler:872 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 32: Using initial value of reset since it is never assigned
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 93: Result of 4-bit expression is truncated to fit in 3-bit target.
+WARNING:HDLCompiler:1127 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 78: Assignment to ft ignored, since the identifier is never used
 
 Elaborating module <INT_CTL>.
 
@@ -213,20 +213,20 @@ Elaborating module <CONTROLSTORE>.
 Reading initialization file \"MicroI_ROM.v\".
 
 Elaborating module <MICROSEQUENCER>.
-WARNING:Xst:2972 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76. All outputs of instance <_rxd> of block <RXD> are unconnected in block <UART>. Underlying logic will be removed.
+WARNING:Xst:2972 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76. All outputs of instance <_rxd> of block <RXD> are unconnected in block <UART>. Underlying logic will be removed.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <LC3>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\LC3.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\LC3.v".
     Summary:
 	no macro.
 Unit <LC3> synthesized.
 
 Synthesizing Unit <CPU>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\CPU.v".
 WARNING:Xst:2935 - Signal 'PSR<14:11>', unconnected in block 'CPU', is tied to its initial value (0000).
 WARNING:Xst:2935 - Signal 'PSR<7:3>', unconnected in block 'CPU', is tied to its initial value (00000).
     Found 16-bit register for signal <PC>.
@@ -275,7 +275,7 @@ WARNING:Xst:2935 - Signal 'PSR<7:3>', unconnected in block 'CPU', is tied to its
 Unit <CPU> synthesized.
 
 Synthesizing Unit <ALU>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ALU.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\ALU.v".
     Found 16-bit adder for signal <OPA[15]_OPB[15]_add_1_OUT> created at line 26.
     Found 16-bit 4-to-1 multiplexer for signal <out> created at line 24.
     Summary:
@@ -284,14 +284,14 @@ Synthesizing Unit <ALU>.
 Unit <ALU> synthesized.
 
 Synthesizing Unit <REGFILE>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\REGFILE.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\REGFILE.v".
     Found 8x16-bit dual-port RAM <Mram_REGFILE> for signal <REGFILE>.
     Summary:
 	inferred   2 RAM(s).
 Unit <REGFILE> synthesized.
 
 Synthesizing Unit <G_MEMORY>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\G_MEMORY.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\G_MEMORY.v".
     Found 1-bit register for signal <R>.
     Found 16-bit register for signal <MDR>.
     Found 1-bit register for signal <readed>.
@@ -337,13 +337,13 @@ Synthesizing Unit <G_MEMORY>.
 Unit <G_MEMORY> synthesized.
 
 Synthesizing Unit <ADDR_CTL_LOGIC>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v".
     Summary:
 	inferred  10 Multiplexer(s).
 Unit <ADDR_CTL_LOGIC> synthesized.
 
 Synthesizing Unit <MEMORY>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\MEMORY.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\MEMORY.v".
 WARNING:Xst:647 - Input <MAR<15:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 32768x16-bit single-port RAM <Mram_RAM> for signal <RAM>.
     Found 1-bit register for signal <R>.
@@ -354,7 +354,7 @@ WARNING:Xst:647 - Input <MAR<15:15>> is never used. This port will be preserved 
 Unit <MEMORY> synthesized.
 
 Synthesizing Unit <KEYBOARD>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\KEYBOARD.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\KEYBOARD.v".
 WARNING:Xst:647 - Input <MDR<15:15>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 1-bit register for signal <KBSR<14>>.
     Found 1-bit register for signal <KBSR<13>>.
@@ -394,9 +394,9 @@ WARNING:Xst:647 - Input <MDR<15:15>> is never used. This port will be preserved 
 Unit <KEYBOARD> synthesized.
 
 Synthesizing Unit <BTN_I>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v".
         times = 16'b1111111111111111
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" line 37: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" line 37: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <Op>.
     Found 1-bit register for signal <Ol>.
     Found 1-bit register for signal <reset>.
@@ -407,7 +407,7 @@ INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v" line 37: Output port <
 Unit <BTN_I> synthesized.
 
 Synthesizing Unit <COUNTER>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\COUNTER.v".
     Found 16-bit register for signal <cnt>.
     Found 1-bit register for signal <inner_reset>.
     Found 17-bit subtractor for signal <GND_58_o_GND_58_o_sub_5_OUT> created at line 40.
@@ -422,9 +422,9 @@ Synthesizing Unit <COUNTER>.
 Unit <COUNTER> synthesized.
 
 Synthesizing Unit <DISIPLAY>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v".
         dT = 16'b1111111111111111
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" line 42: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v" line 42: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
 WARNING:Xst:2999 - Signal 'segOfASCII', unconnected in block 'DISIPLAY', is tied to its initial value.
 WARNING:Xst:2999 - Signal 'ANREG', unconnected in block 'DISIPLAY', is tied to its initial value.
     Found 256x7-bit single-port Read Only RAM <Mram_segOfASCII> for signal <segOfASCII>.
@@ -459,7 +459,7 @@ WARNING:Xst:2999 - Signal 'ANREG', unconnected in block 'DISIPLAY', is tied to i
 Unit <DISIPLAY> synthesized.
 
 Synthesizing Unit <SWITCH>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SWITCH.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SWITCH.v".
     Found 8-bit register for signal <SWR>.
     WARNING:Xst:2404 -  FFs/Latches <SWR<15:8>> (without init value) have a constant value of 0 in block <SWITCH>.
     Summary:
@@ -467,7 +467,7 @@ Synthesizing Unit <SWITCH>.
 Unit <SWITCH> synthesized.
 
 Synthesizing Unit <SDA>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v".
 WARNING:Xst:647 - Input <MDR<15:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:2935 - Signal 'SDAER<15:1>', unconnected in block 'SDA', is tied to its initial value (000000000000000).
 WARNING:Xst:2935 - Signal 'SDADR<15:1>', unconnected in block 'SDA', is tied to its initial value (000000000000000).
@@ -496,10 +496,10 @@ WARNING:Xst:2999 - Signal 'SDA_MODE', unconnected in block 'SDA', is tied to its
 Unit <SDA> synthesized.
 
 Synthesizing Unit <SCL>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v".
         times = 16'b0000000011111010
 WARNING:Xst:647 - Input <MDR<15:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" line 33: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" line 33: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
 WARNING:Xst:2935 - Signal 'SCLER<15:1>', unconnected in block 'SCL', is tied to its initial value (000000000000000).
     Found 1-bit register for signal <WR>.
     Found 1-bit register for signal <reset>.
@@ -510,13 +510,13 @@ WARNING:Xst:2935 - Signal 'SCLER<15:1>', unconnected in block 'SCL', is tied to 
 Unit <SCL> synthesized.
 
 Synthesizing Unit <UART>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v".
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r1> of the instance <_rxd> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r2> of the instance <_rxd> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r3> of the instance <_rxd> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r4> of the instance <_rxd> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <fr> of the instance <_rxd> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 78: Output port <ft> of the instance <_txd> is unconnected or connected to loadless signal.
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v".
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r1> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r2> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r3> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <r4> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 76: Output port <fr> of the instance <_rxd> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 78: Output port <ft> of the instance <_txd> is unconnected or connected to loadless signal.
     Found 16-bit register for signal <UARTDR>.
     Found 1-bit register for signal <UARTSR<15>>.
     Found 1-bit register for signal <flag_buff>.
@@ -544,8 +544,8 @@ INFO:Xst:3210 - "E:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" line 78: Output port <f
 Unit <UART> synthesized.
 
 Synthesizing Unit <TXD>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v".
-        times = 16'b0000000011011001
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v".
+        times = 16'b0000000110010000
         idle = 3'b000
         start = 3'b001
         shift = 3'b010
@@ -584,7 +584,7 @@ WARNING:Xst:647 - Input <UARTDR<15:8>> is never used. This port will be preserve
 Unit <TXD> synthesized.
 
 Synthesizing Unit <INT_CTL>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\INT_CTL.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\INT_CTL.v".
 WARNING:Xst:647 - Input <KBSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <DSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 WARNING:Xst:647 - Input <UARTSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -604,13 +604,13 @@ WARNING:Xst:647 - Input <UARTSR<13:0>> is never used. This port will be preserve
 Unit <INT_CTL> synthesized.
 
 Synthesizing Unit <FSM>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\FSM.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\FSM.v".
     Summary:
 	no macro.
 Unit <FSM> synthesized.
 
 Synthesizing Unit <CONTROLSTORE>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\CONTROLSTORE.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\CONTROLSTORE.v".
 WARNING:Xst:2999 - Signal 'MicroI_ROM', unconnected in block 'CONTROLSTORE', is tied to its initial value.
     Found 64x50-bit single-port Read Only RAM <Mram_MicroI_ROM> for signal <MicroI_ROM>.
     Found 50-bit register for signal <MicroIR>.
@@ -620,7 +620,7 @@ WARNING:Xst:2999 - Signal 'MicroI_ROM', unconnected in block 'CONTROLSTORE', is 
 Unit <CONTROLSTORE> synthesized.
 
 Synthesizing Unit <MICROSEQUENCER>.
-    Related source file is "E:\CS\OSH\final_HW\BCI_FPGA\LC3\MICROSEQUENCER.v".
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\MICROSEQUENCER.v".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <MICROSEQUENCER> synthesized.
@@ -960,7 +960,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_10> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_9> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_8> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
@@ -972,7 +971,7 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counte
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 8.
+Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 9.
 FlipFlop cpu/IR_5 has been replicated 2 time(s)
 FlipFlop fsm/controlstore/MicroIR_22 has been replicated 1 time(s)
 FlipFlop fsm/controlstore/MicroIR_24 has been replicated 1 time(s)
@@ -988,8 +987,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 413
- Flip-Flops                                            : 413
+# Registers                                            : 414
+ Flip-Flops                                            : 414
 
 =========================================================================
 
@@ -1012,26 +1011,26 @@ Top Level Output File Name         : LC3.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1077
+# BELS                             : 1081
 #      GND                         : 1
 #      INV                         : 33
-#      LUT1                        : 119
-#      LUT2                        : 45
-#      LUT3                        : 88
-#      LUT4                        : 78
-#      LUT5                        : 81
-#      LUT6                        : 262
-#      MUXCY                       : 164
+#      LUT1                        : 120
+#      LUT2                        : 46
+#      LUT3                        : 89
+#      LUT4                        : 77
+#      LUT5                        : 79
+#      LUT6                        : 264
+#      MUXCY                       : 165
 #      MUXF7                       : 29
 #      VCC                         : 1
-#      XORCY                       : 176
-# FlipFlops/Latches                : 413
+#      XORCY                       : 177
+# FlipFlops/Latches                : 414
 #      FD                          : 70
 #      FDC                         : 5
 #      FDCE                        : 5
 #      FDE                         : 181
 #      FDPE                        : 2
-#      FDR                         : 116
+#      FDR                         : 117
 #      FDRE                        : 33
 #      FDSE                        : 1
 # RAMS                             : 46
@@ -1052,17 +1051,17 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             413  out of  18224     2%  
- Number of Slice LUTs:                  744  out of   9112     8%  
-    Number used as Logic:               706  out of   9112     7%  
+ Number of Slice Registers:             414  out of  18224     2%  
+ Number of Slice LUTs:                  746  out of   9112     8%  
+    Number used as Logic:               708  out of   9112     7%  
     Number used as Memory:               38  out of   2176     1%  
        Number used as RAM:               38
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    856
-   Number with an unused Flip Flop:     443  out of    856    51%  
-   Number with an unused LUT:           112  out of    856    13%  
-   Number of fully used LUT-FF pairs:   301  out of    856    35%  
+ Number of LUT Flip Flop pairs used:    858
+   Number with an unused Flip Flop:     444  out of    858    51%  
+   Number with an unused LUT:           112  out of    858    13%  
+   Number of fully used LUT-FF pairs:   302  out of    858    35%  
    Number of unique control sets:        71
 
 IO Utilization: 
@@ -1095,7 +1094,7 @@ Clock Information:
 ---------------------------------------------+------------------------------------------------+-------+
 Clock Signal                                 | Clock buffer(FF name)                          | Load  |
 ---------------------------------------------+------------------------------------------------+-------+
-clk                                          | BUFGP                                          | 450   |
+clk                                          | BUFGP                                          | 451   |
 g_memory/uart/_txd/c(g_memory/uart/_txd/c1:O)| NONE(*)(g_memory/uart/_txd/curr_state_FSM_FFd1)| 9     |
 ---------------------------------------------+------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -1123,7 +1122,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 8.257ns (frequency: 121.114MHz)
-  Total number of paths / destination ports: 293620 / 1512
+  Total number of paths / destination ports: 293671 / 1514
 -------------------------------------------------------------------------
 Delay:               8.257ns (Levels of Logic = 10)
   Source:            fsm/controlstore/MicroIR_15 (FF)
@@ -1188,11 +1187,11 @@ Offset:              4.677ns (Levels of Logic = 6)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.222   0.827  SDA_BUS_6_IOBUF (N61)
+     IOBUF:IO->O           1   1.222   0.827  SDA_BUS_6_IOBUF (N63)
      LUT6:I2->O            1   0.203   0.000  g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_3 (g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_3)
      MUXF7:I1->O           1   0.140   0.808  g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_2_f7 (g_memory/SDASR[2]_SDA_BUS[7]_Mux_14_o)
      LUT6:I3->O            1   0.205   0.827  g_memory/Mmux_Z_5_o_dout[15]_mux_29_OUT_71 (g_memory/Mmux_Z_5_o_dout[15]_mux_29_OUT_71)
-     LUT6:I2->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_35_OUT1_G (N295)
+     LUT6:I2->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_35_OUT1_G (N297)
      MUXF7:I1->O           1   0.140   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_35_OUT1 (g_memory/MDR[15]_MDR[15]_mux_35_OUT<0>)
      FDE:D                     0.102          g_memory/MDR_0
     ----------------------------------------
@@ -1249,7 +1248,7 @@ Clock to Setup on destination clock clk
 Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------+---------+---------+---------+---------+
 clk                 |    8.257|         |         |         |
-g_memory/uart/_txd/c|    3.269|         |         |         |
+g_memory/uart/_txd/c|    2.745|         |         |         |
 --------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock g_memory/uart/_txd/c
@@ -1264,14 +1263,14 @@ g_memory/uart/_txd/c|    3.022|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 20.00 secs
-Total CPU time to Xst completion: 19.54 secs
+Total REAL time to Xst completion: 23.00 secs
+Total CPU time to Xst completion: 23.32 secs
  
 --> 
 
-Total memory usage is 328316 kilobytes
+Total memory usage is 328560 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  114 (   0 filtered)
+Number of warnings :  113 (   0 filtered)
 Number of infos    :   21 (   0 filtered)
 

@@ -1,6 +1,10 @@
                     .ORIG x3000
 					LD    R0, TIME
 					TRAP  x27
+					LEA   R0, CHECK_DATA
+					LD    R1, CHECK_DATA_SIZE
+					JSR   uart_send
+					LD    R4, CHECK_SIZE
 					LD    R1, NUM_CHIP
 INIT_ALL_CHIP		ADD   R1, R1, #-1
 					BRn   LOOP_READ
@@ -20,6 +24,12 @@ LOOP_CHIP			ADD   R5, R5, #-1
 					LD    R1, SAMPLE_SIZE
 					ADD   R1, R1, #1
 					JSR   uart_send
+					ADD   R4, R4, #-1
+					BRp   LOOP_CHIP
+					LEA   R0, CHECK_DATA
+					LD    R1, CHECK_DATA_SIZE
+					JSR   uart_send
+					LD    R4, CHECK_SIZE
 					BR    LOOP_CHIP
 
 max30102_Bus_Write;( R0 = (u8) Register_Address, R1 = (u8) Word_Data )
@@ -177,6 +187,11 @@ SAMPLE_SIZE			.FILL x0006
 ASCII_0				.FILL x0030
 SCLER_ADDR			.FILL x7E10
 SDASR_ADDR			.FILL x7E0D
+CHECK_SIZE			.FILL x0010
+CHECK_DATA			.FILL x00FF
+					.FILL x00FF
+					.FILL x00FF
+CHECK_DATA_SIZE     .FILL x0003
 INIT_NUM_I          .FILL x000B;number of initial instructions
 INIT_DATA           .FILL x0009
                     .FILL x000b;1: mode configuration : temp_en[3]      MODE[2:0]=010 HR only enabled    011 SP02 enabled

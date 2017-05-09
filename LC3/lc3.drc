@@ -1,7 +1,7 @@
 Release 14.7 Drc P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Apr 22 19:28:48 2017
+Sun May 07 23:30:43 2017
 
 drc -z LC3.ncd LC3.pcf
 
@@ -12,12 +12,12 @@ WARNING:PhysDesignRules:367 - The signal <cpu/regfile/Mram_REGFILE1_RAMD_D1_O>
    is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <cpu/regfile/Mram_REGFILE2_RAMD_D1_O>
    is incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal
+   <g_memory/display/Mram_SEGREG1_RAMD_D1_O> is incomplete. The signal does not
+   drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <cpu/regfile/Mram_REGFILE11_RAMD_D1_O>
    is incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal <cpu/regfile/Mram_REGFILE12_RAMD_D1_O>
    is incomplete. The signal does not drive any load pins in the design.
-WARNING:PhysDesignRules:367 - The signal
-   <g_memory/display/Mram_SEGREG1_RAMD_D1_O> is incomplete. The signal does not
-   drive any load pins in the design.
 DRC detected 0 errors and 6 warnings.  Please see the previously displayed
 individual error or warning messages for more details.
