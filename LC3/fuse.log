@@ -1,31 +1,32 @@
-Running: fuse.exe -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "E:/CS/OSH/final_HW/BCI_FPGA/LC3/test_isim_beh.exe" -prj "E:/CS/OSH/final_HW/BCI_FPGA/LC3/test_beh.prj" "work.test" "work.glbl" 
+Running: E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o F:/CS/OSH/final_HW/BCI_FPGA/LC3/test_isim_beh.exe -prj F:/CS/OSH/final_HW/BCI_FPGA/LC3/test_beh.prj work.test work.glbl 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/COUNTER.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/TXD.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/RXD.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/BTN_I.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/UART.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/SWITCH.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/SDA.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/SCL.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/REGFILE.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/MICROSEQUENCER.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/MEMORY.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/KEYBOARD.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/INT_CTL.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/DISIPLAY.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/CONTROLSTORE.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/ALU.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/ADDR_CTL_LOGIC.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/G_MEMORY.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/FSM.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/CPU.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.v" into library work
-Analyzing Verilog file "E:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v" into library work
-Analyzing Verilog file "D:/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/COUNTER.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/TXD.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/RXD.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/BTN_I.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/UART.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/SWITCH.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/SETCURRENT.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/SDA.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/SCL.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/REGFILE.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/MICROSEQUENCER.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/MEMORY.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/KEYBOARD.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/INT_CTL.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/DISIPLAY.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/CONTROLSTORE.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/ALU.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/ADDR_CTL_LOGIC.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/G_MEMORY.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/FSM.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/CPU.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.v" into library work
+Analyzing Verilog file "F:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v" into library work
+Analyzing Verilog file "E:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling module ALU
@@ -43,6 +44,7 @@ Compiling module SCL
 Compiling module RXD
 Compiling module TXD
 Compiling module UART
+Compiling module SETCURRENT
 Compiling module INT_CTL
 Compiling module G_MEMORY
 Compiling module CONTROLSTORE
@@ -52,8 +54,8 @@ Compiling module LC3
 Compiling module test
 Compiling module glbl
 Time Resolution for simulation is 1ps.
-Waiting for 16 sub-compilation(s) to finish...
-Compiled 23 Verilog Units
-Built simulation executable E:/CS/OSH/final_HW/BCI_FPGA/LC3/test_isim_beh.exe
-Fuse Memory Usage: 29152 KB
-Fuse CPU Usage: 702 ms
+Waiting for 17 sub-compilation(s) to finish...
+Compiled 24 Verilog Units
+Built simulation executable F:/CS/OSH/final_HW/BCI_FPGA/LC3/test_isim_beh.exe
+Fuse Memory Usage: 29360 KB
+Fuse CPU Usage: 811 ms

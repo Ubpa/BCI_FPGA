@@ -18,11 +18,12 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module ADDR_CTL_LOGIC( MAR, R_W, MIO_EN, INMUX_Sel, MEM_EN, LD_KBSR, LD_DDR, LD_DSR, LD_SDAER, LD_SDADR, LD_SDASR, LD_SCLER, LD_UARTDR, LD_UARTSR );
+module ADDR_CTL_LOGIC( MAR, R_W, MIO_EN, INMUX_Sel, MEM_EN, LD_KBSR, LD_DDR, LD_DSR, LD_SDAER, LD_SDADR, LD_SDASR, LD_SCLER, LD_UARTDR, LD_UARTSR, LD_SC_buffer );
 input [15:0] MAR;
 input R_W, MIO_EN;
 output [3:0] INMUX_Sel;
 output MEM_EN, LD_KBSR, LD_DDR, LD_DSR, LD_SDAER, LD_SDADR, LD_SDASR, LD_SCLER, LD_UARTDR, LD_UARTSR;
+output [2:0] LD_SC_buffer;
 
 assign LD_KBSR   = (MAR == 16'h7E00) & MIO_EN & R_W;
 assign LD_DSR    = (MAR == 16'h7E04) & MIO_EN & R_W;
@@ -33,6 +34,7 @@ assign LD_SDASR  = (MAR == 16'h7E0D) & MIO_EN & R_W;
 assign LD_SCLER  = (MAR == 16'h7E10) & MIO_EN & R_W;
 assign LD_UARTSR = (MAR == 16'h7E14) & MIO_EN & R_W;
 assign LD_UARTDR = (MAR == 16'h7E16) & MIO_EN & R_W;
+assign LD_SC_buffer = ( MAR[15:4] == 12'h7E2 ) & MIO_EN & R_W ? MAR[2:0] : 3'b111;
 
 assign INMUX_Sel = ( ~MIO_EN || R_W  ? 4'bxxxx
 						:( MAR == 16'h7E00 ? 4'b0001//KBSR
@@ -46,7 +48,10 @@ assign INMUX_Sel = ( ~MIO_EN || R_W  ? 4'bxxxx
 						:( MAR == 16'h7E10 ? 4'b1001//SCLER
 						:( MAR == 16'h7E12 ? 4'b1010//SCL_BUS
 						:( MAR == 16'h7E14 ? 4'b1011//UARTSR
-						: 4'b0000 ))))))))))));// MEM
+						:( MAR[15:4] == 12'h7E2 ? 4'b1100//buffer
+						:( MAR[15:4] == 12'h7E3 ? 4'b1101//change
+						:( MAR[15:4] == 12'h7E4 ? 4'b1110//RDCurreent
+						: 4'b0000 )))))))))))))));// MEM
 
 assign MEM_EN = MIO_EN
 				  & ( MAR != 16'h7E00 )
@@ -61,5 +66,8 @@ assign MEM_EN = MIO_EN
 				  & ( MAR != 16'h7E10 )
 				  & ( MAR != 16'h7E12 )
 				  & ( MAR != 16'h7E14 )
-				  & ( MAR != 16'h7E16 );
+				  & ( MAR != 16'h7E16 )
+				  & ( MAR[15:4] != 12'h7E2 )
+				  & ( MAR[15:4] != 12'h7E3 )
+				  & ( MAR[15:4] != 12'h7E4 );
 endmodule

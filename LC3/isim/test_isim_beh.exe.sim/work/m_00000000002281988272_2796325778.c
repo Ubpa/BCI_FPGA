@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "E:/CS/OSH/final_HW/BCI_FPGA/LC3/COUNTER.v";
+static const char *ng0 = "F:/CS/OSH/final_HW/BCI_FPGA/LC3/COUNTER.v";
 static int ng1[] = {0, 0};
 static unsigned int ng2[] = {0U, 0U};
 static int ng3[] = {1, 0};
@@ -280,7 +280,7 @@ LAB17:    t23 = (t32 + 4);
 LAB20:    xsi_set_current_line(43, ng0);
 
 LAB23:    xsi_set_current_line(44, ng0);
-    t2 = ((char*)((ng1)));
+    t2 = ((char*)((ng2)));
     t3 = (t0 + 1928);
     xsi_vlogvar_wait_assign_value(t3, t2, 0, 0, 16, 0LL);
 

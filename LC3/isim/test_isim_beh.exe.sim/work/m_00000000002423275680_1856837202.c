@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "E:/CS/OSH/final_HW/BCI_FPGA/LC3/RXD.v";
+static const char *ng0 = "F:/CS/OSH/final_HW/BCI_FPGA/LC3/RXD.v";
 static int ng1[] = {0, 0};
 static int ng2[] = {3, 0};
 static unsigned int ng3[] = {0U, 0U};
@@ -33,7 +33,7 @@ static unsigned int ng8[] = {7U, 0U};
 static unsigned int ng9[] = {8U, 0U};
 static unsigned int ng10[] = {2U, 0U};
 static int ng11[] = {2, 0};
-static unsigned int ng12[] = {108U, 0U};
+static unsigned int ng12[] = {50U, 0U};
 
 
 

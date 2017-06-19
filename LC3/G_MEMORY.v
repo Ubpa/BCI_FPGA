@@ -34,10 +34,14 @@ output txd;
 output reg R;
 
 reg [15:0] MAR, MDR;
+reg [3:0] SC_readed;
 reg readed;
+wire [127:0] RDCurrent1d, RDCurrent1ds;
+wire [111:0] buffer1d, buffer1ds;
 wire [15:0] INMUX, dout, KBDR, KBSR, DSR, SDAER, SDADR, SDASR, SCLER, SWR, UARTSR;
-wire [7:0] Vector;
+wire [7:0] Vector, change;
 wire [3:0] INMUX_Sel;
+wire [2:0] LD_SC_buffer;
 
 assign BUS = GateMDR ? MDR
 				: ( GateVector ? {8'h01, Vector}
@@ -53,6 +57,9 @@ always @( posedge clk ) begin
 		MAR <= BUS;
 end
 
+
+assign buffer1ds = buffer1d >> { MAR[2:0], 4'b0 };
+assign RDCurrent1ds = RDCurrent1d >> { MAR[2:0], 4'b0 };
 assign INMUX =   ( INMUX_Sel == 4'b0000 ? dout
 					: ( INMUX_Sel == 4'b0001 ? KBSR
 					: ( INMUX_Sel == 4'b0010 ? KBDR
@@ -61,13 +68,16 @@ assign INMUX =   ( INMUX_Sel == 4'b0000 ? dout
 					: ( INMUX_Sel == 4'b0101 ? SDAER
 					: ( INMUX_Sel == 4'b0110 ? SDADR
 					: ( INMUX_Sel == 4'b0111 ? SDASR
-					: ( INMUX_Sel == 4'b1000 ? { 15'b0, SDA_BUS[SDASR[2:0]] }
+					: ( INMUX_Sel == 4'b1000 ? { 15'd0, SDA_BUS[SDASR[2:0]] }
 					: ( INMUX_Sel == 4'b1001 ? SCLER
-					: ( INMUX_Sel == 4'b1010 ? { 15'b0, SCL_BUS }
+					: ( INMUX_Sel == 4'b1010 ? { 15'd0, SCL_BUS }
 					: ( INMUX_Sel == 4'b1011 ? UARTSR
-					: 16'hzzzz ))))))))))));
+					: ( INMUX_Sel == 4'b1100 ? buffer1ds[15:0]
+					: ( INMUX_Sel == 4'b1101 ? { 15'd0, change[MAR[2:0]] }
+					: ( INMUX_Sel == 4'b1110 ? RDCurrent1ds[15:0]
+					: 16'hzzzz )))))))))))))));
 
-ADDR_CTL_LOGIC addr_ctl_logic( MAR, R_W, MIO_EN, INMUX_Sel, MEM_EN, LD_KBSR, LD_DDR, LD_DSR, LD_SDAER, LD_SDADR, LD_SDASR, LD_SCLER, LD_UARTDR, LD_UARTSR );
+ADDR_CTL_LOGIC addr_ctl_logic( MAR, R_W, MIO_EN, INMUX_Sel, MEM_EN, LD_KBSR, LD_DDR, LD_DSR, LD_SDAER, LD_SDADR, LD_SDASR, LD_SCLER, LD_UARTDR, LD_UARTSR, LD_SC_buffer );
 
 MEMORY memory( MDR, MAR, R_W, MEM_EN, clk, dout, R_MEM );
 
@@ -83,6 +93,8 @@ SCL scl( SCL_BUS, MDR, LD_SCLER, clk, SCLER, WR_SCL );
 
 UART uart( MDR, rxd, LD_UARTDR, LD_UARTSR, clk, UARTSR, txd, WR_UART );
 
+SETCURRENT setcurrent(clk, MDR, LD_SC_buffer, SC_readed, buffer1d, change, RDCurrent1d, SC_WR );
+
 always @( posedge clk ) begin
 	if( ~MIO_EN ) begin
 		R <= 0;
@@ -97,7 +109,9 @@ always @( posedge clk ) begin
 			: ( LD_DDR | LD_DSR ? WR_DSP
 			: ( LD_SDAER | LD_SDADR | LD_SDASR ? WR_SDA
 			: ( LD_SCLER ? WR_SCL
-			: WR_UART )))));
+			: ( LD_UARTDR | LD_UARTSR ? WR_UART
+			: SC_WR ))))));
+		SC_readed <= 4'b1000;
 		readed <= 0;
 	end
 	else if( ~R & ( R_MEM | ~MEM_EN ) )begin // 此时 LD_MDR 必定为 1
@@ -105,10 +119,14 @@ always @( posedge clk ) begin
 		MDR <= INMUX;
 		if( INMUX_Sel == 4'b0010 )
 			readed <= 1;
+		else if( INMUX_Sel == 4'b1110 )
+			SC_readed <= { 1'b0, MAR[2:0] };
 		R <= 1;
 	end
-	else
+	else begin
 		readed <= 0;
+		SC_readed <= 4'b1000;
+	end
 end
 
 INT_CTL int_ctl( KBSR, DSR, UARTSR, VectorMUX, LD_Vector, clk, Vector, INT_Priority );

@@ -56,7 +56,16 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 78: Assignment to <arg fmt="%s" index="1">ft</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="Xst" num="2972" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%d" index="2">76</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">_rxd</arg>&gt; of block &lt;<arg fmt="%s" index="4">RXD</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">UART</arg>&gt;. Underlying logic will be removed.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v" Line 67: Assignment to <arg fmt="%s" index="1">cnt</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v" Line 87: Result of <arg fmt="%d" index="1">17</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v" Line 91: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+</msg>
+
+<msg type="warning" file="Xst" num="2972" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%d" index="2">76</arg>. All outputs of instance &lt;<arg fmt="%s" index="3">_rxd</arg>&gt; of block &lt;<arg fmt="%s" index="4">RXD</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="5">UART</arg>&gt;. Underlying logic will be removed.
 </msg>
 
 <msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">PSR&lt;14:11&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">CPU</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">0000</arg>).
@@ -71,10 +80,10 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">MDR&lt;15:15&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v</arg>&quot; line <arg fmt="%s" index="2">37</arg>: Output port &lt;<arg fmt="%s" index="3">cnt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">counter</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\BTN_I.v</arg>&quot; line <arg fmt="%s" index="2">37</arg>: Output port &lt;<arg fmt="%s" index="3">cnt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">counter</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v</arg>&quot; line <arg fmt="%s" index="2">42</arg>: Output port &lt;<arg fmt="%s" index="3">cnt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">counter</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\DISIPLAY.v</arg>&quot; line <arg fmt="%s" index="2">42</arg>: Output port &lt;<arg fmt="%s" index="3">cnt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">counter</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">segOfASCII</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">DISIPLAY</arg>&apos;, is tied to its initial value.
@@ -104,31 +113,34 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">MDR&lt;15:1&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v</arg>&quot; line <arg fmt="%s" index="2">33</arg>: Output port &lt;<arg fmt="%s" index="3">cnt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">counter</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v</arg>&quot; line <arg fmt="%s" index="2">33</arg>: Output port &lt;<arg fmt="%s" index="3">cnt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">counter</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="2935" delta="old" >Signal &apos;<arg fmt="%s" index="1">SCLER&lt;15:1&gt;</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">SCL</arg>&apos;, is tied to its initial value (<arg fmt="%s" index="3">000000000000000</arg>).
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">r4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">fr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">76</arg>: Output port &lt;<arg fmt="%s" index="3">fr</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_rxd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">78</arg>: Output port &lt;<arg fmt="%s" index="3">ft</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_txd</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v</arg>&quot; line <arg fmt="%s" index="2">78</arg>: Output port &lt;<arg fmt="%s" index="3">ft</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">_txd</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">UARTDR&lt;15:8&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v</arg>&quot; line <arg fmt="%s" index="2">63</arg>: Output port &lt;<arg fmt="%s" index="3">cnt</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">counter</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">KBSR&lt;13:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -181,6 +193,9 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">KBDR_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">keyboard</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">inner_reset</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">counter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">inner_reset</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">counter</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
@@ -318,6 +333,9 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">counter/inner_reset</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">DISIPLAY</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">counter/inner_reset</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">SETCURRENT</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">MicroIR_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">CONTROLSTORE</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
@@ -356,49 +374,337 @@ You should achieve better results by setting this init to <arg fmt="%i" index="3
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">g_memory/uart/UARTDR_8</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">LC3</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_44</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_45</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_46</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_47</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_56</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_57</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_58</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_59</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_60</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_61</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_62</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_63</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_72</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_73</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_74</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_75</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_76</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_77</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_78</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_40</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_41</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_42</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_43</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_123</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_124</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_125</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_126</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_127</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/scl/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/uart/_txd/counter/cnt_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_79</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_88</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_89</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_90</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_91</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_92</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_93</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_94</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_95</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_104</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_105</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_106</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_107</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_108</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_109</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_110</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_111</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_120</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_121</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/RDCurrent_0_122</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">LC3</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_224</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_192&gt; &lt;g_memory/setcurrent/lastCheckT_0_160&gt; &lt;g_memory/setcurrent/lastCheckT_0_128&gt; &lt;g_memory/setcurrent/lastCheckT_0_96&gt; &lt;g_memory/setcurrent/lastCheckT_0_64&gt; &lt;g_memory/setcurrent/lastCheckT_0_32&gt; &lt;g_memory/setcurrent/lastCheckT_0_0&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_230</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_198&gt; &lt;g_memory/setcurrent/lastCheckT_0_166&gt; &lt;g_memory/setcurrent/lastCheckT_0_134&gt; &lt;g_memory/setcurrent/lastCheckT_0_102&gt; &lt;g_memory/setcurrent/lastCheckT_0_70&gt; &lt;g_memory/setcurrent/lastCheckT_0_38&gt; &lt;g_memory/setcurrent/lastCheckT_0_6&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_225</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_193&gt; &lt;g_memory/setcurrent/lastCheckT_0_161&gt; &lt;g_memory/setcurrent/lastCheckT_0_129&gt; &lt;g_memory/setcurrent/lastCheckT_0_97&gt; &lt;g_memory/setcurrent/lastCheckT_0_65&gt; &lt;g_memory/setcurrent/lastCheckT_0_33&gt; &lt;g_memory/setcurrent/lastCheckT_0_1&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_231</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_199&gt; &lt;g_memory/setcurrent/lastCheckT_0_167&gt; &lt;g_memory/setcurrent/lastCheckT_0_135&gt; &lt;g_memory/setcurrent/lastCheckT_0_103&gt; &lt;g_memory/setcurrent/lastCheckT_0_71&gt; &lt;g_memory/setcurrent/lastCheckT_0_39&gt; &lt;g_memory/setcurrent/lastCheckT_0_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_226</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_194&gt; &lt;g_memory/setcurrent/lastCheckT_0_162&gt; &lt;g_memory/setcurrent/lastCheckT_0_130&gt; &lt;g_memory/setcurrent/lastCheckT_0_98&gt; &lt;g_memory/setcurrent/lastCheckT_0_66&gt; &lt;g_memory/setcurrent/lastCheckT_0_34&gt; &lt;g_memory/setcurrent/lastCheckT_0_2&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_232</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_200&gt; &lt;g_memory/setcurrent/lastCheckT_0_168&gt; &lt;g_memory/setcurrent/lastCheckT_0_136&gt; &lt;g_memory/setcurrent/lastCheckT_0_104&gt; &lt;g_memory/setcurrent/lastCheckT_0_72&gt; &lt;g_memory/setcurrent/lastCheckT_0_40&gt; &lt;g_memory/setcurrent/lastCheckT_0_8&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_227</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_195&gt; &lt;g_memory/setcurrent/lastCheckT_0_163&gt; &lt;g_memory/setcurrent/lastCheckT_0_131&gt; &lt;g_memory/setcurrent/lastCheckT_0_99&gt; &lt;g_memory/setcurrent/lastCheckT_0_67&gt; &lt;g_memory/setcurrent/lastCheckT_0_35&gt; &lt;g_memory/setcurrent/lastCheckT_0_3&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_233</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_201&gt; &lt;g_memory/setcurrent/lastCheckT_0_169&gt; &lt;g_memory/setcurrent/lastCheckT_0_137&gt; &lt;g_memory/setcurrent/lastCheckT_0_105&gt; &lt;g_memory/setcurrent/lastCheckT_0_73&gt; &lt;g_memory/setcurrent/lastCheckT_0_41&gt; &lt;g_memory/setcurrent/lastCheckT_0_9&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_228</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_196&gt; &lt;g_memory/setcurrent/lastCheckT_0_164&gt; &lt;g_memory/setcurrent/lastCheckT_0_132&gt; &lt;g_memory/setcurrent/lastCheckT_0_100&gt; &lt;g_memory/setcurrent/lastCheckT_0_68&gt; &lt;g_memory/setcurrent/lastCheckT_0_36&gt; &lt;g_memory/setcurrent/lastCheckT_0_4&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_234</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_202&gt; &lt;g_memory/setcurrent/lastCheckT_0_170&gt; &lt;g_memory/setcurrent/lastCheckT_0_138&gt; &lt;g_memory/setcurrent/lastCheckT_0_106&gt; &lt;g_memory/setcurrent/lastCheckT_0_74&gt; &lt;g_memory/setcurrent/lastCheckT_0_42&gt; &lt;g_memory/setcurrent/lastCheckT_0_10&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_229</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_197&gt; &lt;g_memory/setcurrent/lastCheckT_0_165&gt; &lt;g_memory/setcurrent/lastCheckT_0_133&gt; &lt;g_memory/setcurrent/lastCheckT_0_101&gt; &lt;g_memory/setcurrent/lastCheckT_0_69&gt; &lt;g_memory/setcurrent/lastCheckT_0_37&gt; &lt;g_memory/setcurrent/lastCheckT_0_5&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_240</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_208&gt; &lt;g_memory/setcurrent/lastCheckT_0_176&gt; &lt;g_memory/setcurrent/lastCheckT_0_144&gt; &lt;g_memory/setcurrent/lastCheckT_0_112&gt; &lt;g_memory/setcurrent/lastCheckT_0_80&gt; &lt;g_memory/setcurrent/lastCheckT_0_48&gt; &lt;g_memory/setcurrent/lastCheckT_0_16&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_235</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_203&gt; &lt;g_memory/setcurrent/lastCheckT_0_171&gt; &lt;g_memory/setcurrent/lastCheckT_0_139&gt; &lt;g_memory/setcurrent/lastCheckT_0_107&gt; &lt;g_memory/setcurrent/lastCheckT_0_75&gt; &lt;g_memory/setcurrent/lastCheckT_0_43&gt; &lt;g_memory/setcurrent/lastCheckT_0_11&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_241</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_209&gt; &lt;g_memory/setcurrent/lastCheckT_0_177&gt; &lt;g_memory/setcurrent/lastCheckT_0_145&gt; &lt;g_memory/setcurrent/lastCheckT_0_113&gt; &lt;g_memory/setcurrent/lastCheckT_0_81&gt; &lt;g_memory/setcurrent/lastCheckT_0_49&gt; &lt;g_memory/setcurrent/lastCheckT_0_17&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_236</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_204&gt; &lt;g_memory/setcurrent/lastCheckT_0_172&gt; &lt;g_memory/setcurrent/lastCheckT_0_140&gt; &lt;g_memory/setcurrent/lastCheckT_0_108&gt; &lt;g_memory/setcurrent/lastCheckT_0_76&gt; &lt;g_memory/setcurrent/lastCheckT_0_44&gt; &lt;g_memory/setcurrent/lastCheckT_0_12&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_242</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_210&gt; &lt;g_memory/setcurrent/lastCheckT_0_178&gt; &lt;g_memory/setcurrent/lastCheckT_0_146&gt; &lt;g_memory/setcurrent/lastCheckT_0_114&gt; &lt;g_memory/setcurrent/lastCheckT_0_82&gt; &lt;g_memory/setcurrent/lastCheckT_0_50&gt; &lt;g_memory/setcurrent/lastCheckT_0_18&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_237</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_205&gt; &lt;g_memory/setcurrent/lastCheckT_0_173&gt; &lt;g_memory/setcurrent/lastCheckT_0_141&gt; &lt;g_memory/setcurrent/lastCheckT_0_109&gt; &lt;g_memory/setcurrent/lastCheckT_0_77&gt; &lt;g_memory/setcurrent/lastCheckT_0_45&gt; &lt;g_memory/setcurrent/lastCheckT_0_13&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_243</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_211&gt; &lt;g_memory/setcurrent/lastCheckT_0_179&gt; &lt;g_memory/setcurrent/lastCheckT_0_147&gt; &lt;g_memory/setcurrent/lastCheckT_0_115&gt; &lt;g_memory/setcurrent/lastCheckT_0_83&gt; &lt;g_memory/setcurrent/lastCheckT_0_51&gt; &lt;g_memory/setcurrent/lastCheckT_0_19&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_238</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_206&gt; &lt;g_memory/setcurrent/lastCheckT_0_174&gt; &lt;g_memory/setcurrent/lastCheckT_0_142&gt; &lt;g_memory/setcurrent/lastCheckT_0_110&gt; &lt;g_memory/setcurrent/lastCheckT_0_78&gt; &lt;g_memory/setcurrent/lastCheckT_0_46&gt; &lt;g_memory/setcurrent/lastCheckT_0_14&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_244</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_212&gt; &lt;g_memory/setcurrent/lastCheckT_0_180&gt; &lt;g_memory/setcurrent/lastCheckT_0_148&gt; &lt;g_memory/setcurrent/lastCheckT_0_116&gt; &lt;g_memory/setcurrent/lastCheckT_0_84&gt; &lt;g_memory/setcurrent/lastCheckT_0_52&gt; &lt;g_memory/setcurrent/lastCheckT_0_20&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_239</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_207&gt; &lt;g_memory/setcurrent/lastCheckT_0_175&gt; &lt;g_memory/setcurrent/lastCheckT_0_143&gt; &lt;g_memory/setcurrent/lastCheckT_0_111&gt; &lt;g_memory/setcurrent/lastCheckT_0_79&gt; &lt;g_memory/setcurrent/lastCheckT_0_47&gt; &lt;g_memory/setcurrent/lastCheckT_0_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_250</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_218&gt; &lt;g_memory/setcurrent/lastCheckT_0_186&gt; &lt;g_memory/setcurrent/lastCheckT_0_154&gt; &lt;g_memory/setcurrent/lastCheckT_0_122&gt; &lt;g_memory/setcurrent/lastCheckT_0_90&gt; &lt;g_memory/setcurrent/lastCheckT_0_58&gt; &lt;g_memory/setcurrent/lastCheckT_0_26&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_245</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_213&gt; &lt;g_memory/setcurrent/lastCheckT_0_181&gt; &lt;g_memory/setcurrent/lastCheckT_0_149&gt; &lt;g_memory/setcurrent/lastCheckT_0_117&gt; &lt;g_memory/setcurrent/lastCheckT_0_85&gt; &lt;g_memory/setcurrent/lastCheckT_0_53&gt; &lt;g_memory/setcurrent/lastCheckT_0_21&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_251</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_219&gt; &lt;g_memory/setcurrent/lastCheckT_0_187&gt; &lt;g_memory/setcurrent/lastCheckT_0_155&gt; &lt;g_memory/setcurrent/lastCheckT_0_123&gt; &lt;g_memory/setcurrent/lastCheckT_0_91&gt; &lt;g_memory/setcurrent/lastCheckT_0_59&gt; &lt;g_memory/setcurrent/lastCheckT_0_27&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_246</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_214&gt; &lt;g_memory/setcurrent/lastCheckT_0_182&gt; &lt;g_memory/setcurrent/lastCheckT_0_150&gt; &lt;g_memory/setcurrent/lastCheckT_0_118&gt; &lt;g_memory/setcurrent/lastCheckT_0_86&gt; &lt;g_memory/setcurrent/lastCheckT_0_54&gt; &lt;g_memory/setcurrent/lastCheckT_0_22&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_252</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_220&gt; &lt;g_memory/setcurrent/lastCheckT_0_188&gt; &lt;g_memory/setcurrent/lastCheckT_0_156&gt; &lt;g_memory/setcurrent/lastCheckT_0_124&gt; &lt;g_memory/setcurrent/lastCheckT_0_92&gt; &lt;g_memory/setcurrent/lastCheckT_0_60&gt; &lt;g_memory/setcurrent/lastCheckT_0_28&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_247</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_215&gt; &lt;g_memory/setcurrent/lastCheckT_0_183&gt; &lt;g_memory/setcurrent/lastCheckT_0_151&gt; &lt;g_memory/setcurrent/lastCheckT_0_119&gt; &lt;g_memory/setcurrent/lastCheckT_0_87&gt; &lt;g_memory/setcurrent/lastCheckT_0_55&gt; &lt;g_memory/setcurrent/lastCheckT_0_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_253</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_221&gt; &lt;g_memory/setcurrent/lastCheckT_0_189&gt; &lt;g_memory/setcurrent/lastCheckT_0_157&gt; &lt;g_memory/setcurrent/lastCheckT_0_125&gt; &lt;g_memory/setcurrent/lastCheckT_0_93&gt; &lt;g_memory/setcurrent/lastCheckT_0_61&gt; &lt;g_memory/setcurrent/lastCheckT_0_29&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_248</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_216&gt; &lt;g_memory/setcurrent/lastCheckT_0_184&gt; &lt;g_memory/setcurrent/lastCheckT_0_152&gt; &lt;g_memory/setcurrent/lastCheckT_0_120&gt; &lt;g_memory/setcurrent/lastCheckT_0_88&gt; &lt;g_memory/setcurrent/lastCheckT_0_56&gt; &lt;g_memory/setcurrent/lastCheckT_0_24&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_254</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_222&gt; &lt;g_memory/setcurrent/lastCheckT_0_190&gt; &lt;g_memory/setcurrent/lastCheckT_0_158&gt; &lt;g_memory/setcurrent/lastCheckT_0_126&gt; &lt;g_memory/setcurrent/lastCheckT_0_94&gt; &lt;g_memory/setcurrent/lastCheckT_0_62&gt; &lt;g_memory/setcurrent/lastCheckT_0_30&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_249</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_217&gt; &lt;g_memory/setcurrent/lastCheckT_0_185&gt; &lt;g_memory/setcurrent/lastCheckT_0_153&gt; &lt;g_memory/setcurrent/lastCheckT_0_121&gt; &lt;g_memory/setcurrent/lastCheckT_0_89&gt; &lt;g_memory/setcurrent/lastCheckT_0_57&gt; &lt;g_memory/setcurrent/lastCheckT_0_25&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">g_memory/setcurrent/lastCheckT_0_255</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">LC3</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;g_memory/setcurrent/lastCheckT_0_223&gt; &lt;g_memory/setcurrent/lastCheckT_0_191&gt; &lt;g_memory/setcurrent/lastCheckT_0_159&gt; &lt;g_memory/setcurrent/lastCheckT_0_127&gt; &lt;g_memory/setcurrent/lastCheckT_0_95&gt; &lt;g_memory/setcurrent/lastCheckT_0_63&gt; &lt;g_memory/setcurrent/lastCheckT_0_31&gt; </arg>
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

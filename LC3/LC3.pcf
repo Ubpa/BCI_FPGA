@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun May 07 23:30:10 2017
+// Written by: Map P.20131013 on Mon Jun 19 19:26:35 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -52,11 +52,11 @@ PIN g_memory/memory/Mram_RAM28_pins<14> = BEL "g_memory/memory/Mram_RAM28"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM27_pins<14> = BEL "g_memory/memory/Mram_RAM27"
         PINNAME CLKA;
-PIN g_memory/memory/Mram_RAM26_pins<14> = BEL "g_memory/memory/Mram_RAM26"
-        PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM25_pins<14> = BEL "g_memory/memory/Mram_RAM25"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM24_pins<14> = BEL "g_memory/memory/Mram_RAM24"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM26_pins<14> = BEL "g_memory/memory/Mram_RAM26"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM23_pins<14> = BEL "g_memory/memory/Mram_RAM23"
         PINNAME CLKA;
@@ -66,15 +66,15 @@ PIN g_memory/memory/Mram_RAM21_pins<14> = BEL "g_memory/memory/Mram_RAM21"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM20_pins<14> = BEL "g_memory/memory/Mram_RAM20"
         PINNAME CLKA;
-PIN g_memory/memory/Mram_RAM18_pins<14> = BEL "g_memory/memory/Mram_RAM18"
-        PINNAME CLKA;
-PIN g_memory/memory/Mram_RAM17_pins<14> = BEL "g_memory/memory/Mram_RAM17"
-        PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM19_pins<14> = BEL "g_memory/memory/Mram_RAM19"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM18_pins<14> = BEL "g_memory/memory/Mram_RAM18"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM16_pins<14> = BEL "g_memory/memory/Mram_RAM16"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM15_pins<14> = BEL "g_memory/memory/Mram_RAM15"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM17_pins<14> = BEL "g_memory/memory/Mram_RAM17"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM14_pins<14> = BEL "g_memory/memory/Mram_RAM14"
         PINNAME CLKA;
@@ -88,11 +88,11 @@ PIN g_memory/memory/Mram_RAM10_pins<14> = BEL "g_memory/memory/Mram_RAM10"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM9_pins<14> = BEL "g_memory/memory/Mram_RAM9"
         PINNAME CLKA;
-PIN g_memory/memory/Mram_RAM8_pins<14> = BEL "g_memory/memory/Mram_RAM8"
-        PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM7_pins<14> = BEL "g_memory/memory/Mram_RAM7"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM6_pins<14> = BEL "g_memory/memory/Mram_RAM6"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM8_pins<14> = BEL "g_memory/memory/Mram_RAM8"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM5_pins<14> = BEL "g_memory/memory/Mram_RAM5"
         PINNAME CLKA;
@@ -100,9 +100,9 @@ PIN g_memory/memory/Mram_RAM4_pins<14> = BEL "g_memory/memory/Mram_RAM4"
         PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM3_pins<14> = BEL "g_memory/memory/Mram_RAM3"
         PINNAME CLKA;
-PIN g_memory/memory/Mram_RAM1_pins<14> = BEL "g_memory/memory/Mram_RAM1"
-        PINNAME CLKA;
 PIN g_memory/memory/Mram_RAM2_pins<14> = BEL "g_memory/memory/Mram_RAM2"
+        PINNAME CLKA;
+PIN g_memory/memory/Mram_RAM1_pins<14> = BEL "g_memory/memory/Mram_RAM1"
         PINNAME CLKA;
 TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/MDR_14" BEL "g_memory/MDR_13" BEL "g_memory/MDR_12" BEL
@@ -110,7 +110,9 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/MDR_8" BEL "g_memory/MDR_7" BEL "g_memory/MDR_6" BEL
         "g_memory/MDR_5" BEL "g_memory/MDR_4" BEL "g_memory/MDR_3" BEL
         "g_memory/MDR_2" BEL "g_memory/MDR_1" BEL "g_memory/MDR_0" BEL
-        "g_memory/memory/R" BEL "g_memory/MAR_15" BEL "g_memory/MAR_14" BEL
+        "g_memory/memory/R" BEL "g_memory/SC_readed_3" BEL
+        "g_memory/SC_readed_2" BEL "g_memory/SC_readed_1" BEL
+        "g_memory/SC_readed_0" BEL "g_memory/MAR_15" BEL "g_memory/MAR_14" BEL
         "g_memory/MAR_13" BEL "g_memory/MAR_12" BEL "g_memory/MAR_11" BEL
         "g_memory/MAR_10" BEL "g_memory/MAR_9" BEL "g_memory/MAR_8" BEL
         "g_memory/MAR_7" BEL "g_memory/MAR_6" BEL "g_memory/MAR_5" BEL
@@ -307,69 +309,819 @@ TIMEGRP sys_clk_pin = BEL "g_memory/inst_LPM_FF" BEL "g_memory/MDR_15" BEL
         "g_memory/scl/counter/cnt_3" BEL "g_memory/scl/counter/inner_reset"
         BEL "g_memory/scl/SCL_BUS" BEL "g_memory/scl/reset" BEL
         "g_memory/scl/SCLER_0" BEL "g_memory/scl/WR" BEL
-        "fsm/controlstore/MicroIR_49" BEL "fsm/controlstore/MicroIR_48" BEL
-        "fsm/controlstore/MicroIR_47" BEL "fsm/controlstore/MicroIR_46" BEL
-        "fsm/controlstore/MicroIR_45" BEL "fsm/controlstore/MicroIR_44" BEL
-        "fsm/controlstore/MicroIR_43" BEL "fsm/controlstore/MicroIR_42" BEL
-        "fsm/controlstore/MicroIR_41" BEL "fsm/controlstore/MicroIR_40" BEL
-        "fsm/controlstore/MicroIR_39" BEL "fsm/controlstore/MicroIR_38" BEL
-        "fsm/controlstore/MicroIR_37" BEL "fsm/controlstore/MicroIR_36" BEL
-        "fsm/controlstore/MicroIR_35" BEL "fsm/controlstore/MicroIR_34" BEL
-        "fsm/controlstore/MicroIR_33" BEL "fsm/controlstore/MicroIR_32" BEL
-        "fsm/controlstore/MicroIR_31" BEL "fsm/controlstore/MicroIR_30" BEL
-        "fsm/controlstore/MicroIR_29" BEL "fsm/controlstore/MicroIR_28" BEL
-        "fsm/controlstore/MicroIR_27" BEL "fsm/controlstore/MicroIR_26" BEL
-        "fsm/controlstore/MicroIR_25" BEL "fsm/controlstore/MicroIR_24" BEL
-        "fsm/controlstore/MicroIR_23" BEL "fsm/controlstore/MicroIR_22" BEL
-        "fsm/controlstore/MicroIR_21" BEL "fsm/controlstore/MicroIR_20" BEL
-        "fsm/controlstore/MicroIR_19" BEL "fsm/controlstore/MicroIR_18" BEL
-        "fsm/controlstore/MicroIR_17" BEL "fsm/controlstore/MicroIR_16" BEL
-        "fsm/controlstore/MicroIR_15" BEL "fsm/controlstore/MicroIR_14" BEL
-        "fsm/controlstore/MicroIR_13" BEL "fsm/controlstore/MicroIR_12" BEL
-        "fsm/controlstore/MicroIR_11" BEL "fsm/controlstore/MicroIR_10" BEL
-        "fsm/controlstore/MicroIR_9" BEL "fsm/controlstore/MicroIR_8" BEL
-        "fsm/controlstore/MicroIR_7" BEL "fsm/controlstore/MicroIR_6" BEL
-        "fsm/controlstore/MicroIR_5" BEL "fsm/controlstore/MicroIR_4" BEL
-        "fsm/controlstore/MicroIR_3" BEL "fsm/controlstore/MicroIR_2" BEL
-        "fsm/controlstore/MicroIR_1" BEL "g_memory/R" BEL "g_memory/readed"
-        BEL "g_memory/sda/WR" BEL "g_memory/keyboard/KBSR_15" BEL
-        "g_memory/uart/UARTSR_15" BEL "g_memory/display/DSR_15" BEL
-        "fsm/controlstore/MicroIR_24_1" BEL "fsm/controlstore/MicroIR_22_1"
-        BEL "fsm/controlstore/MicroIR_27_1" BEL "cpu/IR_5_1" BEL
-        "g_memory/MAR_13_1" BEL "g_memory/MAR_5_1" BEL "g_memory/MAR_10_1" BEL
-        "g_memory/MAR_11_1" BEL "cpu/IR_5_2" BEL "clk_BUFGP/BUFG" PIN
+        "g_memory/setcurrent/currentT_31" BEL
+        "g_memory/setcurrent/currentT_30" BEL
+        "g_memory/setcurrent/currentT_29" BEL
+        "g_memory/setcurrent/currentT_28" BEL
+        "g_memory/setcurrent/currentT_27" BEL
+        "g_memory/setcurrent/currentT_26" BEL
+        "g_memory/setcurrent/currentT_25" BEL
+        "g_memory/setcurrent/currentT_24" BEL
+        "g_memory/setcurrent/currentT_23" BEL
+        "g_memory/setcurrent/currentT_22" BEL
+        "g_memory/setcurrent/currentT_21" BEL
+        "g_memory/setcurrent/currentT_20" BEL
+        "g_memory/setcurrent/currentT_19" BEL
+        "g_memory/setcurrent/currentT_18" BEL
+        "g_memory/setcurrent/currentT_17" BEL
+        "g_memory/setcurrent/currentT_16" BEL
+        "g_memory/setcurrent/currentT_15" BEL
+        "g_memory/setcurrent/currentT_14" BEL
+        "g_memory/setcurrent/currentT_13" BEL
+        "g_memory/setcurrent/currentT_12" BEL
+        "g_memory/setcurrent/currentT_11" BEL
+        "g_memory/setcurrent/currentT_10" BEL "g_memory/setcurrent/currentT_9"
+        BEL "g_memory/setcurrent/currentT_8" BEL
+        "g_memory/setcurrent/currentT_7" BEL "g_memory/setcurrent/currentT_6"
+        BEL "g_memory/setcurrent/currentT_5" BEL
+        "g_memory/setcurrent/currentT_4" BEL "g_memory/setcurrent/currentT_3"
+        BEL "g_memory/setcurrent/currentT_2" BEL
+        "g_memory/setcurrent/currentT_1" BEL "g_memory/setcurrent/currentT_0"
+        BEL "g_memory/setcurrent/counter/cnt_0" BEL
+        "g_memory/setcurrent/counter/cnt_15" BEL
+        "g_memory/setcurrent/counter/cnt_14" BEL
+        "g_memory/setcurrent/counter/cnt_13" BEL
+        "g_memory/setcurrent/counter/cnt_12" BEL
+        "g_memory/setcurrent/counter/cnt_11" BEL
+        "g_memory/setcurrent/counter/cnt_9" BEL
+        "g_memory/setcurrent/counter/cnt_8" BEL
+        "g_memory/setcurrent/counter/cnt_10" BEL
+        "g_memory/setcurrent/counter/cnt_7" BEL
+        "g_memory/setcurrent/counter/cnt_6" BEL
+        "g_memory/setcurrent/counter/cnt_5" BEL
+        "g_memory/setcurrent/counter/cnt_4" BEL
+        "g_memory/setcurrent/counter/cnt_2" BEL
+        "g_memory/setcurrent/counter/cnt_1" BEL
+        "g_memory/setcurrent/counter/cnt_3" BEL "g_memory/setcurrent/change_7"
+        BEL "g_memory/setcurrent/change_6" BEL "g_memory/setcurrent/change_5"
+        BEL "g_memory/setcurrent/change_4" BEL "g_memory/setcurrent/change_3"
+        BEL "g_memory/setcurrent/change_2" BEL "g_memory/setcurrent/change_1"
+        BEL "g_memory/setcurrent/change_0" BEL
+        "g_memory/setcurrent/RDCurrent_0_119" BEL
+        "g_memory/setcurrent/RDCurrent_0_118" BEL
+        "g_memory/setcurrent/RDCurrent_0_117" BEL
+        "g_memory/setcurrent/RDCurrent_0_116" BEL
+        "g_memory/setcurrent/RDCurrent_0_115" BEL
+        "g_memory/setcurrent/RDCurrent_0_114" BEL
+        "g_memory/setcurrent/RDCurrent_0_113" BEL
+        "g_memory/setcurrent/RDCurrent_0_112" BEL
+        "g_memory/setcurrent/RDCurrent_0_103" BEL
+        "g_memory/setcurrent/RDCurrent_0_102" BEL
+        "g_memory/setcurrent/RDCurrent_0_101" BEL
+        "g_memory/setcurrent/RDCurrent_0_100" BEL
+        "g_memory/setcurrent/RDCurrent_0_99" BEL
+        "g_memory/setcurrent/RDCurrent_0_98" BEL
+        "g_memory/setcurrent/RDCurrent_0_97" BEL
+        "g_memory/setcurrent/RDCurrent_0_96" BEL
+        "g_memory/setcurrent/RDCurrent_0_87" BEL
+        "g_memory/setcurrent/RDCurrent_0_86" BEL
+        "g_memory/setcurrent/RDCurrent_0_85" BEL
+        "g_memory/setcurrent/RDCurrent_0_84" BEL
+        "g_memory/setcurrent/RDCurrent_0_83" BEL
+        "g_memory/setcurrent/RDCurrent_0_82" BEL
+        "g_memory/setcurrent/RDCurrent_0_81" BEL
+        "g_memory/setcurrent/RDCurrent_0_80" BEL
+        "g_memory/setcurrent/RDCurrent_0_71" BEL
+        "g_memory/setcurrent/RDCurrent_0_70" BEL
+        "g_memory/setcurrent/RDCurrent_0_69" BEL
+        "g_memory/setcurrent/RDCurrent_0_68" BEL
+        "g_memory/setcurrent/RDCurrent_0_67" BEL
+        "g_memory/setcurrent/RDCurrent_0_66" BEL
+        "g_memory/setcurrent/RDCurrent_0_65" BEL
+        "g_memory/setcurrent/RDCurrent_0_64" BEL
+        "g_memory/setcurrent/RDCurrent_0_55" BEL
+        "g_memory/setcurrent/RDCurrent_0_54" BEL
+        "g_memory/setcurrent/RDCurrent_0_53" BEL
+        "g_memory/setcurrent/RDCurrent_0_52" BEL
+        "g_memory/setcurrent/RDCurrent_0_51" BEL
+        "g_memory/setcurrent/RDCurrent_0_50" BEL
+        "g_memory/setcurrent/RDCurrent_0_49" BEL
+        "g_memory/setcurrent/RDCurrent_0_48" BEL
+        "g_memory/setcurrent/RDCurrent_0_39" BEL
+        "g_memory/setcurrent/RDCurrent_0_38" BEL
+        "g_memory/setcurrent/RDCurrent_0_37" BEL
+        "g_memory/setcurrent/RDCurrent_0_36" BEL
+        "g_memory/setcurrent/RDCurrent_0_35" BEL
+        "g_memory/setcurrent/RDCurrent_0_34" BEL
+        "g_memory/setcurrent/RDCurrent_0_33" BEL
+        "g_memory/setcurrent/RDCurrent_0_32" BEL
+        "g_memory/setcurrent/RDCurrent_0_23" BEL
+        "g_memory/setcurrent/RDCurrent_0_22" BEL
+        "g_memory/setcurrent/RDCurrent_0_21" BEL
+        "g_memory/setcurrent/RDCurrent_0_20" BEL
+        "g_memory/setcurrent/RDCurrent_0_19" BEL
+        "g_memory/setcurrent/RDCurrent_0_18" BEL
+        "g_memory/setcurrent/RDCurrent_0_17" BEL
+        "g_memory/setcurrent/RDCurrent_0_16" BEL
+        "g_memory/setcurrent/RDCurrent_0_7" BEL
+        "g_memory/setcurrent/RDCurrent_0_6" BEL
+        "g_memory/setcurrent/RDCurrent_0_5" BEL
+        "g_memory/setcurrent/RDCurrent_0_4" BEL
+        "g_memory/setcurrent/RDCurrent_0_3" BEL
+        "g_memory/setcurrent/RDCurrent_0_2" BEL
+        "g_memory/setcurrent/RDCurrent_0_1" BEL
+        "g_memory/setcurrent/RDCurrent_0_0" BEL
+        "g_memory/setcurrent/RDdcw_0_255" BEL
+        "g_memory/setcurrent/RDdcw_0_254" BEL
+        "g_memory/setcurrent/RDdcw_0_253" BEL
+        "g_memory/setcurrent/RDdcw_0_252" BEL
+        "g_memory/setcurrent/RDdcw_0_251" BEL
+        "g_memory/setcurrent/RDdcw_0_250" BEL
+        "g_memory/setcurrent/RDdcw_0_249" BEL
+        "g_memory/setcurrent/RDdcw_0_248" BEL
+        "g_memory/setcurrent/RDdcw_0_247" BEL
+        "g_memory/setcurrent/RDdcw_0_246" BEL
+        "g_memory/setcurrent/RDdcw_0_245" BEL
+        "g_memory/setcurrent/RDdcw_0_244" BEL
+        "g_memory/setcurrent/RDdcw_0_243" BEL
+        "g_memory/setcurrent/RDdcw_0_242" BEL
+        "g_memory/setcurrent/RDdcw_0_241" BEL
+        "g_memory/setcurrent/RDdcw_0_240" BEL
+        "g_memory/setcurrent/RDdcw_0_239" BEL
+        "g_memory/setcurrent/RDdcw_0_238" BEL
+        "g_memory/setcurrent/RDdcw_0_237" BEL
+        "g_memory/setcurrent/RDdcw_0_236" BEL
+        "g_memory/setcurrent/RDdcw_0_235" BEL
+        "g_memory/setcurrent/RDdcw_0_234" BEL
+        "g_memory/setcurrent/RDdcw_0_233" BEL
+        "g_memory/setcurrent/RDdcw_0_232" BEL
+        "g_memory/setcurrent/RDdcw_0_231" BEL
+        "g_memory/setcurrent/RDdcw_0_230" BEL
+        "g_memory/setcurrent/RDdcw_0_229" BEL
+        "g_memory/setcurrent/RDdcw_0_228" BEL
+        "g_memory/setcurrent/RDdcw_0_227" BEL
+        "g_memory/setcurrent/RDdcw_0_226" BEL
+        "g_memory/setcurrent/RDdcw_0_225" BEL
+        "g_memory/setcurrent/RDdcw_0_224" BEL
+        "g_memory/setcurrent/RDdcw_0_223" BEL
+        "g_memory/setcurrent/RDdcw_0_222" BEL
+        "g_memory/setcurrent/RDdcw_0_221" BEL
+        "g_memory/setcurrent/RDdcw_0_220" BEL
+        "g_memory/setcurrent/RDdcw_0_219" BEL
+        "g_memory/setcurrent/RDdcw_0_218" BEL
+        "g_memory/setcurrent/RDdcw_0_217" BEL
+        "g_memory/setcurrent/RDdcw_0_216" BEL
+        "g_memory/setcurrent/RDdcw_0_215" BEL
+        "g_memory/setcurrent/RDdcw_0_214" BEL
+        "g_memory/setcurrent/RDdcw_0_213" BEL
+        "g_memory/setcurrent/RDdcw_0_212" BEL
+        "g_memory/setcurrent/RDdcw_0_211" BEL
+        "g_memory/setcurrent/RDdcw_0_210" BEL
+        "g_memory/setcurrent/RDdcw_0_209" BEL
+        "g_memory/setcurrent/RDdcw_0_208" BEL
+        "g_memory/setcurrent/RDdcw_0_207" BEL
+        "g_memory/setcurrent/RDdcw_0_206" BEL
+        "g_memory/setcurrent/RDdcw_0_205" BEL
+        "g_memory/setcurrent/RDdcw_0_204" BEL
+        "g_memory/setcurrent/RDdcw_0_203" BEL
+        "g_memory/setcurrent/RDdcw_0_202" BEL
+        "g_memory/setcurrent/RDdcw_0_201" BEL
+        "g_memory/setcurrent/RDdcw_0_200" BEL
+        "g_memory/setcurrent/RDdcw_0_199" BEL
+        "g_memory/setcurrent/RDdcw_0_198" BEL
+        "g_memory/setcurrent/RDdcw_0_197" BEL
+        "g_memory/setcurrent/RDdcw_0_196" BEL
+        "g_memory/setcurrent/RDdcw_0_195" BEL
+        "g_memory/setcurrent/RDdcw_0_194" BEL
+        "g_memory/setcurrent/RDdcw_0_193" BEL
+        "g_memory/setcurrent/RDdcw_0_192" BEL
+        "g_memory/setcurrent/RDdcw_0_191" BEL
+        "g_memory/setcurrent/RDdcw_0_190" BEL
+        "g_memory/setcurrent/RDdcw_0_189" BEL
+        "g_memory/setcurrent/RDdcw_0_188" BEL
+        "g_memory/setcurrent/RDdcw_0_187" BEL
+        "g_memory/setcurrent/RDdcw_0_186" BEL
+        "g_memory/setcurrent/RDdcw_0_185" BEL
+        "g_memory/setcurrent/RDdcw_0_184" BEL
+        "g_memory/setcurrent/RDdcw_0_183" BEL
+        "g_memory/setcurrent/RDdcw_0_182" BEL
+        "g_memory/setcurrent/RDdcw_0_181" BEL
+        "g_memory/setcurrent/RDdcw_0_180" BEL
+        "g_memory/setcurrent/RDdcw_0_179" BEL
+        "g_memory/setcurrent/RDdcw_0_178" BEL
+        "g_memory/setcurrent/RDdcw_0_177" BEL
+        "g_memory/setcurrent/RDdcw_0_176" BEL
+        "g_memory/setcurrent/RDdcw_0_175" BEL
+        "g_memory/setcurrent/RDdcw_0_174" BEL
+        "g_memory/setcurrent/RDdcw_0_173" BEL
+        "g_memory/setcurrent/RDdcw_0_172" BEL
+        "g_memory/setcurrent/RDdcw_0_171" BEL
+        "g_memory/setcurrent/RDdcw_0_170" BEL
+        "g_memory/setcurrent/RDdcw_0_169" BEL
+        "g_memory/setcurrent/RDdcw_0_168" BEL
+        "g_memory/setcurrent/RDdcw_0_167" BEL
+        "g_memory/setcurrent/RDdcw_0_166" BEL
+        "g_memory/setcurrent/RDdcw_0_165" BEL
+        "g_memory/setcurrent/RDdcw_0_164" BEL
+        "g_memory/setcurrent/RDdcw_0_163" BEL
+        "g_memory/setcurrent/RDdcw_0_162" BEL
+        "g_memory/setcurrent/RDdcw_0_161" BEL
+        "g_memory/setcurrent/RDdcw_0_160" BEL
+        "g_memory/setcurrent/RDdcw_0_159" BEL
+        "g_memory/setcurrent/RDdcw_0_158" BEL
+        "g_memory/setcurrent/RDdcw_0_157" BEL
+        "g_memory/setcurrent/RDdcw_0_156" BEL
+        "g_memory/setcurrent/RDdcw_0_155" BEL
+        "g_memory/setcurrent/RDdcw_0_154" BEL
+        "g_memory/setcurrent/RDdcw_0_153" BEL
+        "g_memory/setcurrent/RDdcw_0_152" BEL
+        "g_memory/setcurrent/RDdcw_0_151" BEL
+        "g_memory/setcurrent/RDdcw_0_150" BEL
+        "g_memory/setcurrent/RDdcw_0_149" BEL
+        "g_memory/setcurrent/RDdcw_0_148" BEL
+        "g_memory/setcurrent/RDdcw_0_147" BEL
+        "g_memory/setcurrent/RDdcw_0_146" BEL
+        "g_memory/setcurrent/RDdcw_0_145" BEL
+        "g_memory/setcurrent/RDdcw_0_144" BEL
+        "g_memory/setcurrent/RDdcw_0_143" BEL
+        "g_memory/setcurrent/RDdcw_0_142" BEL
+        "g_memory/setcurrent/RDdcw_0_141" BEL
+        "g_memory/setcurrent/RDdcw_0_140" BEL
+        "g_memory/setcurrent/RDdcw_0_139" BEL
+        "g_memory/setcurrent/RDdcw_0_138" BEL
+        "g_memory/setcurrent/RDdcw_0_137" BEL
+        "g_memory/setcurrent/RDdcw_0_136" BEL
+        "g_memory/setcurrent/RDdcw_0_135" BEL
+        "g_memory/setcurrent/RDdcw_0_134" BEL
+        "g_memory/setcurrent/RDdcw_0_133" BEL
+        "g_memory/setcurrent/RDdcw_0_132" BEL
+        "g_memory/setcurrent/RDdcw_0_131" BEL
+        "g_memory/setcurrent/RDdcw_0_130" BEL
+        "g_memory/setcurrent/RDdcw_0_129" BEL
+        "g_memory/setcurrent/RDdcw_0_128" BEL
+        "g_memory/setcurrent/RDdcw_0_127" BEL
+        "g_memory/setcurrent/RDdcw_0_126" BEL
+        "g_memory/setcurrent/RDdcw_0_125" BEL
+        "g_memory/setcurrent/RDdcw_0_124" BEL
+        "g_memory/setcurrent/RDdcw_0_123" BEL
+        "g_memory/setcurrent/RDdcw_0_122" BEL
+        "g_memory/setcurrent/RDdcw_0_121" BEL
+        "g_memory/setcurrent/RDdcw_0_120" BEL
+        "g_memory/setcurrent/RDdcw_0_119" BEL
+        "g_memory/setcurrent/RDdcw_0_118" BEL
+        "g_memory/setcurrent/RDdcw_0_117" BEL
+        "g_memory/setcurrent/RDdcw_0_116" BEL
+        "g_memory/setcurrent/RDdcw_0_115" BEL
+        "g_memory/setcurrent/RDdcw_0_114" BEL
+        "g_memory/setcurrent/RDdcw_0_113" BEL
+        "g_memory/setcurrent/RDdcw_0_112" BEL
+        "g_memory/setcurrent/RDdcw_0_111" BEL
+        "g_memory/setcurrent/RDdcw_0_110" BEL
+        "g_memory/setcurrent/RDdcw_0_109" BEL
+        "g_memory/setcurrent/RDdcw_0_108" BEL
+        "g_memory/setcurrent/RDdcw_0_107" BEL
+        "g_memory/setcurrent/RDdcw_0_106" BEL
+        "g_memory/setcurrent/RDdcw_0_105" BEL
+        "g_memory/setcurrent/RDdcw_0_104" BEL
+        "g_memory/setcurrent/RDdcw_0_103" BEL
+        "g_memory/setcurrent/RDdcw_0_102" BEL
+        "g_memory/setcurrent/RDdcw_0_101" BEL
+        "g_memory/setcurrent/RDdcw_0_100" BEL "g_memory/setcurrent/RDdcw_0_99"
+        BEL "g_memory/setcurrent/RDdcw_0_98" BEL
+        "g_memory/setcurrent/RDdcw_0_97" BEL "g_memory/setcurrent/RDdcw_0_96"
+        BEL "g_memory/setcurrent/RDdcw_0_95" BEL
+        "g_memory/setcurrent/RDdcw_0_94" BEL "g_memory/setcurrent/RDdcw_0_93"
+        BEL "g_memory/setcurrent/RDdcw_0_92" BEL
+        "g_memory/setcurrent/RDdcw_0_91" BEL "g_memory/setcurrent/RDdcw_0_90"
+        BEL "g_memory/setcurrent/RDdcw_0_89" BEL
+        "g_memory/setcurrent/RDdcw_0_88" BEL "g_memory/setcurrent/RDdcw_0_87"
+        BEL "g_memory/setcurrent/RDdcw_0_86" BEL
+        "g_memory/setcurrent/RDdcw_0_85" BEL "g_memory/setcurrent/RDdcw_0_84"
+        BEL "g_memory/setcurrent/RDdcw_0_83" BEL
+        "g_memory/setcurrent/RDdcw_0_82" BEL "g_memory/setcurrent/RDdcw_0_81"
+        BEL "g_memory/setcurrent/RDdcw_0_80" BEL
+        "g_memory/setcurrent/RDdcw_0_79" BEL "g_memory/setcurrent/RDdcw_0_78"
+        BEL "g_memory/setcurrent/RDdcw_0_77" BEL
+        "g_memory/setcurrent/RDdcw_0_76" BEL "g_memory/setcurrent/RDdcw_0_75"
+        BEL "g_memory/setcurrent/RDdcw_0_74" BEL
+        "g_memory/setcurrent/RDdcw_0_73" BEL "g_memory/setcurrent/RDdcw_0_72"
+        BEL "g_memory/setcurrent/RDdcw_0_71" BEL
+        "g_memory/setcurrent/RDdcw_0_70" BEL "g_memory/setcurrent/RDdcw_0_69"
+        BEL "g_memory/setcurrent/RDdcw_0_68" BEL
+        "g_memory/setcurrent/RDdcw_0_67" BEL "g_memory/setcurrent/RDdcw_0_66"
+        BEL "g_memory/setcurrent/RDdcw_0_65" BEL
+        "g_memory/setcurrent/RDdcw_0_64" BEL "g_memory/setcurrent/RDdcw_0_63"
+        BEL "g_memory/setcurrent/RDdcw_0_62" BEL
+        "g_memory/setcurrent/RDdcw_0_61" BEL "g_memory/setcurrent/RDdcw_0_60"
+        BEL "g_memory/setcurrent/RDdcw_0_59" BEL
+        "g_memory/setcurrent/RDdcw_0_58" BEL "g_memory/setcurrent/RDdcw_0_57"
+        BEL "g_memory/setcurrent/RDdcw_0_56" BEL
+        "g_memory/setcurrent/RDdcw_0_55" BEL "g_memory/setcurrent/RDdcw_0_54"
+        BEL "g_memory/setcurrent/RDdcw_0_53" BEL
+        "g_memory/setcurrent/RDdcw_0_52" BEL "g_memory/setcurrent/RDdcw_0_51"
+        BEL "g_memory/setcurrent/RDdcw_0_50" BEL
+        "g_memory/setcurrent/RDdcw_0_49" BEL "g_memory/setcurrent/RDdcw_0_48"
+        BEL "g_memory/setcurrent/RDdcw_0_47" BEL
+        "g_memory/setcurrent/RDdcw_0_46" BEL "g_memory/setcurrent/RDdcw_0_45"
+        BEL "g_memory/setcurrent/RDdcw_0_44" BEL
+        "g_memory/setcurrent/RDdcw_0_43" BEL "g_memory/setcurrent/RDdcw_0_42"
+        BEL "g_memory/setcurrent/RDdcw_0_41" BEL
+        "g_memory/setcurrent/RDdcw_0_40" BEL "g_memory/setcurrent/RDdcw_0_39"
+        BEL "g_memory/setcurrent/RDdcw_0_38" BEL
+        "g_memory/setcurrent/RDdcw_0_37" BEL "g_memory/setcurrent/RDdcw_0_36"
+        BEL "g_memory/setcurrent/RDdcw_0_35" BEL
+        "g_memory/setcurrent/RDdcw_0_34" BEL "g_memory/setcurrent/RDdcw_0_33"
+        BEL "g_memory/setcurrent/RDdcw_0_32" BEL
+        "g_memory/setcurrent/RDdcw_0_31" BEL "g_memory/setcurrent/RDdcw_0_30"
+        BEL "g_memory/setcurrent/RDdcw_0_29" BEL
+        "g_memory/setcurrent/RDdcw_0_28" BEL "g_memory/setcurrent/RDdcw_0_27"
+        BEL "g_memory/setcurrent/RDdcw_0_26" BEL
+        "g_memory/setcurrent/RDdcw_0_25" BEL "g_memory/setcurrent/RDdcw_0_24"
+        BEL "g_memory/setcurrent/RDdcw_0_23" BEL
+        "g_memory/setcurrent/RDdcw_0_22" BEL "g_memory/setcurrent/RDdcw_0_21"
+        BEL "g_memory/setcurrent/RDdcw_0_20" BEL
+        "g_memory/setcurrent/RDdcw_0_19" BEL "g_memory/setcurrent/RDdcw_0_18"
+        BEL "g_memory/setcurrent/RDdcw_0_17" BEL
+        "g_memory/setcurrent/RDdcw_0_16" BEL "g_memory/setcurrent/RDdcw_0_15"
+        BEL "g_memory/setcurrent/RDdcw_0_14" BEL
+        "g_memory/setcurrent/RDdcw_0_13" BEL "g_memory/setcurrent/RDdcw_0_12"
+        BEL "g_memory/setcurrent/RDdcw_0_11" BEL
+        "g_memory/setcurrent/RDdcw_0_10" BEL "g_memory/setcurrent/RDdcw_0_9"
+        BEL "g_memory/setcurrent/RDdcw_0_8" BEL
+        "g_memory/setcurrent/RDdcw_0_7" BEL "g_memory/setcurrent/RDdcw_0_6"
+        BEL "g_memory/setcurrent/RDdcw_0_5" BEL
+        "g_memory/setcurrent/RDdcw_0_4" BEL "g_memory/setcurrent/RDdcw_0_3"
+        BEL "g_memory/setcurrent/RDdcw_0_2" BEL
+        "g_memory/setcurrent/RDdcw_0_1" BEL "g_memory/setcurrent/RDdcw_0_0"
+        BEL "g_memory/setcurrent/IRDdcw_0_255" BEL
+        "g_memory/setcurrent/IRDdcw_0_254" BEL
+        "g_memory/setcurrent/IRDdcw_0_253" BEL
+        "g_memory/setcurrent/IRDdcw_0_252" BEL
+        "g_memory/setcurrent/IRDdcw_0_251" BEL
+        "g_memory/setcurrent/IRDdcw_0_250" BEL
+        "g_memory/setcurrent/IRDdcw_0_249" BEL
+        "g_memory/setcurrent/IRDdcw_0_248" BEL
+        "g_memory/setcurrent/IRDdcw_0_247" BEL
+        "g_memory/setcurrent/IRDdcw_0_246" BEL
+        "g_memory/setcurrent/IRDdcw_0_245" BEL
+        "g_memory/setcurrent/IRDdcw_0_244" BEL
+        "g_memory/setcurrent/IRDdcw_0_243" BEL
+        "g_memory/setcurrent/IRDdcw_0_242" BEL
+        "g_memory/setcurrent/IRDdcw_0_241" BEL
+        "g_memory/setcurrent/IRDdcw_0_240" BEL
+        "g_memory/setcurrent/IRDdcw_0_239" BEL
+        "g_memory/setcurrent/IRDdcw_0_238" BEL
+        "g_memory/setcurrent/IRDdcw_0_237" BEL
+        "g_memory/setcurrent/IRDdcw_0_236" BEL
+        "g_memory/setcurrent/IRDdcw_0_235" BEL
+        "g_memory/setcurrent/IRDdcw_0_234" BEL
+        "g_memory/setcurrent/IRDdcw_0_233" BEL
+        "g_memory/setcurrent/IRDdcw_0_232" BEL
+        "g_memory/setcurrent/IRDdcw_0_231" BEL
+        "g_memory/setcurrent/IRDdcw_0_230" BEL
+        "g_memory/setcurrent/IRDdcw_0_229" BEL
+        "g_memory/setcurrent/IRDdcw_0_228" BEL
+        "g_memory/setcurrent/IRDdcw_0_227" BEL
+        "g_memory/setcurrent/IRDdcw_0_226" BEL
+        "g_memory/setcurrent/IRDdcw_0_225" BEL
+        "g_memory/setcurrent/IRDdcw_0_224" BEL
+        "g_memory/setcurrent/IRDdcw_0_223" BEL
+        "g_memory/setcurrent/IRDdcw_0_222" BEL
+        "g_memory/setcurrent/IRDdcw_0_221" BEL
+        "g_memory/setcurrent/IRDdcw_0_220" BEL
+        "g_memory/setcurrent/IRDdcw_0_219" BEL
+        "g_memory/setcurrent/IRDdcw_0_218" BEL
+        "g_memory/setcurrent/IRDdcw_0_217" BEL
+        "g_memory/setcurrent/IRDdcw_0_216" BEL
+        "g_memory/setcurrent/IRDdcw_0_215" BEL
+        "g_memory/setcurrent/IRDdcw_0_214" BEL
+        "g_memory/setcurrent/IRDdcw_0_213" BEL
+        "g_memory/setcurrent/IRDdcw_0_212" BEL
+        "g_memory/setcurrent/IRDdcw_0_211" BEL
+        "g_memory/setcurrent/IRDdcw_0_210" BEL
+        "g_memory/setcurrent/IRDdcw_0_209" BEL
+        "g_memory/setcurrent/IRDdcw_0_208" BEL
+        "g_memory/setcurrent/IRDdcw_0_207" BEL
+        "g_memory/setcurrent/IRDdcw_0_206" BEL
+        "g_memory/setcurrent/IRDdcw_0_205" BEL
+        "g_memory/setcurrent/IRDdcw_0_204" BEL
+        "g_memory/setcurrent/IRDdcw_0_203" BEL
+        "g_memory/setcurrent/IRDdcw_0_202" BEL
+        "g_memory/setcurrent/IRDdcw_0_201" BEL
+        "g_memory/setcurrent/IRDdcw_0_200" BEL
+        "g_memory/setcurrent/IRDdcw_0_199" BEL
+        "g_memory/setcurrent/IRDdcw_0_198" BEL
+        "g_memory/setcurrent/IRDdcw_0_197" BEL
+        "g_memory/setcurrent/IRDdcw_0_196" BEL
+        "g_memory/setcurrent/IRDdcw_0_195" BEL
+        "g_memory/setcurrent/IRDdcw_0_194" BEL
+        "g_memory/setcurrent/IRDdcw_0_193" BEL
+        "g_memory/setcurrent/IRDdcw_0_192" BEL
+        "g_memory/setcurrent/IRDdcw_0_191" BEL
+        "g_memory/setcurrent/IRDdcw_0_190" BEL
+        "g_memory/setcurrent/IRDdcw_0_189" BEL
+        "g_memory/setcurrent/IRDdcw_0_188" BEL
+        "g_memory/setcurrent/IRDdcw_0_187" BEL
+        "g_memory/setcurrent/IRDdcw_0_186" BEL
+        "g_memory/setcurrent/IRDdcw_0_185" BEL
+        "g_memory/setcurrent/IRDdcw_0_184" BEL
+        "g_memory/setcurrent/IRDdcw_0_183" BEL
+        "g_memory/setcurrent/IRDdcw_0_182" BEL
+        "g_memory/setcurrent/IRDdcw_0_181" BEL
+        "g_memory/setcurrent/IRDdcw_0_180" BEL
+        "g_memory/setcurrent/IRDdcw_0_179" BEL
+        "g_memory/setcurrent/IRDdcw_0_178" BEL
+        "g_memory/setcurrent/IRDdcw_0_177" BEL
+        "g_memory/setcurrent/IRDdcw_0_176" BEL
+        "g_memory/setcurrent/IRDdcw_0_175" BEL
+        "g_memory/setcurrent/IRDdcw_0_174" BEL
+        "g_memory/setcurrent/IRDdcw_0_173" BEL
+        "g_memory/setcurrent/IRDdcw_0_172" BEL
+        "g_memory/setcurrent/IRDdcw_0_171" BEL
+        "g_memory/setcurrent/IRDdcw_0_170" BEL
+        "g_memory/setcurrent/IRDdcw_0_169" BEL
+        "g_memory/setcurrent/IRDdcw_0_168" BEL
+        "g_memory/setcurrent/IRDdcw_0_167" BEL
+        "g_memory/setcurrent/IRDdcw_0_166" BEL
+        "g_memory/setcurrent/IRDdcw_0_165" BEL
+        "g_memory/setcurrent/IRDdcw_0_164" BEL
+        "g_memory/setcurrent/IRDdcw_0_163" BEL
+        "g_memory/setcurrent/IRDdcw_0_162" BEL
+        "g_memory/setcurrent/IRDdcw_0_161" BEL
+        "g_memory/setcurrent/IRDdcw_0_160" BEL
+        "g_memory/setcurrent/IRDdcw_0_159" BEL
+        "g_memory/setcurrent/IRDdcw_0_158" BEL
+        "g_memory/setcurrent/IRDdcw_0_157" BEL
+        "g_memory/setcurrent/IRDdcw_0_156" BEL
+        "g_memory/setcurrent/IRDdcw_0_155" BEL
+        "g_memory/setcurrent/IRDdcw_0_154" BEL
+        "g_memory/setcurrent/IRDdcw_0_153" BEL
+        "g_memory/setcurrent/IRDdcw_0_152" BEL
+        "g_memory/setcurrent/IRDdcw_0_151" BEL
+        "g_memory/setcurrent/IRDdcw_0_150" BEL
+        "g_memory/setcurrent/IRDdcw_0_149" BEL
+        "g_memory/setcurrent/IRDdcw_0_148" BEL
+        "g_memory/setcurrent/IRDdcw_0_147" BEL
+        "g_memory/setcurrent/IRDdcw_0_146" BEL
+        "g_memory/setcurrent/IRDdcw_0_145" BEL
+        "g_memory/setcurrent/IRDdcw_0_144" BEL
+        "g_memory/setcurrent/IRDdcw_0_143" BEL
+        "g_memory/setcurrent/IRDdcw_0_142" BEL
+        "g_memory/setcurrent/IRDdcw_0_141" BEL
+        "g_memory/setcurrent/IRDdcw_0_140" BEL
+        "g_memory/setcurrent/IRDdcw_0_139" BEL
+        "g_memory/setcurrent/IRDdcw_0_138" BEL
+        "g_memory/setcurrent/IRDdcw_0_137" BEL
+        "g_memory/setcurrent/IRDdcw_0_136" BEL
+        "g_memory/setcurrent/IRDdcw_0_135" BEL
+        "g_memory/setcurrent/IRDdcw_0_134" BEL
+        "g_memory/setcurrent/IRDdcw_0_133" BEL
+        "g_memory/setcurrent/IRDdcw_0_132" BEL
+        "g_memory/setcurrent/IRDdcw_0_131" BEL
+        "g_memory/setcurrent/IRDdcw_0_130" BEL
+        "g_memory/setcurrent/IRDdcw_0_129" BEL
+        "g_memory/setcurrent/IRDdcw_0_128" BEL
+        "g_memory/setcurrent/IRDdcw_0_127" BEL
+        "g_memory/setcurrent/IRDdcw_0_126" BEL
+        "g_memory/setcurrent/IRDdcw_0_125" BEL
+        "g_memory/setcurrent/IRDdcw_0_124" BEL
+        "g_memory/setcurrent/IRDdcw_0_123" BEL
+        "g_memory/setcurrent/IRDdcw_0_122" BEL
+        "g_memory/setcurrent/IRDdcw_0_121" BEL
+        "g_memory/setcurrent/IRDdcw_0_120" BEL
+        "g_memory/setcurrent/IRDdcw_0_119" BEL
+        "g_memory/setcurrent/IRDdcw_0_118" BEL
+        "g_memory/setcurrent/IRDdcw_0_117" BEL
+        "g_memory/setcurrent/IRDdcw_0_116" BEL
+        "g_memory/setcurrent/IRDdcw_0_115" BEL
+        "g_memory/setcurrent/IRDdcw_0_114" BEL
+        "g_memory/setcurrent/IRDdcw_0_113" BEL
+        "g_memory/setcurrent/IRDdcw_0_112" BEL
+        "g_memory/setcurrent/IRDdcw_0_111" BEL
+        "g_memory/setcurrent/IRDdcw_0_110" BEL
+        "g_memory/setcurrent/IRDdcw_0_109" BEL
+        "g_memory/setcurrent/IRDdcw_0_108" BEL
+        "g_memory/setcurrent/IRDdcw_0_107" BEL
+        "g_memory/setcurrent/IRDdcw_0_106" BEL
+        "g_memory/setcurrent/IRDdcw_0_105" BEL
+        "g_memory/setcurrent/IRDdcw_0_104" BEL
+        "g_memory/setcurrent/IRDdcw_0_103" BEL
+        "g_memory/setcurrent/IRDdcw_0_102" BEL
+        "g_memory/setcurrent/IRDdcw_0_101" BEL
+        "g_memory/setcurrent/IRDdcw_0_100" BEL
+        "g_memory/setcurrent/IRDdcw_0_99" BEL
+        "g_memory/setcurrent/IRDdcw_0_98" BEL
+        "g_memory/setcurrent/IRDdcw_0_97" BEL
+        "g_memory/setcurrent/IRDdcw_0_96" BEL
+        "g_memory/setcurrent/IRDdcw_0_95" BEL
+        "g_memory/setcurrent/IRDdcw_0_94" BEL
+        "g_memory/setcurrent/IRDdcw_0_93" BEL
+        "g_memory/setcurrent/IRDdcw_0_92" BEL
+        "g_memory/setcurrent/IRDdcw_0_91" BEL
+        "g_memory/setcurrent/IRDdcw_0_90" BEL
+        "g_memory/setcurrent/IRDdcw_0_89" BEL
+        "g_memory/setcurrent/IRDdcw_0_88" BEL
+        "g_memory/setcurrent/IRDdcw_0_87" BEL
+        "g_memory/setcurrent/IRDdcw_0_86" BEL
+        "g_memory/setcurrent/IRDdcw_0_85" BEL
+        "g_memory/setcurrent/IRDdcw_0_84" BEL
+        "g_memory/setcurrent/IRDdcw_0_83" BEL
+        "g_memory/setcurrent/IRDdcw_0_82" BEL
+        "g_memory/setcurrent/IRDdcw_0_81" BEL
+        "g_memory/setcurrent/IRDdcw_0_80" BEL
+        "g_memory/setcurrent/IRDdcw_0_79" BEL
+        "g_memory/setcurrent/IRDdcw_0_78" BEL
+        "g_memory/setcurrent/IRDdcw_0_77" BEL
+        "g_memory/setcurrent/IRDdcw_0_76" BEL
+        "g_memory/setcurrent/IRDdcw_0_75" BEL
+        "g_memory/setcurrent/IRDdcw_0_74" BEL
+        "g_memory/setcurrent/IRDdcw_0_73" BEL
+        "g_memory/setcurrent/IRDdcw_0_72" BEL
+        "g_memory/setcurrent/IRDdcw_0_71" BEL
+        "g_memory/setcurrent/IRDdcw_0_70" BEL
+        "g_memory/setcurrent/IRDdcw_0_69" BEL
+        "g_memory/setcurrent/IRDdcw_0_68" BEL
+        "g_memory/setcurrent/IRDdcw_0_67" BEL
+        "g_memory/setcurrent/IRDdcw_0_66" BEL
+        "g_memory/setcurrent/IRDdcw_0_65" BEL
+        "g_memory/setcurrent/IRDdcw_0_64" BEL
+        "g_memory/setcurrent/IRDdcw_0_63" BEL
+        "g_memory/setcurrent/IRDdcw_0_62" BEL
+        "g_memory/setcurrent/IRDdcw_0_61" BEL
+        "g_memory/setcurrent/IRDdcw_0_60" BEL
+        "g_memory/setcurrent/IRDdcw_0_59" BEL
+        "g_memory/setcurrent/IRDdcw_0_58" BEL
+        "g_memory/setcurrent/IRDdcw_0_57" BEL
+        "g_memory/setcurrent/IRDdcw_0_56" BEL
+        "g_memory/setcurrent/IRDdcw_0_55" BEL
+        "g_memory/setcurrent/IRDdcw_0_54" BEL
+        "g_memory/setcurrent/IRDdcw_0_53" BEL
+        "g_memory/setcurrent/IRDdcw_0_52" BEL
+        "g_memory/setcurrent/IRDdcw_0_51" BEL
+        "g_memory/setcurrent/IRDdcw_0_50" BEL
+        "g_memory/setcurrent/IRDdcw_0_49" BEL
+        "g_memory/setcurrent/IRDdcw_0_48" BEL
+        "g_memory/setcurrent/IRDdcw_0_47" BEL
+        "g_memory/setcurrent/IRDdcw_0_46" BEL
+        "g_memory/setcurrent/IRDdcw_0_45" BEL
+        "g_memory/setcurrent/IRDdcw_0_44" BEL
+        "g_memory/setcurrent/IRDdcw_0_43" BEL
+        "g_memory/setcurrent/IRDdcw_0_42" BEL
+        "g_memory/setcurrent/IRDdcw_0_41" BEL
+        "g_memory/setcurrent/IRDdcw_0_40" BEL
+        "g_memory/setcurrent/IRDdcw_0_39" BEL
+        "g_memory/setcurrent/IRDdcw_0_38" BEL
+        "g_memory/setcurrent/IRDdcw_0_37" BEL
+        "g_memory/setcurrent/IRDdcw_0_36" BEL
+        "g_memory/setcurrent/IRDdcw_0_35" BEL
+        "g_memory/setcurrent/IRDdcw_0_34" BEL
+        "g_memory/setcurrent/IRDdcw_0_33" BEL
+        "g_memory/setcurrent/IRDdcw_0_32" BEL
+        "g_memory/setcurrent/IRDdcw_0_31" BEL
+        "g_memory/setcurrent/IRDdcw_0_30" BEL
+        "g_memory/setcurrent/IRDdcw_0_29" BEL
+        "g_memory/setcurrent/IRDdcw_0_28" BEL
+        "g_memory/setcurrent/IRDdcw_0_27" BEL
+        "g_memory/setcurrent/IRDdcw_0_26" BEL
+        "g_memory/setcurrent/IRDdcw_0_25" BEL
+        "g_memory/setcurrent/IRDdcw_0_24" BEL
+        "g_memory/setcurrent/IRDdcw_0_23" BEL
+        "g_memory/setcurrent/IRDdcw_0_22" BEL
+        "g_memory/setcurrent/IRDdcw_0_21" BEL
+        "g_memory/setcurrent/IRDdcw_0_20" BEL
+        "g_memory/setcurrent/IRDdcw_0_19" BEL
+        "g_memory/setcurrent/IRDdcw_0_18" BEL
+        "g_memory/setcurrent/IRDdcw_0_17" BEL
+        "g_memory/setcurrent/IRDdcw_0_16" BEL
+        "g_memory/setcurrent/IRDdcw_0_15" BEL
+        "g_memory/setcurrent/IRDdcw_0_14" BEL
+        "g_memory/setcurrent/IRDdcw_0_13" BEL
+        "g_memory/setcurrent/IRDdcw_0_12" BEL
+        "g_memory/setcurrent/IRDdcw_0_11" BEL
+        "g_memory/setcurrent/IRDdcw_0_10" BEL "g_memory/setcurrent/IRDdcw_0_9"
+        BEL "g_memory/setcurrent/IRDdcw_0_8" BEL
+        "g_memory/setcurrent/IRDdcw_0_7" BEL "g_memory/setcurrent/IRDdcw_0_6"
+        BEL "g_memory/setcurrent/IRDdcw_0_5" BEL
+        "g_memory/setcurrent/IRDdcw_0_4" BEL "g_memory/setcurrent/IRDdcw_0_3"
+        BEL "g_memory/setcurrent/IRDdcw_0_2" BEL
+        "g_memory/setcurrent/IRDdcw_0_1" BEL "g_memory/setcurrent/IRDdcw_0_0"
+        BEL "g_memory/setcurrent/lastCheckT_0_255" BEL
+        "g_memory/setcurrent/lastCheckT_0_254" BEL
+        "g_memory/setcurrent/lastCheckT_0_253" BEL
+        "g_memory/setcurrent/lastCheckT_0_252" BEL
+        "g_memory/setcurrent/lastCheckT_0_251" BEL
+        "g_memory/setcurrent/lastCheckT_0_250" BEL
+        "g_memory/setcurrent/lastCheckT_0_249" BEL
+        "g_memory/setcurrent/lastCheckT_0_248" BEL
+        "g_memory/setcurrent/lastCheckT_0_247" BEL
+        "g_memory/setcurrent/lastCheckT_0_246" BEL
+        "g_memory/setcurrent/lastCheckT_0_245" BEL
+        "g_memory/setcurrent/lastCheckT_0_244" BEL
+        "g_memory/setcurrent/lastCheckT_0_243" BEL
+        "g_memory/setcurrent/lastCheckT_0_242" BEL
+        "g_memory/setcurrent/lastCheckT_0_241" BEL
+        "g_memory/setcurrent/lastCheckT_0_240" BEL
+        "g_memory/setcurrent/lastCheckT_0_239" BEL
+        "g_memory/setcurrent/lastCheckT_0_238" BEL
+        "g_memory/setcurrent/lastCheckT_0_237" BEL
+        "g_memory/setcurrent/lastCheckT_0_236" BEL
+        "g_memory/setcurrent/lastCheckT_0_235" BEL
+        "g_memory/setcurrent/lastCheckT_0_234" BEL
+        "g_memory/setcurrent/lastCheckT_0_233" BEL
+        "g_memory/setcurrent/lastCheckT_0_232" BEL
+        "g_memory/setcurrent/lastCheckT_0_231" BEL
+        "g_memory/setcurrent/lastCheckT_0_230" BEL
+        "g_memory/setcurrent/lastCheckT_0_229" BEL
+        "g_memory/setcurrent/lastCheckT_0_228" BEL
+        "g_memory/setcurrent/lastCheckT_0_227" BEL
+        "g_memory/setcurrent/lastCheckT_0_226" BEL
+        "g_memory/setcurrent/lastCheckT_0_225" BEL
+        "g_memory/setcurrent/lastCheckT_0_224" BEL
+        "g_memory/setcurrent/lastID_15" BEL "g_memory/setcurrent/lastID_14"
+        BEL "g_memory/setcurrent/lastID_13" BEL
+        "g_memory/setcurrent/lastID_12" BEL "g_memory/setcurrent/lastID_11"
+        BEL "g_memory/setcurrent/lastID_10" BEL "g_memory/setcurrent/lastID_9"
+        BEL "g_memory/setcurrent/lastID_8" BEL "g_memory/setcurrent/lastID_7"
+        BEL "g_memory/setcurrent/lastID_6" BEL "g_memory/setcurrent/lastID_5"
+        BEL "g_memory/setcurrent/lastID_4" BEL "g_memory/setcurrent/lastID_3"
+        BEL "g_memory/setcurrent/lastID_2" BEL "g_memory/setcurrent/lastID_1"
+        BEL "g_memory/setcurrent/lastID_0" BEL
+        "g_memory/setcurrent/buffer_0_111" BEL
+        "g_memory/setcurrent/buffer_0_110" BEL
+        "g_memory/setcurrent/buffer_0_109" BEL
+        "g_memory/setcurrent/buffer_0_108" BEL
+        "g_memory/setcurrent/buffer_0_107" BEL
+        "g_memory/setcurrent/buffer_0_106" BEL
+        "g_memory/setcurrent/buffer_0_105" BEL
+        "g_memory/setcurrent/buffer_0_104" BEL
+        "g_memory/setcurrent/buffer_0_103" BEL
+        "g_memory/setcurrent/buffer_0_102" BEL
+        "g_memory/setcurrent/buffer_0_101" BEL
+        "g_memory/setcurrent/buffer_0_100" BEL
+        "g_memory/setcurrent/buffer_0_99" BEL
+        "g_memory/setcurrent/buffer_0_98" BEL
+        "g_memory/setcurrent/buffer_0_97" BEL
+        "g_memory/setcurrent/buffer_0_96" BEL
+        "g_memory/setcurrent/buffer_0_95" BEL
+        "g_memory/setcurrent/buffer_0_94" BEL
+        "g_memory/setcurrent/buffer_0_93" BEL
+        "g_memory/setcurrent/buffer_0_92" BEL
+        "g_memory/setcurrent/buffer_0_91" BEL
+        "g_memory/setcurrent/buffer_0_90" BEL
+        "g_memory/setcurrent/buffer_0_89" BEL
+        "g_memory/setcurrent/buffer_0_88" BEL
+        "g_memory/setcurrent/buffer_0_87" BEL
+        "g_memory/setcurrent/buffer_0_86" BEL
+        "g_memory/setcurrent/buffer_0_85" BEL
+        "g_memory/setcurrent/buffer_0_84" BEL
+        "g_memory/setcurrent/buffer_0_83" BEL
+        "g_memory/setcurrent/buffer_0_82" BEL
+        "g_memory/setcurrent/buffer_0_81" BEL
+        "g_memory/setcurrent/buffer_0_80" BEL
+        "g_memory/setcurrent/buffer_0_79" BEL
+        "g_memory/setcurrent/buffer_0_78" BEL
+        "g_memory/setcurrent/buffer_0_77" BEL
+        "g_memory/setcurrent/buffer_0_76" BEL
+        "g_memory/setcurrent/buffer_0_75" BEL
+        "g_memory/setcurrent/buffer_0_74" BEL
+        "g_memory/setcurrent/buffer_0_73" BEL
+        "g_memory/setcurrent/buffer_0_72" BEL
+        "g_memory/setcurrent/buffer_0_71" BEL
+        "g_memory/setcurrent/buffer_0_70" BEL
+        "g_memory/setcurrent/buffer_0_69" BEL
+        "g_memory/setcurrent/buffer_0_68" BEL
+        "g_memory/setcurrent/buffer_0_67" BEL
+        "g_memory/setcurrent/buffer_0_66" BEL
+        "g_memory/setcurrent/buffer_0_65" BEL
+        "g_memory/setcurrent/buffer_0_64" BEL
+        "g_memory/setcurrent/buffer_0_63" BEL
+        "g_memory/setcurrent/buffer_0_62" BEL
+        "g_memory/setcurrent/buffer_0_61" BEL
+        "g_memory/setcurrent/buffer_0_60" BEL
+        "g_memory/setcurrent/buffer_0_59" BEL
+        "g_memory/setcurrent/buffer_0_58" BEL
+        "g_memory/setcurrent/buffer_0_57" BEL
+        "g_memory/setcurrent/buffer_0_56" BEL
+        "g_memory/setcurrent/buffer_0_55" BEL
+        "g_memory/setcurrent/buffer_0_54" BEL
+        "g_memory/setcurrent/buffer_0_53" BEL
+        "g_memory/setcurrent/buffer_0_52" BEL
+        "g_memory/setcurrent/buffer_0_51" BEL
+        "g_memory/setcurrent/buffer_0_50" BEL
+        "g_memory/setcurrent/buffer_0_49" BEL
+        "g_memory/setcurrent/buffer_0_48" BEL
+        "g_memory/setcurrent/buffer_0_47" BEL
+        "g_memory/setcurrent/buffer_0_46" BEL
+        "g_memory/setcurrent/buffer_0_45" BEL
+        "g_memory/setcurrent/buffer_0_44" BEL
+        "g_memory/setcurrent/buffer_0_43" BEL
+        "g_memory/setcurrent/buffer_0_42" BEL
+        "g_memory/setcurrent/buffer_0_41" BEL
+        "g_memory/setcurrent/buffer_0_40" BEL
+        "g_memory/setcurrent/buffer_0_39" BEL
+        "g_memory/setcurrent/buffer_0_38" BEL
+        "g_memory/setcurrent/buffer_0_37" BEL
+        "g_memory/setcurrent/buffer_0_36" BEL
+        "g_memory/setcurrent/buffer_0_35" BEL
+        "g_memory/setcurrent/buffer_0_34" BEL
+        "g_memory/setcurrent/buffer_0_33" BEL
+        "g_memory/setcurrent/buffer_0_32" BEL
+        "g_memory/setcurrent/buffer_0_31" BEL
+        "g_memory/setcurrent/buffer_0_30" BEL
+        "g_memory/setcurrent/buffer_0_29" BEL
+        "g_memory/setcurrent/buffer_0_28" BEL
+        "g_memory/setcurrent/buffer_0_27" BEL
+        "g_memory/setcurrent/buffer_0_26" BEL
+        "g_memory/setcurrent/buffer_0_25" BEL
+        "g_memory/setcurrent/buffer_0_24" BEL
+        "g_memory/setcurrent/buffer_0_23" BEL
+        "g_memory/setcurrent/buffer_0_22" BEL
+        "g_memory/setcurrent/buffer_0_21" BEL
+        "g_memory/setcurrent/buffer_0_20" BEL
+        "g_memory/setcurrent/buffer_0_19" BEL
+        "g_memory/setcurrent/buffer_0_18" BEL
+        "g_memory/setcurrent/buffer_0_17" BEL
+        "g_memory/setcurrent/buffer_0_16" BEL
+        "g_memory/setcurrent/buffer_0_15" BEL
+        "g_memory/setcurrent/buffer_0_14" BEL
+        "g_memory/setcurrent/buffer_0_13" BEL
+        "g_memory/setcurrent/buffer_0_12" BEL
+        "g_memory/setcurrent/buffer_0_11" BEL
+        "g_memory/setcurrent/buffer_0_10" BEL "g_memory/setcurrent/buffer_0_9"
+        BEL "g_memory/setcurrent/buffer_0_8" BEL
+        "g_memory/setcurrent/buffer_0_7" BEL "g_memory/setcurrent/buffer_0_6"
+        BEL "g_memory/setcurrent/buffer_0_5" BEL
+        "g_memory/setcurrent/buffer_0_4" BEL "g_memory/setcurrent/buffer_0_3"
+        BEL "g_memory/setcurrent/buffer_0_2" BEL
+        "g_memory/setcurrent/buffer_0_1" BEL "g_memory/setcurrent/buffer_0_0"
+        BEL "g_memory/setcurrent/WR" BEL "fsm/controlstore/MicroIR_49" BEL
+        "fsm/controlstore/MicroIR_48" BEL "fsm/controlstore/MicroIR_47" BEL
+        "fsm/controlstore/MicroIR_46" BEL "fsm/controlstore/MicroIR_45" BEL
+        "fsm/controlstore/MicroIR_44" BEL "fsm/controlstore/MicroIR_43" BEL
+        "fsm/controlstore/MicroIR_42" BEL "fsm/controlstore/MicroIR_41" BEL
+        "fsm/controlstore/MicroIR_40" BEL "fsm/controlstore/MicroIR_39" BEL
+        "fsm/controlstore/MicroIR_38" BEL "fsm/controlstore/MicroIR_37" BEL
+        "fsm/controlstore/MicroIR_36" BEL "fsm/controlstore/MicroIR_35" BEL
+        "fsm/controlstore/MicroIR_34" BEL "fsm/controlstore/MicroIR_33" BEL
+        "fsm/controlstore/MicroIR_32" BEL "fsm/controlstore/MicroIR_31" BEL
+        "fsm/controlstore/MicroIR_30" BEL "fsm/controlstore/MicroIR_29" BEL
+        "fsm/controlstore/MicroIR_28" BEL "fsm/controlstore/MicroIR_27" BEL
+        "fsm/controlstore/MicroIR_26" BEL "fsm/controlstore/MicroIR_25" BEL
+        "fsm/controlstore/MicroIR_24" BEL "fsm/controlstore/MicroIR_23" BEL
+        "fsm/controlstore/MicroIR_22" BEL "fsm/controlstore/MicroIR_21" BEL
+        "fsm/controlstore/MicroIR_20" BEL "fsm/controlstore/MicroIR_19" BEL
+        "fsm/controlstore/MicroIR_18" BEL "fsm/controlstore/MicroIR_17" BEL
+        "fsm/controlstore/MicroIR_16" BEL "fsm/controlstore/MicroIR_15" BEL
+        "fsm/controlstore/MicroIR_14" BEL "fsm/controlstore/MicroIR_13" BEL
+        "fsm/controlstore/MicroIR_12" BEL "fsm/controlstore/MicroIR_11" BEL
+        "fsm/controlstore/MicroIR_10" BEL "fsm/controlstore/MicroIR_9" BEL
+        "fsm/controlstore/MicroIR_8" BEL "fsm/controlstore/MicroIR_7" BEL
+        "fsm/controlstore/MicroIR_6" BEL "fsm/controlstore/MicroIR_5" BEL
+        "fsm/controlstore/MicroIR_4" BEL "fsm/controlstore/MicroIR_3" BEL
+        "fsm/controlstore/MicroIR_2" BEL "fsm/controlstore/MicroIR_1" BEL
+        "g_memory/R" BEL "g_memory/readed" BEL "g_memory/sda/WR" BEL
+        "g_memory/keyboard/KBSR_15" BEL "g_memory/uart/UARTSR_15" BEL
+        "g_memory/display/DSR_15" BEL "g_memory/MAR_6_1" BEL
+        "g_memory/MAR_10_1" BEL "g_memory/MAR_7_1" BEL "g_memory/MAR_13_1" BEL
+        "g_memory/MAR_2_1" BEL "g_memory/MAR_1_1" BEL "g_memory/MAR_3_1" BEL
+        "g_memory/MAR_9_1" BEL "g_memory/MAR_12_1" BEL "g_memory/MAR_8_1" BEL
+        "g_memory/MAR_11_1" BEL "g_memory/setcurrent/buffer_0_96_1" BEL
+        "g_memory/setcurrent/buffer_0_96_2" BEL
+        "g_memory/setcurrent/buffer_0_96_3" BEL
+        "g_memory/setcurrent/buffer_0_96_4" BEL
+        "g_memory/setcurrent/buffer_0_96_5" BEL
+        "g_memory/setcurrent/buffer_0_96_6" BEL "cpu/IR_5_1" BEL
+        "g_memory/MAR_4_1" BEL "g_memory/MAR_10_2" BEL "g_memory/MAR_8_2" BEL
+        "cpu/IR_5_2" BEL "fsm/controlstore/MicroIR_22_1" BEL
+        "fsm/controlstore/MicroIR_27_1" BEL
+        "g_memory/setcurrent/buffer_0_97_1" BEL
+        "g_memory/setcurrent/buffer_0_97_2" BEL
+        "g_memory/setcurrent/buffer_0_97_3" BEL
+        "g_memory/setcurrent/buffer_0_97_4" BEL
+        "g_memory/setcurrent/buffer_0_97_5" BEL
+        "g_memory/setcurrent/buffer_0_97_6" BEL "clk_BUFGP/BUFG" PIN
         "g_memory/memory/Mram_RAM32_pins<14>" PIN
         "g_memory/memory/Mram_RAM31_pins<14>" PIN
         "g_memory/memory/Mram_RAM30_pins<14>" PIN
         "g_memory/memory/Mram_RAM29_pins<14>" PIN
         "g_memory/memory/Mram_RAM28_pins<14>" PIN
         "g_memory/memory/Mram_RAM27_pins<14>" PIN
-        "g_memory/memory/Mram_RAM26_pins<14>" PIN
         "g_memory/memory/Mram_RAM25_pins<14>" PIN
         "g_memory/memory/Mram_RAM24_pins<14>" PIN
+        "g_memory/memory/Mram_RAM26_pins<14>" PIN
         "g_memory/memory/Mram_RAM23_pins<14>" PIN
         "g_memory/memory/Mram_RAM22_pins<14>" PIN
         "g_memory/memory/Mram_RAM21_pins<14>" PIN
         "g_memory/memory/Mram_RAM20_pins<14>" PIN
-        "g_memory/memory/Mram_RAM18_pins<14>" PIN
-        "g_memory/memory/Mram_RAM17_pins<14>" PIN
         "g_memory/memory/Mram_RAM19_pins<14>" PIN
+        "g_memory/memory/Mram_RAM18_pins<14>" PIN
         "g_memory/memory/Mram_RAM16_pins<14>" PIN
         "g_memory/memory/Mram_RAM15_pins<14>" PIN
+        "g_memory/memory/Mram_RAM17_pins<14>" PIN
         "g_memory/memory/Mram_RAM14_pins<14>" PIN
         "g_memory/memory/Mram_RAM13_pins<14>" PIN
         "g_memory/memory/Mram_RAM12_pins<14>" PIN
         "g_memory/memory/Mram_RAM11_pins<14>" PIN
         "g_memory/memory/Mram_RAM10_pins<14>" PIN
         "g_memory/memory/Mram_RAM9_pins<14>" PIN
-        "g_memory/memory/Mram_RAM8_pins<14>" PIN
         "g_memory/memory/Mram_RAM7_pins<14>" PIN
         "g_memory/memory/Mram_RAM6_pins<14>" PIN
+        "g_memory/memory/Mram_RAM8_pins<14>" PIN
         "g_memory/memory/Mram_RAM5_pins<14>" PIN
         "g_memory/memory/Mram_RAM4_pins<14>" PIN
         "g_memory/memory/Mram_RAM3_pins<14>" PIN
-        "g_memory/memory/Mram_RAM1_pins<14>" PIN
-        "g_memory/memory/Mram_RAM2_pins<14>" BEL
+        "g_memory/memory/Mram_RAM2_pins<14>" PIN
+        "g_memory/memory/Mram_RAM1_pins<14>" BEL
         "cpu/regfile/Mram_REGFILE131/DP" BEL "cpu/regfile/Mram_REGFILE131/SP"
         BEL "cpu/regfile/Mram_REGFILE132/DP" BEL
         "cpu/regfile/Mram_REGFILE132/SP" BEL "cpu/regfile/Mram_REGFILE133/DP"

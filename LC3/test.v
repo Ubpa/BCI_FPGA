@@ -27,6 +27,9 @@ integer i;
 
 wire [15:0] SDAER;
 
+wire [3:0] a = 4'b0011;
+wire [3:0] b = 4'b0111;
+wire [3:0] c = a-b;
 
 initial clk = 0;
 always #0.5 clk = ~clk;
@@ -35,7 +38,7 @@ initial begin
 	ack = 0;
 	
 end
-
+ 
 wire [7:0] SDA_BUS;
 wire SCL_BUS;
 wire [6:0] seg;

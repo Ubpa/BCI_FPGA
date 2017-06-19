@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.19 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.14 secs
+Total CPU time to Xst completion: 0.20 secs
  
 --> Reading design: LC3.prj
 
@@ -117,6 +117,8 @@ Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" into library wor
 Parsing module <UART>.
 Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SWITCH.v" into library work
 Parsing module <SWITCH>.
+Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v" into library work
+Parsing module <SETCURRENT>.
 Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SDA.v" into library work
 Parsing module <SDA>.
 Analyzing Verilog file "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SCL.v" into library work
@@ -204,6 +206,11 @@ Elaborating module <TXD>.
 WARNING:HDLCompiler:872 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 32: Using initial value of reset since it is never assigned
 WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\TXD.v" Line 93: Result of 4-bit expression is truncated to fit in 3-bit target.
 WARNING:HDLCompiler:1127 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\UART.v" Line 78: Assignment to ft ignored, since the identifier is never used
+
+Elaborating module <SETCURRENT>.
+WARNING:HDLCompiler:1127 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v" Line 67: Assignment to cnt ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v" Line 87: Result of 17-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v" Line 91: Result of 32-bit expression is truncated to fit in 16-bit target.
 
 Elaborating module <INT_CTL>.
 
@@ -295,51 +302,56 @@ Synthesizing Unit <G_MEMORY>.
     Found 1-bit register for signal <R>.
     Found 16-bit register for signal <MDR>.
     Found 1-bit register for signal <readed>.
+    Found 4-bit register for signal <SC_readed>.
     Found 16-bit register for signal <MAR>.
-    Found 1-bit 8-to-1 multiplexer for signal <SDASR[2]_SDA_BUS[7]_Mux_14_o> created at line 64.
-    Found 16-bit 13-to-1 multiplexer for signal <Z_5_o_dout[15]_mux_29_OUT> created at line 56.
-    Found 1-bit tristate buffer for signal <BUS<15>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<14>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<13>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<12>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<11>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<10>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<9>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<8>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<7>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<6>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<5>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<4>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<3>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<2>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<1>> created at line 42
-    Found 1-bit tristate buffer for signal <BUS<0>> created at line 42
-    Found 1-bit tristate buffer for signal <INMUX<15>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<14>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<13>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<12>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<11>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<10>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<9>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<8>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<7>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<6>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<5>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<4>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<3>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<2>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<1>> created at line 56
-    Found 1-bit tristate buffer for signal <INMUX<0>> created at line 56
+    Found 112-bit shifter logical right for signal <buffer1ds> created at line 61
+    Found 128-bit shifter logical right for signal <RDCurrent1ds> created at line 62
+    Found 1-bit 8-to-1 multiplexer for signal <SDASR[2]_SDA_BUS[7]_Mux_16_o> created at line 71.
+    Found 1-bit 8-to-1 multiplexer for signal <MAR[2]_change[7]_Mux_22_o> created at line 76.
+    Found 16-bit 15-to-1 multiplexer for signal <Z_5_o_dout[15]_mux_38_OUT> created at line 63.
+    Found 1-bit tristate buffer for signal <BUS<15>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<14>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<13>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<12>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<11>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<10>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<9>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<8>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<7>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<6>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<5>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<4>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<3>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<2>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<1>> created at line 46
+    Found 1-bit tristate buffer for signal <BUS<0>> created at line 46
+    Found 1-bit tristate buffer for signal <INMUX<15>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<14>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<13>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<12>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<11>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<10>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<9>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<8>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<7>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<6>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<5>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<4>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<3>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<2>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<1>> created at line 63
+    Found 1-bit tristate buffer for signal <INMUX<0>> created at line 63
     Summary:
-	inferred  34 D-type flip-flop(s).
-	inferred   9 Multiplexer(s).
+	inferred  38 D-type flip-flop(s).
+	inferred  12 Multiplexer(s).
+	inferred   2 Combinational logic shifter(s).
 	inferred  32 Tristate(s).
 Unit <G_MEMORY> synthesized.
 
 Synthesizing Unit <ADDR_CTL_LOGIC>.
     Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\ADDR_CTL_LOGIC.v".
     Summary:
-	inferred  10 Multiplexer(s).
+	inferred  14 Multiplexer(s).
 Unit <ADDR_CTL_LOGIC> synthesized.
 
 Synthesizing Unit <MEMORY>.
@@ -583,6 +595,137 @@ WARNING:Xst:647 - Input <UARTDR<15:8>> is never used. This port will be preserve
 	inferred   1 Finite State Machine(s).
 Unit <TXD> synthesized.
 
+Synthesizing Unit <SETCURRENT>.
+    Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v".
+        times = 16'b1100001101010000
+INFO:Xst:3210 - "F:\CS\OSH\final_HW\BCI_FPGA\LC3\SETCURRENT.v" line 63: Output port <cnt> of the instance <counter> is unconnected or connected to loadless signal.
+    Found 112-bit register for signal <buffer1d>.
+    Found 1-bit register for signal <WR>.
+    Found 8-bit register for signal <change>.
+    Found 256-bit register for signal <n0892[255:0]>.
+    Found 256-bit register for signal <n0893[255:0]>.
+    Found 128-bit register for signal <RDCurrent1d>.
+    Found 256-bit register for signal <n0895[255:0]>.
+    Found 16-bit register for signal <lastID>.
+    Found 32-bit register for signal <currentT>.
+    Found 32-bit subtractor for signal <IRDdcw[0][31]_RDdcw[0][31]_sub_50_OUT> created at line 86.
+    Found 32-bit subtractor for signal <RDdcw[0][31]_IRDdcw[0][31]_sub_56_OUT> created at line 90.
+    Found 32-bit subtractor for signal <IRDdcw[1][31]_RDdcw[1][31]_sub_64_OUT> created at line 86.
+    Found 32-bit subtractor for signal <RDdcw[1][31]_IRDdcw[1][31]_sub_70_OUT> created at line 90.
+    Found 32-bit subtractor for signal <IRDdcw[2][31]_RDdcw[2][31]_sub_78_OUT> created at line 86.
+    Found 32-bit subtractor for signal <RDdcw[2][31]_IRDdcw[2][31]_sub_84_OUT> created at line 90.
+    Found 32-bit subtractor for signal <IRDdcw[3][31]_RDdcw[3][31]_sub_92_OUT> created at line 86.
+    Found 32-bit subtractor for signal <RDdcw[3][31]_IRDdcw[3][31]_sub_98_OUT> created at line 90.
+    Found 32-bit subtractor for signal <IRDdcw[4][31]_RDdcw[4][31]_sub_106_OUT> created at line 86.
+    Found 32-bit subtractor for signal <RDdcw[4][31]_IRDdcw[4][31]_sub_112_OUT> created at line 90.
+    Found 32-bit subtractor for signal <IRDdcw[5][31]_RDdcw[5][31]_sub_120_OUT> created at line 86.
+    Found 32-bit subtractor for signal <RDdcw[5][31]_IRDdcw[5][31]_sub_126_OUT> created at line 90.
+    Found 32-bit subtractor for signal <IRDdcw[6][31]_RDdcw[6][31]_sub_134_OUT> created at line 86.
+    Found 32-bit subtractor for signal <RDdcw[6][31]_IRDdcw[6][31]_sub_140_OUT> created at line 90.
+    Found 32-bit subtractor for signal <IRDdcw[7][31]_RDdcw[7][31]_sub_148_OUT> created at line 86.
+    Found 32-bit subtractor for signal <RDdcw[7][31]_IRDdcw[7][31]_sub_154_OUT> created at line 90.
+    Found 32-bit adder for signal <currentT[31]_GND_76_o_add_4_OUT> created at line 72.
+    Found 32-bit adder for signal <lastCheckT[0][31]_GND_76_o_add_47_OUT> created at line 85.
+    Found 16-bit adder for signal <RDCurrent[0][15]_GND_76_o_add_54_OUT> created at line 87.
+    Found 32-bit adder for signal <lastCheckT[1][31]_GND_76_o_add_61_OUT> created at line 85.
+    Found 16-bit adder for signal <RDCurrent[1][15]_GND_76_o_add_68_OUT> created at line 87.
+    Found 32-bit adder for signal <lastCheckT[2][31]_GND_76_o_add_75_OUT> created at line 85.
+    Found 16-bit adder for signal <RDCurrent[2][15]_GND_76_o_add_82_OUT> created at line 87.
+    Found 32-bit adder for signal <lastCheckT[3][31]_GND_76_o_add_89_OUT> created at line 85.
+    Found 16-bit adder for signal <RDCurrent[3][15]_GND_76_o_add_96_OUT> created at line 87.
+    Found 32-bit adder for signal <lastCheckT[4][31]_GND_76_o_add_103_OUT> created at line 85.
+    Found 16-bit adder for signal <RDCurrent[4][15]_GND_76_o_add_110_OUT> created at line 87.
+    Found 32-bit adder for signal <lastCheckT[5][31]_GND_76_o_add_117_OUT> created at line 85.
+    Found 16-bit adder for signal <RDCurrent[5][15]_GND_76_o_add_124_OUT> created at line 87.
+    Found 32-bit adder for signal <lastCheckT[6][31]_GND_76_o_add_131_OUT> created at line 85.
+    Found 16-bit adder for signal <RDCurrent[6][15]_GND_76_o_add_138_OUT> created at line 87.
+    Found 32-bit adder for signal <lastCheckT[7][31]_GND_76_o_add_145_OUT> created at line 85.
+    Found 16-bit adder for signal <RDCurrent[7][15]_GND_76_o_add_152_OUT> created at line 87.
+    Found 32-bit adder for signal <n1096> created at line 102.
+    Found 32-bit adder for signal <n1099> created at line 102.
+    Found 32-bit adder for signal <n1102> created at line 102.
+    Found 32-bit adder for signal <alphaRDdcw> created at line 102.
+    Found 32-bit adder for signal <newRDdcw> created at line 103.
+    Found 32-bit adder for signal <n1111> created at line 106.
+    Found 32-bit adder for signal <n1114> created at line 106.
+    Found 32-bit adder for signal <n1117> created at line 106.
+    Found 32-bit adder for signal <alphaIRDdcw> created at line 106.
+    Found 32-bit adder for signal <newIRDdcw> created at line 107.
+    Found 16-bit subtractor for signal <GND_76_o_GND_76_o_sub_61_OUT<15:0>> created at line 91.
+    Found 16-bit subtractor for signal <GND_76_o_GND_76_o_sub_75_OUT<15:0>> created at line 91.
+    Found 16-bit subtractor for signal <GND_76_o_GND_76_o_sub_89_OUT<15:0>> created at line 91.
+    Found 16-bit subtractor for signal <GND_76_o_GND_76_o_sub_103_OUT<15:0>> created at line 91.
+    Found 16-bit subtractor for signal <GND_76_o_GND_76_o_sub_117_OUT<15:0>> created at line 91.
+    Found 16-bit subtractor for signal <GND_76_o_GND_76_o_sub_131_OUT<15:0>> created at line 91.
+    Found 16-bit subtractor for signal <GND_76_o_GND_76_o_sub_145_OUT<15:0>> created at line 91.
+    Found 16-bit subtractor for signal <GND_76_o_GND_76_o_sub_159_OUT<15:0>> created at line 91.
+    Found 32-bit 8-to-1 multiplexer for signal <n0992> created at line 102.
+    Found 32-bit 8-to-1 multiplexer for signal <n0996> created at line 106.
+    Found 16-bit comparator equal for signal <n0027> created at line 81
+    Found 16-bit comparator lessequal for signal <n0029> created at line 82
+    Found 32-bit comparator greater for signal <currentT[31]_lastCheckT[0][31]_LessThan_49_o> created at line 85
+    Found 32-bit comparator greater for signal <GND_76_o_IRDdcw[0][31]_LessThan_51_o> created at line 86
+    Found 32-bit comparator greater for signal <IRDdcw[0][31]_PWR_20_o_LessThan_53_o> created at line 86
+    Found 16-bit comparator greater for signal <RDCurrent[0][15]_GND_76_o_LessThan_54_o> created at line 86
+    Found 32-bit comparator greater for signal <GND_76_o_RDdcw[0][31]_LessThan_57_o> created at line 90
+    Found 32-bit comparator greater for signal <RDdcw[0][31]_PWR_20_o_LessThan_59_o> created at line 90
+    Found 16-bit comparator greater for signal <GND_76_o_RDCurrent[0][15]_LessThan_60_o> created at line 90
+    Found 32-bit comparator greater for signal <currentT[31]_lastCheckT[1][31]_LessThan_63_o> created at line 85
+    Found 32-bit comparator greater for signal <GND_76_o_IRDdcw[1][31]_LessThan_65_o> created at line 86
+    Found 32-bit comparator greater for signal <IRDdcw[1][31]_PWR_20_o_LessThan_67_o> created at line 86
+    Found 16-bit comparator greater for signal <RDCurrent[1][15]_GND_76_o_LessThan_68_o> created at line 86
+    Found 32-bit comparator greater for signal <GND_76_o_RDdcw[1][31]_LessThan_71_o> created at line 90
+    Found 32-bit comparator greater for signal <RDdcw[1][31]_PWR_20_o_LessThan_73_o> created at line 90
+    Found 16-bit comparator greater for signal <GND_76_o_RDCurrent[1][15]_LessThan_74_o> created at line 90
+    Found 32-bit comparator greater for signal <currentT[31]_lastCheckT[2][31]_LessThan_77_o> created at line 85
+    Found 32-bit comparator greater for signal <GND_76_o_IRDdcw[2][31]_LessThan_79_o> created at line 86
+    Found 32-bit comparator greater for signal <IRDdcw[2][31]_PWR_20_o_LessThan_81_o> created at line 86
+    Found 16-bit comparator greater for signal <RDCurrent[2][15]_GND_76_o_LessThan_82_o> created at line 86
+    Found 32-bit comparator greater for signal <GND_76_o_RDdcw[2][31]_LessThan_85_o> created at line 90
+    Found 32-bit comparator greater for signal <RDdcw[2][31]_PWR_20_o_LessThan_87_o> created at line 90
+    Found 16-bit comparator greater for signal <GND_76_o_RDCurrent[2][15]_LessThan_88_o> created at line 90
+    Found 32-bit comparator greater for signal <currentT[31]_lastCheckT[3][31]_LessThan_91_o> created at line 85
+    Found 32-bit comparator greater for signal <GND_76_o_IRDdcw[3][31]_LessThan_93_o> created at line 86
+    Found 32-bit comparator greater for signal <IRDdcw[3][31]_PWR_20_o_LessThan_95_o> created at line 86
+    Found 16-bit comparator greater for signal <RDCurrent[3][15]_GND_76_o_LessThan_96_o> created at line 86
+    Found 32-bit comparator greater for signal <GND_76_o_RDdcw[3][31]_LessThan_99_o> created at line 90
+    Found 32-bit comparator greater for signal <RDdcw[3][31]_PWR_20_o_LessThan_101_o> created at line 90
+    Found 16-bit comparator greater for signal <GND_76_o_RDCurrent[3][15]_LessThan_102_o> created at line 90
+    Found 32-bit comparator greater for signal <currentT[31]_lastCheckT[4][31]_LessThan_105_o> created at line 85
+    Found 32-bit comparator greater for signal <GND_76_o_IRDdcw[4][31]_LessThan_107_o> created at line 86
+    Found 32-bit comparator greater for signal <IRDdcw[4][31]_PWR_20_o_LessThan_109_o> created at line 86
+    Found 16-bit comparator greater for signal <RDCurrent[4][15]_GND_76_o_LessThan_110_o> created at line 86
+    Found 32-bit comparator greater for signal <GND_76_o_RDdcw[4][31]_LessThan_113_o> created at line 90
+    Found 32-bit comparator greater for signal <RDdcw[4][31]_PWR_20_o_LessThan_115_o> created at line 90
+    Found 16-bit comparator greater for signal <GND_76_o_RDCurrent[4][15]_LessThan_116_o> created at line 90
+    Found 32-bit comparator greater for signal <currentT[31]_lastCheckT[5][31]_LessThan_119_o> created at line 85
+    Found 32-bit comparator greater for signal <GND_76_o_IRDdcw[5][31]_LessThan_121_o> created at line 86
+    Found 32-bit comparator greater for signal <IRDdcw[5][31]_PWR_20_o_LessThan_123_o> created at line 86
+    Found 16-bit comparator greater for signal <RDCurrent[5][15]_GND_76_o_LessThan_124_o> created at line 86
+    Found 32-bit comparator greater for signal <GND_76_o_RDdcw[5][31]_LessThan_127_o> created at line 90
+    Found 32-bit comparator greater for signal <RDdcw[5][31]_PWR_20_o_LessThan_129_o> created at line 90
+    Found 16-bit comparator greater for signal <GND_76_o_RDCurrent[5][15]_LessThan_130_o> created at line 90
+    Found 32-bit comparator greater for signal <currentT[31]_lastCheckT[6][31]_LessThan_133_o> created at line 85
+    Found 32-bit comparator greater for signal <GND_76_o_IRDdcw[6][31]_LessThan_135_o> created at line 86
+    Found 32-bit comparator greater for signal <IRDdcw[6][31]_PWR_20_o_LessThan_137_o> created at line 86
+    Found 16-bit comparator greater for signal <RDCurrent[6][15]_GND_76_o_LessThan_138_o> created at line 86
+    Found 32-bit comparator greater for signal <GND_76_o_RDdcw[6][31]_LessThan_141_o> created at line 90
+    Found 32-bit comparator greater for signal <RDdcw[6][31]_PWR_20_o_LessThan_143_o> created at line 90
+    Found 16-bit comparator greater for signal <GND_76_o_RDCurrent[6][15]_LessThan_144_o> created at line 90
+    Found 32-bit comparator greater for signal <currentT[31]_lastCheckT[7][31]_LessThan_147_o> created at line 85
+    Found 32-bit comparator greater for signal <GND_76_o_IRDdcw[7][31]_LessThan_149_o> created at line 86
+    Found 32-bit comparator greater for signal <IRDdcw[7][31]_PWR_20_o_LessThan_151_o> created at line 86
+    Found 16-bit comparator greater for signal <RDCurrent[7][15]_GND_76_o_LessThan_152_o> created at line 86
+    Found 32-bit comparator greater for signal <GND_76_o_RDdcw[7][31]_LessThan_155_o> created at line 90
+    Found 32-bit comparator greater for signal <RDdcw[7][31]_PWR_20_o_LessThan_157_o> created at line 90
+    Found 16-bit comparator greater for signal <GND_76_o_RDCurrent[7][15]_LessThan_158_o> created at line 90
+    Summary:
+	inferred  51 Adder/Subtractor(s).
+	inferred 1065 D-type flip-flop(s).
+	inferred  58 Comparator(s).
+	inferred 698 Multiplexer(s).
+Unit <SETCURRENT> synthesized.
+
 Synthesizing Unit <INT_CTL>.
     Related source file is "F:\CS\OSH\final_HW\BCI_FPGA\LC3\INT_CTL.v".
 WARNING:Xst:647 - Input <KBSR<13:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -637,35 +780,51 @@ Macro Statistics
  4x7-bit dual-port RAM                                 : 1
  64x50-bit single-port Read Only RAM                   : 1
  8x16-bit dual-port RAM                                : 2
-# Adders/Subtractors                                   : 22
- 16-bit adder                                          : 11
+# Adders/Subtractors                                   : 75
+ 16-bit adder                                          : 20
  16-bit addsub                                         : 1
- 17-bit subtractor                                     : 8
+ 16-bit subtractor                                     : 8
+ 17-bit subtractor                                     : 9
  2-bit adder                                           : 1
  3-bit adder                                           : 1
-# Registers                                            : 139
- 1-bit register                                        : 115
- 16-bit register                                       : 17
+ 32-bit adder                                          : 19
+ 32-bit subtractor                                     : 16
+# Registers                                            : 151
+ 1-bit register                                        : 117
+ 112-bit register                                      : 1
+ 128-bit register                                      : 1
+ 16-bit register                                       : 19
  2-bit register                                        : 1
+ 256-bit register                                      : 3
  3-bit register                                        : 3
+ 32-bit register                                       : 1
+ 4-bit register                                        : 1
  50-bit register                                       : 1
- 8-bit register                                        : 2
-# Comparators                                          : 30
- 1-bit comparator equal                                : 13
+ 8-bit register                                        : 3
+# Comparators                                          : 91
+ 1-bit comparator equal                                : 14
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 16
+ 16-bit comparator lessequal                           : 1
  3-bit comparator greater                              : 1
- 32-bit comparator equal                               : 8
- 32-bit comparator greater                             : 8
-# Multiplexers                                         : 71
- 1-bit 2-to-1 multiplexer                              : 29
+ 32-bit comparator equal                               : 9
+ 32-bit comparator greater                             : 49
+# Multiplexers                                         : 776
+ 1-bit 2-to-1 multiplexer                              : 694
  1-bit 4-to-1 multiplexer                              : 2
- 1-bit 8-to-1 multiplexer                              : 2
- 16-bit 13-to-1 multiplexer                            : 1
- 16-bit 2-to-1 multiplexer                             : 19
+ 1-bit 8-to-1 multiplexer                              : 3
+ 16-bit 15-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 26
  16-bit 4-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 5
- 4-bit 2-to-1 multiplexer                              : 10
+ 3-bit 2-to-1 multiplexer                              : 6
+ 32-bit 2-to-1 multiplexer                             : 24
+ 32-bit 8-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 14
  6-bit 2-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 2
+ 112-bit shifter logical right                         : 1
+ 128-bit shifter logical right                         : 1
 # Tristates                                            : 64
  1-bit tristate buffer                                 : 64
 # FSMs                                                 : 1
@@ -690,6 +849,7 @@ WARNING:Xst:1293 - FF/Latch <KBDR_8> has a constant value of 0 in block <keyboar
 WARNING:Xst:1293 - FF/Latch <KBDR_7> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <KBDR_6> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <KBDR_5> has a constant value of 0 in block <keyboard>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <inner_reset> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <inner_reset> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <inner_reset> has a constant value of 0 in block <counter>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <UARTDR_8> of sequential type is unconnected in block <uart>.
@@ -836,6 +996,14 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_SDA_MODE> will be implemented on LUT
     -----------------------------------------------------------------------
 Unit <SDA> synthesized (advanced).
 
+Synthesizing (advanced) Unit <SETCURRENT>.
+The following registers are absorbed into counter <currentT>: 1 register on signal <currentT>.
+	The following adders/subtractors are grouped into adder tree <Madd_newIRDdcw1> :
+ 	<Madd_newIRDdcw> in block <SETCURRENT>, 	<Madd_n1111> in block <SETCURRENT>, 	<Madd_n1114> in block <SETCURRENT>, 	<Madd_n1117> in block <SETCURRENT>, 	<Madd_alphaIRDdcw> in block <SETCURRENT>.
+	The following adders/subtractors are grouped into adder tree <Madd_newRDdcw1> :
+ 	<Madd_newRDdcw> in block <SETCURRENT>, 	<Madd_n1096> in block <SETCURRENT>, 	<Madd_n1099> in block <SETCURRENT>, 	<Madd_n1102> in block <SETCURRENT>, 	<Madd_alphaRDdcw> in block <SETCURRENT>.
+Unit <SETCURRENT> synthesized (advanced).
+
 Synthesizing (advanced) Unit <TXD>.
 The following registers are absorbed into counter <bit_counter>: 1 register on signal <bit_counter>.
 Unit <TXD> synthesized (advanced).
@@ -858,32 +1026,46 @@ Macro Statistics
  4x7-bit dual-port distributed RAM                     : 1
  64x50-bit single-port distributed Read Only RAM       : 1
  8x16-bit dual-port distributed RAM                    : 2
-# Adders/Subtractors                                   : 12
- 16-bit adder                                          : 3
+# Adders/Subtractors                                   : 53
+ 16-bit adder                                          : 11
  16-bit addsub                                         : 1
- 17-bit subtractor                                     : 8
-# Counters                                             : 10
- 16-bit up counter                                     : 8
+ 16-bit subtractor                                     : 8
+ 17-bit subtractor                                     : 9
+ 32-bit adder                                          : 8
+ 32-bit subtractor                                     : 16
+# Adder Trees                                          : 2
+ 32-bit / 6-inputs adder tree                          : 2
+# Counters                                             : 12
+ 16-bit up counter                                     : 9
  2-bit up counter                                      : 1
  3-bit up counter                                      : 1
-# Registers                                            : 309
- Flip-Flops                                            : 309
-# Comparators                                          : 30
- 1-bit comparator equal                                : 13
+ 32-bit up counter                                     : 1
+# Registers                                            : 1347
+ Flip-Flops                                            : 1347
+# Comparators                                          : 91
+ 1-bit comparator equal                                : 14
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 16
+ 16-bit comparator lessequal                           : 1
  3-bit comparator greater                              : 1
- 32-bit comparator equal                               : 8
- 32-bit comparator greater                             : 8
-# Multiplexers                                         : 69
- 1-bit 2-to-1 multiplexer                              : 28
+ 32-bit comparator equal                               : 9
+ 32-bit comparator greater                             : 49
+# Multiplexers                                         : 864
+ 1-bit 2-to-1 multiplexer                              : 789
  1-bit 4-to-1 multiplexer                              : 2
- 1-bit 8-to-1 multiplexer                              : 2
- 16-bit 13-to-1 multiplexer                            : 1
- 16-bit 2-to-1 multiplexer                             : 19
+ 1-bit 8-to-1 multiplexer                              : 3
+ 16-bit 15-to-1 multiplexer                            : 1
+ 16-bit 2-to-1 multiplexer                             : 20
  16-bit 4-to-1 multiplexer                             : 1
- 3-bit 2-to-1 multiplexer                              : 4
- 4-bit 2-to-1 multiplexer                              : 10
+ 3-bit 2-to-1 multiplexer                              : 5
+ 32-bit 2-to-1 multiplexer                             : 24
+ 32-bit 8-to-1 multiplexer                             : 2
+ 4-bit 2-to-1 multiplexer                              : 14
  6-bit 2-to-1 multiplexer                              : 1
- 8-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 2
+# Logic shifters                                       : 2
+ 112-bit shifter logical right                         : 1
+ 128-bit shifter logical right                         : 1
 # FSMs                                                 : 1
 
 =========================================================================
@@ -906,6 +1088,7 @@ WARNING:Xst:1426 - The value init of the FF/Latch rst_n hinder the constant clea
    You should achieve better results by setting this init to 1.
 WARNING:Xst:1293 - FF/Latch <counter/inner_reset> has a constant value of 0 in block <TXD>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1293 - FF/Latch <counter/inner_reset> has a constant value of 0 in block <DISIPLAY>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <counter/inner_reset> has a constant value of 0 in block <SETCURRENT>. This FF/Latch will be trimmed during the optimization process.
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <g_memory/uart/_txd/FSM_0> on signal <curr_state[1:3]> with user encoding.
 -------------------
@@ -942,6 +1125,8 @@ Optimizing unit <DISIPLAY> ...
 
 Optimizing unit <SCL> ...
 
+Optimizing unit <SETCURRENT> ...
+
 Optimizing unit <ALU> ...
 
 Optimizing unit <CONTROLSTORE> ...
@@ -953,33 +1138,138 @@ WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_11> of sequential type is unconnec
 WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_10> of sequential type is unconnected in block <LC3>.
 WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_9> of sequential type is unconnected in block <LC3>.
 WARNING:Xst:2677 - Node <g_memory/uart/UARTDR_8> of sequential type is unconnected in block <LC3>.
-WARNING:Xst:1293 - FF/Latch <g_memory/uart/_txd/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_13> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_11> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_10> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_9> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_11> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_13> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_10> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_9> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <g_memory/setcurrent/RDCurrent_0_44> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_45> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_46> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_47> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_56> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_57> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_58> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_59> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_60> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_61> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_62> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_63> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_72> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_73> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_74> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_75> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_76> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_77> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_78> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_8> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_9> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_10> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_11> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_13> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_24> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_25> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_26> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_27> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_28> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_29> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_30> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_31> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_40> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_41> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_42> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_43> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_123> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_124> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_125> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_126> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_127> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_8> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_9> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_10> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_13> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_11> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/scl/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_9> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_12> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_10> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_11> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_13> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_14> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/uart/_txd/counter/cnt_15> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_79> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_88> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_89> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_90> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_91> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_92> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_93> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_94> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_95> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_104> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_105> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_106> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_107> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_108> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_109> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_110> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_111> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_120> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_121> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <g_memory/setcurrent/RDCurrent_0_122> has a constant value of 0 in block <LC3>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_224> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_192> <g_memory/setcurrent/lastCheckT_0_160> <g_memory/setcurrent/lastCheckT_0_128> <g_memory/setcurrent/lastCheckT_0_96> <g_memory/setcurrent/lastCheckT_0_64> <g_memory/setcurrent/lastCheckT_0_32> <g_memory/setcurrent/lastCheckT_0_0> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_230> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_198> <g_memory/setcurrent/lastCheckT_0_166> <g_memory/setcurrent/lastCheckT_0_134> <g_memory/setcurrent/lastCheckT_0_102> <g_memory/setcurrent/lastCheckT_0_70> <g_memory/setcurrent/lastCheckT_0_38> <g_memory/setcurrent/lastCheckT_0_6> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_225> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_193> <g_memory/setcurrent/lastCheckT_0_161> <g_memory/setcurrent/lastCheckT_0_129> <g_memory/setcurrent/lastCheckT_0_97> <g_memory/setcurrent/lastCheckT_0_65> <g_memory/setcurrent/lastCheckT_0_33> <g_memory/setcurrent/lastCheckT_0_1> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_231> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_199> <g_memory/setcurrent/lastCheckT_0_167> <g_memory/setcurrent/lastCheckT_0_135> <g_memory/setcurrent/lastCheckT_0_103> <g_memory/setcurrent/lastCheckT_0_71> <g_memory/setcurrent/lastCheckT_0_39> <g_memory/setcurrent/lastCheckT_0_7> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_226> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_194> <g_memory/setcurrent/lastCheckT_0_162> <g_memory/setcurrent/lastCheckT_0_130> <g_memory/setcurrent/lastCheckT_0_98> <g_memory/setcurrent/lastCheckT_0_66> <g_memory/setcurrent/lastCheckT_0_34> <g_memory/setcurrent/lastCheckT_0_2> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_232> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_200> <g_memory/setcurrent/lastCheckT_0_168> <g_memory/setcurrent/lastCheckT_0_136> <g_memory/setcurrent/lastCheckT_0_104> <g_memory/setcurrent/lastCheckT_0_72> <g_memory/setcurrent/lastCheckT_0_40> <g_memory/setcurrent/lastCheckT_0_8> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_227> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_195> <g_memory/setcurrent/lastCheckT_0_163> <g_memory/setcurrent/lastCheckT_0_131> <g_memory/setcurrent/lastCheckT_0_99> <g_memory/setcurrent/lastCheckT_0_67> <g_memory/setcurrent/lastCheckT_0_35> <g_memory/setcurrent/lastCheckT_0_3> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_233> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_201> <g_memory/setcurrent/lastCheckT_0_169> <g_memory/setcurrent/lastCheckT_0_137> <g_memory/setcurrent/lastCheckT_0_105> <g_memory/setcurrent/lastCheckT_0_73> <g_memory/setcurrent/lastCheckT_0_41> <g_memory/setcurrent/lastCheckT_0_9> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_228> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_196> <g_memory/setcurrent/lastCheckT_0_164> <g_memory/setcurrent/lastCheckT_0_132> <g_memory/setcurrent/lastCheckT_0_100> <g_memory/setcurrent/lastCheckT_0_68> <g_memory/setcurrent/lastCheckT_0_36> <g_memory/setcurrent/lastCheckT_0_4> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_234> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_202> <g_memory/setcurrent/lastCheckT_0_170> <g_memory/setcurrent/lastCheckT_0_138> <g_memory/setcurrent/lastCheckT_0_106> <g_memory/setcurrent/lastCheckT_0_74> <g_memory/setcurrent/lastCheckT_0_42> <g_memory/setcurrent/lastCheckT_0_10> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_229> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_197> <g_memory/setcurrent/lastCheckT_0_165> <g_memory/setcurrent/lastCheckT_0_133> <g_memory/setcurrent/lastCheckT_0_101> <g_memory/setcurrent/lastCheckT_0_69> <g_memory/setcurrent/lastCheckT_0_37> <g_memory/setcurrent/lastCheckT_0_5> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_240> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_208> <g_memory/setcurrent/lastCheckT_0_176> <g_memory/setcurrent/lastCheckT_0_144> <g_memory/setcurrent/lastCheckT_0_112> <g_memory/setcurrent/lastCheckT_0_80> <g_memory/setcurrent/lastCheckT_0_48> <g_memory/setcurrent/lastCheckT_0_16> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_235> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_203> <g_memory/setcurrent/lastCheckT_0_171> <g_memory/setcurrent/lastCheckT_0_139> <g_memory/setcurrent/lastCheckT_0_107> <g_memory/setcurrent/lastCheckT_0_75> <g_memory/setcurrent/lastCheckT_0_43> <g_memory/setcurrent/lastCheckT_0_11> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_241> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_209> <g_memory/setcurrent/lastCheckT_0_177> <g_memory/setcurrent/lastCheckT_0_145> <g_memory/setcurrent/lastCheckT_0_113> <g_memory/setcurrent/lastCheckT_0_81> <g_memory/setcurrent/lastCheckT_0_49> <g_memory/setcurrent/lastCheckT_0_17> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_236> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_204> <g_memory/setcurrent/lastCheckT_0_172> <g_memory/setcurrent/lastCheckT_0_140> <g_memory/setcurrent/lastCheckT_0_108> <g_memory/setcurrent/lastCheckT_0_76> <g_memory/setcurrent/lastCheckT_0_44> <g_memory/setcurrent/lastCheckT_0_12> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_242> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_210> <g_memory/setcurrent/lastCheckT_0_178> <g_memory/setcurrent/lastCheckT_0_146> <g_memory/setcurrent/lastCheckT_0_114> <g_memory/setcurrent/lastCheckT_0_82> <g_memory/setcurrent/lastCheckT_0_50> <g_memory/setcurrent/lastCheckT_0_18> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_237> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_205> <g_memory/setcurrent/lastCheckT_0_173> <g_memory/setcurrent/lastCheckT_0_141> <g_memory/setcurrent/lastCheckT_0_109> <g_memory/setcurrent/lastCheckT_0_77> <g_memory/setcurrent/lastCheckT_0_45> <g_memory/setcurrent/lastCheckT_0_13> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_243> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_211> <g_memory/setcurrent/lastCheckT_0_179> <g_memory/setcurrent/lastCheckT_0_147> <g_memory/setcurrent/lastCheckT_0_115> <g_memory/setcurrent/lastCheckT_0_83> <g_memory/setcurrent/lastCheckT_0_51> <g_memory/setcurrent/lastCheckT_0_19> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_238> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_206> <g_memory/setcurrent/lastCheckT_0_174> <g_memory/setcurrent/lastCheckT_0_142> <g_memory/setcurrent/lastCheckT_0_110> <g_memory/setcurrent/lastCheckT_0_78> <g_memory/setcurrent/lastCheckT_0_46> <g_memory/setcurrent/lastCheckT_0_14> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_244> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_212> <g_memory/setcurrent/lastCheckT_0_180> <g_memory/setcurrent/lastCheckT_0_148> <g_memory/setcurrent/lastCheckT_0_116> <g_memory/setcurrent/lastCheckT_0_84> <g_memory/setcurrent/lastCheckT_0_52> <g_memory/setcurrent/lastCheckT_0_20> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_239> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_207> <g_memory/setcurrent/lastCheckT_0_175> <g_memory/setcurrent/lastCheckT_0_143> <g_memory/setcurrent/lastCheckT_0_111> <g_memory/setcurrent/lastCheckT_0_79> <g_memory/setcurrent/lastCheckT_0_47> <g_memory/setcurrent/lastCheckT_0_15> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_250> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_218> <g_memory/setcurrent/lastCheckT_0_186> <g_memory/setcurrent/lastCheckT_0_154> <g_memory/setcurrent/lastCheckT_0_122> <g_memory/setcurrent/lastCheckT_0_90> <g_memory/setcurrent/lastCheckT_0_58> <g_memory/setcurrent/lastCheckT_0_26> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_245> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_213> <g_memory/setcurrent/lastCheckT_0_181> <g_memory/setcurrent/lastCheckT_0_149> <g_memory/setcurrent/lastCheckT_0_117> <g_memory/setcurrent/lastCheckT_0_85> <g_memory/setcurrent/lastCheckT_0_53> <g_memory/setcurrent/lastCheckT_0_21> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_251> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_219> <g_memory/setcurrent/lastCheckT_0_187> <g_memory/setcurrent/lastCheckT_0_155> <g_memory/setcurrent/lastCheckT_0_123> <g_memory/setcurrent/lastCheckT_0_91> <g_memory/setcurrent/lastCheckT_0_59> <g_memory/setcurrent/lastCheckT_0_27> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_246> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_214> <g_memory/setcurrent/lastCheckT_0_182> <g_memory/setcurrent/lastCheckT_0_150> <g_memory/setcurrent/lastCheckT_0_118> <g_memory/setcurrent/lastCheckT_0_86> <g_memory/setcurrent/lastCheckT_0_54> <g_memory/setcurrent/lastCheckT_0_22> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_252> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_220> <g_memory/setcurrent/lastCheckT_0_188> <g_memory/setcurrent/lastCheckT_0_156> <g_memory/setcurrent/lastCheckT_0_124> <g_memory/setcurrent/lastCheckT_0_92> <g_memory/setcurrent/lastCheckT_0_60> <g_memory/setcurrent/lastCheckT_0_28> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_247> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_215> <g_memory/setcurrent/lastCheckT_0_183> <g_memory/setcurrent/lastCheckT_0_151> <g_memory/setcurrent/lastCheckT_0_119> <g_memory/setcurrent/lastCheckT_0_87> <g_memory/setcurrent/lastCheckT_0_55> <g_memory/setcurrent/lastCheckT_0_23> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_253> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_221> <g_memory/setcurrent/lastCheckT_0_189> <g_memory/setcurrent/lastCheckT_0_157> <g_memory/setcurrent/lastCheckT_0_125> <g_memory/setcurrent/lastCheckT_0_93> <g_memory/setcurrent/lastCheckT_0_61> <g_memory/setcurrent/lastCheckT_0_29> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_248> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_216> <g_memory/setcurrent/lastCheckT_0_184> <g_memory/setcurrent/lastCheckT_0_152> <g_memory/setcurrent/lastCheckT_0_120> <g_memory/setcurrent/lastCheckT_0_88> <g_memory/setcurrent/lastCheckT_0_56> <g_memory/setcurrent/lastCheckT_0_24> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_254> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_222> <g_memory/setcurrent/lastCheckT_0_190> <g_memory/setcurrent/lastCheckT_0_158> <g_memory/setcurrent/lastCheckT_0_126> <g_memory/setcurrent/lastCheckT_0_94> <g_memory/setcurrent/lastCheckT_0_62> <g_memory/setcurrent/lastCheckT_0_30> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_249> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_217> <g_memory/setcurrent/lastCheckT_0_185> <g_memory/setcurrent/lastCheckT_0_153> <g_memory/setcurrent/lastCheckT_0_121> <g_memory/setcurrent/lastCheckT_0_89> <g_memory/setcurrent/lastCheckT_0_57> <g_memory/setcurrent/lastCheckT_0_25> 
+INFO:Xst:2261 - The FF/Latch <g_memory/setcurrent/lastCheckT_0_255> in Unit <LC3> is equivalent to the following 7 FFs/Latches, which will be removed : <g_memory/setcurrent/lastCheckT_0_223> <g_memory/setcurrent/lastCheckT_0_191> <g_memory/setcurrent/lastCheckT_0_159> <g_memory/setcurrent/lastCheckT_0_127> <g_memory/setcurrent/lastCheckT_0_95> <g_memory/setcurrent/lastCheckT_0_63> <g_memory/setcurrent/lastCheckT_0_31> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 9.
+Found area constraint ratio of 100 (+ 5) on block LC3, actual ratio is 45.
 FlipFlop cpu/IR_5 has been replicated 2 time(s)
 FlipFlop fsm/controlstore/MicroIR_22 has been replicated 1 time(s)
-FlipFlop fsm/controlstore/MicroIR_24 has been replicated 1 time(s)
 FlipFlop fsm/controlstore/MicroIR_27 has been replicated 1 time(s)
-FlipFlop g_memory/MAR_10 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_1 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_10 has been replicated 2 time(s)
 FlipFlop g_memory/MAR_11 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_12 has been replicated 1 time(s)
 FlipFlop g_memory/MAR_13 has been replicated 1 time(s)
-FlipFlop g_memory/MAR_5 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_2 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_3 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_4 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_6 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_7 has been replicated 1 time(s)
+FlipFlop g_memory/MAR_8 has been replicated 2 time(s)
+FlipFlop g_memory/MAR_9 has been replicated 1 time(s)
+FlipFlop g_memory/setcurrent/buffer_0_96 has been replicated 6 time(s)
+FlipFlop g_memory/setcurrent/buffer_0_97 has been replicated 6 time(s)
 
 Final Macro Processing ...
 
@@ -987,8 +1277,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 414
- Flip-Flops                                            : 414
+# Registers                                            : 1232
+ Flip-Flops                                            : 1232
 
 =========================================================================
 
@@ -1011,28 +1301,29 @@ Top Level Output File Name         : LC3.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1081
+# BELS                             : 6287
 #      GND                         : 1
-#      INV                         : 33
-#      LUT1                        : 120
-#      LUT2                        : 46
-#      LUT3                        : 89
-#      LUT4                        : 77
-#      LUT5                        : 79
-#      LUT6                        : 264
-#      MUXCY                       : 165
-#      MUXF7                       : 29
+#      INV                         : 123
+#      LUT1                        : 448
+#      LUT2                        : 677
+#      LUT3                        : 651
+#      LUT4                        : 457
+#      LUT5                        : 376
+#      LUT6                        : 677
+#      MUXCY                       : 1495
+#      MUXF7                       : 87
+#      MUXF8                       : 1
 #      VCC                         : 1
-#      XORCY                       : 177
-# FlipFlops/Latches                : 414
+#      XORCY                       : 1293
+# FlipFlops/Latches                : 1232
 #      FD                          : 70
 #      FDC                         : 5
 #      FDCE                        : 5
-#      FDE                         : 181
+#      FDE                         : 979
 #      FDPE                        : 2
-#      FDR                         : 117
-#      FDRE                        : 33
-#      FDSE                        : 1
+#      FDR                         : 133
+#      FDRE                        : 36
+#      FDSE                        : 2
 # RAMS                             : 46
 #      RAM16X1D                    : 9
 #      RAM32M                      : 5
@@ -1051,18 +1342,18 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             414  out of  18224     2%  
- Number of Slice LUTs:                  746  out of   9112     8%  
-    Number used as Logic:               708  out of   9112     7%  
+ Number of Slice Registers:            1232  out of  18224     6%  
+ Number of Slice LUTs:                 3447  out of   9112    37%  
+    Number used as Logic:              3409  out of   9112    37%  
     Number used as Memory:               38  out of   2176     1%  
        Number used as RAM:               38
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    858
-   Number with an unused Flip Flop:     444  out of    858    51%  
-   Number with an unused LUT:           112  out of    858    13%  
-   Number of fully used LUT-FF pairs:   302  out of    858    35%  
-   Number of unique control sets:        71
+ Number of LUT Flip Flop pairs used:   3595
+   Number with an unused Flip Flop:    2363  out of   3595    65%  
+   Number with an unused LUT:           148  out of   3595     4%  
+   Number of fully used LUT-FF pairs:  1084  out of   3595    30%  
+   Number of unique control sets:        77
 
 IO Utilization: 
  Number of IOs:                          53
@@ -1094,7 +1385,7 @@ Clock Information:
 ---------------------------------------------+------------------------------------------------+-------+
 Clock Signal                                 | Clock buffer(FF name)                          | Load  |
 ---------------------------------------------+------------------------------------------------+-------+
-clk                                          | BUFGP                                          | 451   |
+clk                                          | BUFGP                                          | 1269  |
 g_memory/uart/_txd/c(g_memory/uart/_txd/c1:O)| NONE(*)(g_memory/uart/_txd/curr_state_FSM_FFd1)| 9     |
 ---------------------------------------------+------------------------------------------------+-------+
 (*) This 1 clock signal(s) are generated by combinatorial logic,
@@ -1110,7 +1401,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 8.257ns (Maximum Frequency: 121.114MHz)
+   Minimum period: 8.291ns (Maximum Frequency: 120.617MHz)
    Minimum input arrival time before clock: 4.677ns
    Maximum output required time after clock: 4.930ns
    Maximum combinational path delay: No path found
@@ -1121,10 +1412,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 8.257ns (frequency: 121.114MHz)
-  Total number of paths / destination ports: 293671 / 1514
+  Clock period: 8.291ns (frequency: 120.617MHz)
+  Total number of paths / destination ports: 24268209 / 3154
 -------------------------------------------------------------------------
-Delay:               8.257ns (Levels of Logic = 10)
+Delay:               8.291ns (Levels of Logic = 10)
   Source:            fsm/controlstore/MicroIR_15 (FF)
   Destination:       cpu/PSR_0 (FF)
   Source Clock:      clk rising
@@ -1141,14 +1432,14 @@ Delay:               8.257ns (Levels of Logic = 10)
      XORCY:LI->O           1   0.136   0.580  cpu/alu/Madd_OPA[15]_OPB[15]_add_1_OUT_xor<12> (cpu/alu/OPA[15]_OPB[15]_add_1_OUT<12>)
      LUT6:I5->O            2   0.205   0.721  cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_A86 (cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_A85)
      LUT6:I4->O            1   0.203   0.000  cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_rs_lut<12> (cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_rs_lut<12>)
-     XORCY:LI->O           2   0.136   0.617  cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_rs_xor<12> (cpu/Z_2_o_MARMUX_OUT[15]_mux_57_OUT<12>)
+     XORCY:LI->O           3   0.136   0.651  cpu/Mmux_Z_2_o_MARMUX_OUT[15]_mux_57_OUT_rs_xor<12> (cpu/Z_2_o_MARMUX_OUT[15]_mux_57_OUT<12>)
      LUT5:I4->O            7   0.205   0.774  BUS<12>LogicTrst1 (BUS<12>)
      LUT6:I5->O            1   0.205   0.580  cpu/Mmux_PSRMUX_OUT<0>11 (cpu/Mmux_PSRMUX_OUT<0>1)
      LUT6:I5->O            1   0.205   0.000  cpu/Mmux_PSRMUX_OUT<0>14 (cpu/PSRMUX_OUT<0>)
      FDE:D                     0.102          cpu/PSR_0
     ----------------------------------------
-    Total                      8.257ns (2.457ns logic, 5.800ns route)
-                                       (29.8% logic, 70.2% route)
+    Total                      8.291ns (2.457ns logic, 5.834ns route)
+                                       (29.6% logic, 70.4% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'g_memory/uart/_txd/c'
@@ -1178,7 +1469,7 @@ Delay:               3.022ns (Levels of Logic = 3)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
   Total number of paths / destination ports: 41 / 34
 -------------------------------------------------------------------------
-Offset:              4.677ns (Levels of Logic = 6)
+Offset:              4.677ns (Levels of Logic = 7)
   Source:            SDA_BUS<6> (PAD)
   Destination:       g_memory/MDR_0 (FF)
   Destination Clock: clk rising
@@ -1187,16 +1478,17 @@ Offset:              4.677ns (Levels of Logic = 6)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IOBUF:IO->O           1   1.222   0.827  SDA_BUS_6_IOBUF (N63)
-     LUT6:I2->O            1   0.203   0.000  g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_3 (g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_3)
-     MUXF7:I1->O           1   0.140   0.808  g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_14_o_2_f7 (g_memory/SDASR[2]_SDA_BUS[7]_Mux_14_o)
-     LUT6:I3->O            1   0.205   0.827  g_memory/Mmux_Z_5_o_dout[15]_mux_29_OUT_71 (g_memory/Mmux_Z_5_o_dout[15]_mux_29_OUT_71)
-     LUT6:I2->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_35_OUT1_G (N297)
-     MUXF7:I1->O           1   0.140   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_35_OUT1 (g_memory/MDR[15]_MDR[15]_mux_35_OUT<0>)
+     IOBUF:IO->O           1   1.222   0.827  SDA_BUS_6_IOBUF (N103)
+     LUT6:I2->O            1   0.203   0.000  g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_16_o_3 (g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_16_o_3)
+     MUXF7:I1->O           1   0.140   0.808  g_memory/Mmux_SDASR[2]_SDA_BUS[7]_Mux_16_o_2_f7 (g_memory/SDASR[2]_SDA_BUS[7]_Mux_16_o)
+     LUT6:I3->O            1   0.205   0.000  g_memory/Mmux_Z_5_o_dout[15]_mux_38_OUT_5 (g_memory/Mmux_Z_5_o_dout[15]_mux_38_OUT_5)
+     MUXF7:I0->O           1   0.131   0.000  g_memory/Mmux_Z_5_o_dout[15]_mux_38_OUT_3_f7 (g_memory/Mmux_Z_5_o_dout[15]_mux_38_OUT_3_f7)
+     MUXF8:I1->O           1   0.152   0.684  g_memory/Mmux_Z_5_o_dout[15]_mux_38_OUT_2_f8 (g_memory/Z_5_o_dout[15]_mux_38_OUT<0>)
+     LUT4:I2->O            1   0.203   0.000  g_memory/Mmux_MDR[15]_MDR[15]_mux_49_OUT17 (g_memory/MDR[15]_MDR[15]_mux_49_OUT<0>)
      FDE:D                     0.102          g_memory/MDR_0
     ----------------------------------------
-    Total                      4.677ns (2.215ns logic, 2.462ns route)
-                                       (47.4% logic, 52.6% route)
+    Total                      4.677ns (2.358ns logic, 2.319ns route)
+                                       (50.4% logic, 49.6% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1247,7 +1539,7 @@ Clock to Setup on destination clock clk
                     | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock        |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 --------------------+---------+---------+---------+---------+
-clk                 |    8.257|         |         |         |
+clk                 |    8.291|         |         |         |
 g_memory/uart/_txd/c|    2.745|         |         |         |
 --------------------+---------+---------+---------+---------+
 
@@ -1263,14 +1555,14 @@ g_memory/uart/_txd/c|    3.022|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 23.00 secs
-Total CPU time to Xst completion: 23.32 secs
+Total REAL time to Xst completion: 63.00 secs
+Total CPU time to Xst completion: 63.13 secs
  
 --> 
 
-Total memory usage is 328560 kilobytes
+Total memory usage is 400464 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  113 (   0 filtered)
-Number of infos    :   21 (   0 filtered)
+Number of warnings :  182 (   0 filtered)
+Number of infos    :   54 (   0 filtered)
 

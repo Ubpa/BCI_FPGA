@@ -41,7 +41,7 @@ always @( posedge clk ) begin
 		cnt <= cnt + 1;
 	end
 	else begin
-		cnt <= 0;
+		cnt <= 16'h0000;
 	end
 end
 

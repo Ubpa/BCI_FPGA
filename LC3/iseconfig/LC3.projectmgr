@@ -47,18 +47,31 @@
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/display - DISIPLAY</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/scl - SCL</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/fsm - FSM</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/display - DISIPLAY</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD/btn_down - BTN_I</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD/btn_left - BTN_I</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD/btn_middle - BTN_I</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD/btn_right - BTN_I</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD/btn_up - BTN_I</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/scl - SCL</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/setcurrent - SETCURRENT</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/uart - UART</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/uart - UART/_rxd - RXD</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/uart - UART/_txd - TXD</ClosedNode>
          <ClosedNode>/testbench E:|CS|SDMD|Verilog|LC3|testbench.v/cpu - CPU</ClosedNode>
          <ClosedNode>/testbench E:|CS|SDMD|Verilog|LC3|testbench.v/lc3 - LC3/cpu - CPU</ClosedNode>
          <ClosedNode>/testbench E:|CS|SDMD|Verilog|LC3|testbench.v/lc3 - LC3/g_memory - G_MEMORY</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>xc6slx16-3csg324</SelectedItem>
+         <SelectedItem>lc3 - LC3 (F:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.v)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001e5000000020000000000000000000000000200000064ffffffff000000810000000300000002000001e50000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001bb000000020000000000000000000000000200000064ffffffff000000810000000300000002000001bb0000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>xc6slx16-3csg324</CurrentItem>
+      <CurrentItem>lc3 - LC3 (F:/CS/OSH/final_HW/BCI_FPGA/LC3/LC3.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -66,13 +79,13 @@
          <ClosedNode>Design Utilities/Compile HDL Simulation Libraries</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000159000000010000000100000000000000000000000064ffffffff000000810000000000000001000001590000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
    <ItemView guiview="File" >
       <ClosedNodes>
@@ -81,7 +94,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000013d000000040101000100000000000000000000000064ffffffff0000008100000000000000040000003d0000000100000000000000240000000100000000000000780000000100000000000000640000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000002f2000000040101000100000000000000000000000064ffffffff0000008100000000000000040000003d0000000100000000000000240000000100000000000000780000000100000000000002190000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>ADDR_CTL_LOGIC.v</CurrentItem>
    </ItemView>
@@ -110,13 +123,13 @@
          <ClosedNode>User Constraints</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem>Generate Programming File</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000159000000010000000100000000000000000000000064ffffffff000000810000000000000001000001590000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Generate Programming File</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
@@ -142,19 +155,25 @@
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/display - DISIPLAY</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD</ClosedNode>
          <ClosedNode>/test E:|CS|OSH|final_HW|lab07|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/scl - SCL</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/cpu - CPU</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/display - DISIPLAY</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/scl - SCL</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/setcurrent - SETCURRENT</ClosedNode>
+         <ClosedNode>/test F:|CS|OSH|final_HW|BCI_FPGA|LC3|test.v/lc3 - LC3/g_memory - G_MEMORY/uart - UART</ClosedNode>
          <ClosedNode>/testbench E:|CS|SDMD|Verilog|LC3|testbench.v/cpu - CPU</ClosedNode>
          <ClosedNode>/testbench E:|CS|SDMD|Verilog|LC3|testbench.v/cpu - CPU/fsm - FSM</ClosedNode>
          <ClosedNode>/testbench E:|CS|SDMD|Verilog|LC3|testbench.v/lc3 - LC3/g_memory - G_MEMORY/display - DISIPLAY</ClosedNode>
          <ClosedNode>/testbench E:|CS|SDMD|Verilog|LC3|testbench.v/lc3 - LC3/g_memory - G_MEMORY/keyboard - KEYBOARD</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>test (E:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v)</SelectedItem>
+         <SelectedItem>test (F:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v)</SelectedItem>
       </SelectedItems>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >10</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000289000000020000000000000000000000000200000064ffffffff000000810000000300000002000002890000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001e5000000020000000000000000000000000200000064ffffffff000000810000000300000002000001e50000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>test (E:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v)</CurrentItem>
+      <CurrentItem>test (F:/CS/OSH/final_HW/BCI_FPGA/LC3/test.v)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -166,7 +185,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014d0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>Check All Core Versions</CurrentItem>
    </ItemView>
@@ -175,13 +194,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000014d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000014d0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000159000000010000000100000000000000000000000064ffffffff000000810000000000000001000001590000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff0000000000000002000000d5000000ae01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>

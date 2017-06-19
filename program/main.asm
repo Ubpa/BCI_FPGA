@@ -11,26 +11,38 @@ INIT_ALL_CHIP		ADD   R1, R1, #-1
 					STI   R1, SDASR_ADDR
 					JSR   max30102_init
 					BR    INIT_ALL_CHIP
-LOOP_READ			LD    R5, NUM_CHIP
+LOOP_READ			LD    R5, NUM_CHIP; R5 : chip ID
 LOOP_CHIP			ADD   R5, R5, #-1
 					BRn   LOOP_READ
 					STI   R5, SDASR_ADDR
-					LEA   R0, DATA_BUFF
+					LD    R0, SC_BUFFER_ADDR
 					JSR   max30102_Sample_Read
 					ADD   R0, R0, #0
 					BRz   LOOP_CHIP
-					LEA   R0, DATA_BUFF
-					STR   R5, R0, #6; DATA_BUFF[6] == ID of chip
+					LD    R0, SC_BUFFER_ADDR
+					STR   R5, R0, #6; SC_BUFFER[6] == ID of chip
 					LD    R1, SAMPLE_SIZE
 					ADD   R1, R1, #1
 					JSR   uart_send
-					ADD   R4, R4, #-1
+					LD    R0, SC_change_ADDR
+					ADD   R0, R0, R5
+					LDR   R0, R0, #0
+					BRp   SETCURRENT
+SC_DONE				ADD   R4, R4, #-1
 					BRp   LOOP_CHIP
 					LEA   R0, CHECK_DATA
 					LD    R1, CHECK_DATA_SIZE
 					JSR   uart_send
 					LD    R4, CHECK_SIZE
 					BR    LOOP_CHIP
+
+SETCURRENT			LD    R0, SC_RDCurrent_ADDR
+					ADD   R0, R0, R5
+					LDR   R1, R0, #0; R1 = new RD current
+					AND   R0, R0, #0
+					ADD   R0, R0, #12; R0 = LED1(RED) current register adress
+					JSR   max30102_Bus_Write
+					BR    SC_DONE
 
 max30102_Bus_Write;( R0 = (u8) Register_Address, R1 = (u8) Word_Data )
                     ADD   R6, R6, #-2
@@ -93,7 +105,7 @@ RD_FAIL             TRAP  x2C; i2c stop
                     ADD   R6, R6, #2
                     RET; R0 == final 8 bits data, R2 == address of data + n
 
-max30102_Sample_Read;( R0 = address of DATA_BUFF )
+max30102_Sample_Read;( R0 = address of SC_BUFFER )
 					ADD   R6, R6, #-3
 					STR   R1, R6, #0
 					STR   R2, R6, #1
@@ -125,7 +137,7 @@ Sample_Read_DONE	LDR   R1, R6, #0
 					ADD   R6, R6, #3
 					RET
 					
-uart_send;( R0 = address of DATA_BUFF, R1 = num of data )
+uart_send;( R0 = address of SC_BUFFER, R1 = num of data )
 					ADD   R6, R6, #-2
 					STR   R2, R6, #0
 					STR   R3, R6, #1
@@ -181,6 +193,7 @@ TEMP_address		.FILL x001F
 LED1I_address		.FILL x000C
 FIFO_RD_PTR_address .FILL x0006
 FIFO_WR_PTR_address .FILL x0004
+TWO					.FILL x0002
 ONE                 .FILL x0001
 ZERO                .FILL x0000
 SAMPLE_SIZE			.FILL x0006
@@ -204,11 +217,11 @@ INIT_DATA           .FILL x0009
                     .FILL x0021
                     .FILL x0001;5: SET TEMP_EN
                     .FILL x000a
-                    .FILL x0047;6: SPO2_SR[4:2]=001  100 per second    LED_PW[1:0]=11  16BITS
+                    .FILL x0047;6: SPO2_SR[4:2]=001  100 per second    LED_PW[1:0]=11  18BITS
                     .FILL x000c
-                    .FILL x0047;7: set LED1 current  why is 0x47?
+                    .FILL x0080;7: set LED1(RED) current  why is 0x47? now is 0x80
                     .FILL x000d
-                    .FILL x0047;8: set LED2 current  why is 0x47?
+                    .FILL x00FF;8: set LED2(IR) current  why is 0x47? now is 0xFF
 					.FILL x0004
 					.FILL x0001;9: clear FIFO_WR_PTR
 					.FILL x0005
@@ -217,5 +230,8 @@ INIT_DATA           .FILL x0009
 					.FILL x0000;11: clear FIFO_RD_PTR
 UARTSR_ADDR			.FILL x7E14
 UARTDR_ADDR			.FILL x7E16
-DATA_BUFF			.BLKW x0007; RED[23:16], RED[15:8], RED[7:0], IR[23:16], IR[15:8], IR[7:0], ID of chip
+SC_BUFFER_ADDR      .FILL x7E20; RED[23:16], RED[15:8], RED[7:0], IR[23:16], IR[15:8], IR[7:0], ID of chip
+SC_change_ADDR		.FILL x7E30
+SC_RDCurrent_ADDR   .FILL x7E40
+UART_BUFFER			.BLKW x0002
                     .END
